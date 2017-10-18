@@ -19,6 +19,7 @@ done
 
 # Debian
 if [[ $DISTRO = "Debian 9" ]]; then
+# Install method
     echo 'Now select an install method'
     select RELEASE in "Net Install" "Full Install" "Live Install"
     do
@@ -33,18 +34,19 @@ if [[ $DISTRO = "Debian 9" ]]; then
     done
 # Net Install
     if [[ $RELEASE = "Net Install" ]]; then
-echo 'Now select an architecture'
-    select ARC in i386 amd64
-    do
-            case $ARC in
-            i386|amd64)
-                    break
-                    ;;
-            *)
-                    echo "Please select an architecture"
-                    ;;
-            esac
-    done
+# Architecture
+        echo 'Now select an architecture'
+        select ARC in i386 amd64
+        do
+                case $ARC in
+                i386|amd64)
+                        break
+                        ;;
+                *)
+                        echo "Please select an architecture"
+                        ;;
+                esac
+        done
 # i386
         if [[ $ARC = "i386" ]]; then
 # Message
@@ -62,18 +64,19 @@ echo 'Now select an architecture'
     fi
 # Full Install
     if [[ $RELEASE = "Full Install" ]]; then
-echo 'Now select an architecture'
-    select ARC in i386 amd64
-    do
-            case $ARC in
-            i386|amd64)
-                    break
-                    ;;
-            *)
-                    echo "Please select an architecture"
-                    ;;
-            esac
-    done
+# Architecture
+        echo 'Now select an architecture'
+        select ARC in i386 amd64
+        do
+                case $ARC in
+                i386|amd64)
+                        break
+                        ;;
+                *)
+                        echo "Please select an architecture"
+                        ;;
+                esac
+        done
 # i386
         if [[ $ARC = "i386" ]]; then
 # Message
@@ -95,21 +98,22 @@ echo 'Now select an architecture'
     fi
 # Live Install
     if [[ $RELEASE = "Live Install" ]]; then
-echo 'Now select an architecture'
-    select ARC in i386 amd64
-    do
-            case $ARC in
-            i386|amd64)
-                    break
-                    ;;
-            *)
-                    echo "Please select an architecture"
-                    ;;
-            esac
-    done
+# Architecture
+        echo 'Now select an architecture'
+        select ARC in i386 amd64
+        do
+                case $ARC in
+                i386|amd64)
+                        break
+                        ;;
+                *)
+                        echo "Please select an architecture"
+                        ;;
+                esac
+        done
 # i386
         if [[ $ARC = "i386" ]]; then
-# Which one?
+# Which desktop?
             echo 'Which desktop would you like?'
             select DEBDESK in Cinnamon GNOME KDE LXDE MATE XFCE
             do
@@ -167,7 +171,7 @@ echo 'Now select an architecture'
         fi
 # amd64
         if [[ $ARC = "amd64" ]]; then
-# Which one?
+# Which desktop?
             echo 'Which desktop would you like?'
             select DEBDESK in Cinnamon GNOME KDE LXDE MATE XFCE
             do
@@ -227,6 +231,7 @@ echo 'Now select an architecture'
 fi
 # KDE Neon
 if [[ $DISTRO = "KDE Neon" ]]; then
+# Release
     echo 'Now select a release'
     select RELEASE in "User Edition" "User LTS Edition" "Developer Edition Git-Unstable" "Developer Edition Git-Stable"
     do
@@ -241,52 +246,41 @@ if [[ $DISTRO = "KDE Neon" ]]; then
     done
 # User Edition
     if [[ $RELEASE = "User Edition" ]]; then
-# amd64
-#        if [[ $ARC = "amd64" ]]; then
 # Message
             echo "Now downloading current $DISTRO $RELEASE ISO..."
 # Download
             wget -O ~/ISO/neon-useredition-current-amd64.iso https://files.kde.org/neon/images/neon-useredition/current/neon-useredition-current.iso
-#        fi
     fi
 # User LTS Edition
     if [[ $RELEASE = "User LTS Edition" ]]; then
-# amd64
-#        if [[ $ARC = "amd64" ]]; then
 # Message
             echo "Now downloading current $DISTRO $RELEASE ISO..."
 # Download
             wget -O ~/ISO/neon-userltsedition-current-amd64.iso https://files.kde.org/neon/images/neon-userltsedition/current/neon-userltsedition-current.iso
-#        fi
     fi
 # Developer Edition Git-Unstable
     if [[ $RELEASE = "Developer Edition Git-Unstable" ]]; then
-# amd64
-#        if [[ $ARC = "amd64" ]]; then
 # Message
             echo "Now downloading current $DISTRO $RELEASE ISO..."
 # Download
             wget -O ~/ISO/neon-devedition-gitunstable-current-amd64.iso https://files.kde.org/neon/images/neon-devedition-gitunstable/current/neon-devedition-gitunstable-current.iso
-#        fi
     fi
 # Developer Edition Git-Stable
     if [[ $RELEASE = "Developer Edition Git-Stable" ]]; then
-# amd64
-#        if [[ $ARC = "amd64" ]]; then
 # Message
             echo "Now Downloading current $DISTRO $RELEASE ISO..."
 # Download
             wget -O ~/ISO/neon-devedition-gitstable-current-amd64.iso-amd64.iso https://files.kde.org/neon/images/neon-devedition-gitstable/current/neon-devedition-gitstable-current.iso
-#        fi
     fi
 fi
 # Kubuntu
 if [[ $DISTRO = "Kubuntu" ]]; then
+# Release
     echo 'Now select a release'
-    select RELEASE in "Long-Term Support" Stable "Daily testing"
+    select RELEASE in "16.04.3 LTS" "17.04" "17.10 Daily"
     do
             case $RELEASE in
-            "Long-Term Support"|Stable|"Daily testing")
+            "16.04.3 LTS"|"17.04"|"17.10 Daily")
                     break
                     ;;
             *)
@@ -295,19 +289,20 @@ if [[ $DISTRO = "Kubuntu" ]]; then
             esac
     done
 # LTS
-    if [[ $RELEASE = "Long-Term Support" ]]; then
-echo 'Now select an architecture'
-    select ARC in i386 amd64
-    do
-            case $ARC in
-            i386|amd64)
-                    break
-                    ;;
-            *)
-                    echo "Please select an architecture"
-                    ;;
-            esac
-    done
+    if [[ $RELEASE = "16.04.3 LTS" ]]; then
+# Architecture
+        echo 'Now select an architecture'
+        select ARC in i386 amd64
+        do
+                case $ARC in
+                i386|amd64)
+                        break
+                        ;;
+                *)
+                        echo "Please select an architecture"
+                        ;;
+                esac
+        done
 # i386
         if [[ $ARC = "i386" ]]; then
 # Message
@@ -323,20 +318,21 @@ echo 'Now select an architecture'
             wget -P ~/ISO http://cdimage.ubuntu.com/kubuntu/releases/16.04.3/release/kubuntu-16.04.3-desktop-amd64.iso
         fi
     fi
-# Stable
-    if [[ $RELEASE = "Stable" ]]; then
-echo 'Now select an architecture'
-    select ARC in i386 amd64
-    do
-            case $ARC in
-            i386|amd64)
-                    break
-                    ;;
-            *)
-                    echo "Please select an architecture"
-                    ;;
-            esac
-    done
+# 17.04
+    if [[ $RELEASE = "17.04" ]]; then
+# Architecture
+        echo 'Now select an architecture'
+        select ARC in i386 amd64
+        do
+                case $ARC in
+                i386|amd64)
+                        break
+                        ;;
+                *)
+                        echo "Please select an architecture"
+                        ;;
+                esac
+        done
 # i386
         if [[ $ARC = "i386" ]]; then
 # Message
@@ -352,20 +348,21 @@ echo 'Now select an architecture'
             wget -P ~/ISO http://cdimage.ubuntu.com/kubuntu/releases/17.04/release/kubuntu-17.04-desktop-amd64.iso
         fi
     fi
-# Daily testing
-    if [[ $RELEASE = "Daily testing" ]]; then
-echo 'Now select an architecture'
-    select ARC in i386 amd64
-    do
-            case $ARC in
-            i386|amd64)
-                    break
-                    ;;
-            *)
-                    echo "Please select an architecture"
-                    ;;
-            esac
-    done
+# 17.10 Daily
+    if [[ $RELEASE = "17.10 Daily" ]]; then
+# Architecture
+        echo 'Now select an architecture'
+        select ARC in i386 amd64
+        do
+                case $ARC in
+                i386|amd64)
+                        break
+                        ;;
+                *)
+                        echo "Please select an architecture"
+                        ;;
+                esac
+        done
 # i386
         if [[ $ARC = "i386" ]]; then
 # Message
@@ -384,11 +381,12 @@ echo 'Now select an architecture'
 fi
 # Lubuntu
 if [[ $DISTRO = "Lubuntu" ]]; then
+# Release
     echo 'Now select a release'
-    select RELEASE in "Long-Term Support" Stable "Daily testing"
+    select RELEASE in "16.04.3 LTS" "17.04" "17.10 Daily"
     do
             case $RELEASE in
-            "Long-Term Support"|Stable|"Daily testing")
+            "16.04.3 LTS"|"17.04"|"17.10 Daily")
                     break
                     ;;
             *)
@@ -397,19 +395,20 @@ if [[ $DISTRO = "Lubuntu" ]]; then
             esac
     done
 # LTS
-    if [[ $RELEASE = "Long-Term Support" ]]; then
-echo 'Now select an architecture'
-    select ARC in i386 amd64
-    do
-            case $ARC in
-            i386|amd64)
-                    break
-                    ;;
-            *)
-                    echo "Please select an architecture"
-                    ;;
-            esac
-    done
+    if [[ $RELEASE = "16.04.3 LTS" ]]; then
+# Architecture
+        echo 'Now select an architecture'
+        select ARC in i386 amd64
+        do
+                case $ARC in
+                i386|amd64)
+                        break
+                        ;;
+                *)
+                        echo "Please select an architecture"
+                        ;;
+                esac
+        done
 # i386
         if [[ $ARC = "i386" ]]; then
 # Message
@@ -425,20 +424,21 @@ echo 'Now select an architecture'
             wget -P ~/ISO http://cdimage.ubuntu.com/lubuntu/releases/16.04.3/release/lubuntu-16.04.3-desktop-amd64.iso
         fi
     fi
-# Stable
-    if [[ $RELEASE = "Stable" ]]; then
-echo 'Now select an architecture'
-    select ARC in i386 amd64
-    do
-            case $ARC in
-            i386|amd64)
-                    break
-                    ;;
-            *)
-                    echo "Please select an architecture"
-                    ;;
-            esac
-    done
+# 17.04
+    if [[ $RELEASE = "17.04" ]]; then
+# Architecture
+        echo 'Now select an architecture'
+        select ARC in i386 amd64
+        do
+                case $ARC in
+                i386|amd64)
+                        break
+                        ;;
+                *)
+                        echo "Please select an architecture"
+                        ;;
+                esac
+        done
 # i386
         if [[ $ARC = "i386" ]]; then
 # Message
@@ -454,20 +454,21 @@ echo 'Now select an architecture'
             wget -P ~/ISO http://cdimage.ubuntu.com/lubuntu/releases/17.04/release/lubuntu-17.04-desktop-amd64.iso
         fi
     fi
-# Daily testing
-    if [[ $RELEASE = "Daily testing" ]]; then
-echo 'Now select an architecture'
-    select ARC in i386 amd64
-    do
-            case $ARC in
-            i386|amd64)
-                    break
-                    ;;
-            *)
-                    echo "Please select an architecture"
-                    ;;
-            esac
-    done
+# 17.10 Daily
+    if [[ $RELEASE = "17.10 Daily" ]]; then
+# Architecture
+        echo 'Now select an architecture'
+        select ARC in i386 amd64
+        do
+                case $ARC in
+                i386|amd64)
+                        break
+                        ;;
+                *)
+                        echo "Please select an architecture"
+                        ;;
+                esac
+        done
 # i386
         if [[ $ARC = "i386" ]]; then
 # Message
@@ -486,11 +487,12 @@ echo 'Now select an architecture'
 fi
 # Ubuntu
 if [[ $DISTRO = "Ubuntu" ]]; then
+# Release
     echo 'Now select a release'
-    select RELEASE in "Long-Term Support" Stable "Daily testing"
+    select RELEASE in "16.04.3 LTS" "17.04" "17.10 Daily"
     do
             case $RELEASE in
-            "Long-Term Support"|Stable|"Daily testing")
+            "16.04.3 LTS"|"17.04"|"17.10 Daily")
                     break
                     ;;
             *)
@@ -499,19 +501,20 @@ if [[ $DISTRO = "Ubuntu" ]]; then
             esac
     done
 # LTS
-    if [[ $RELEASE = "Long-Term Support" ]]; then
-echo 'Now select an architecture'
-    select ARC in i386 amd64
-    do
-            case $ARC in
-            i386|amd64)
-                    break
-                    ;;
-            *)
-                    echo "Please select an architecture"
-                    ;;
-            esac
-    done
+    if [[ $RELEASE = "16.04.3 LTS" ]]; then
+# Architecture
+        echo 'Now select an architecture'
+        select ARC in i386 amd64
+        do
+                case $ARC in
+                i386|amd64)
+                        break
+                        ;;
+                *)
+                        echo "Please select an architecture"
+                        ;;
+                esac
+        done
 # i386
         if [[ $ARC = "i386" ]]; then
 # Message
@@ -527,20 +530,21 @@ echo 'Now select an architecture'
             wget -P ~/ISO http://releases.ubuntu.com/16.04.3/ubuntu-16.04.3-desktop-amd64.iso
         fi
     fi
-# Stable
-    if [[ $RELEASE = "Stable" ]]; then
-echo 'Now select an architecture'
-    select ARC in i386 amd64
-    do
-            case $ARC in
-            i386|amd64)
-                    break
-                    ;;
-            *)
-                    echo "Please select an architecture"
-                    ;;
-            esac
-    done
+# 17.04
+    if [[ $RELEASE = "17.04" ]]; then
+# Architecture
+        echo 'Now select an architecture'
+        select ARC in i386 amd64
+        do
+                case $ARC in
+                i386|amd64)
+                        break
+                        ;;
+                *)
+                        echo "Please select an architecture"
+                        ;;
+                esac
+        done
 # i386
         if [[ $ARC = "i386" ]]; then
 # Message
@@ -556,24 +560,22 @@ echo 'Now select an architecture'
             wget -P ~/ISO http://releases.ubuntu.com/17.04/ubuntu-17.04-desktop-amd64.iso
         fi
     fi
-# Daily testing
-    if [[ $RELEASE = "Daily testing" ]]; then
-# amd64
-#        if [[ $ARC = "amd64" ]]; then
+# 17.10 Daily
+    if [[ $RELEASE = "17.10 Daily" ]]; then
 # Message
             echo "Now downloading $DISTRO $RELEASE ISO..."
 # Download
             wget -O ~/ISO/ubuntu-artful-desktop-$DATE-amd64.iso http://cdimage.ubuntu.com/ubuntu/daily-live/current/artful-desktop-amd64.iso
-#        fi
     fi
 fi
 # Ubuntu Budgie
 if [[ $DISTRO = "Ubuntu Budgie" ]]; then
+# Release
     echo 'Now select a release'
-    select RELEASE in Stable "Daily testing"
+    select RELEASE in "17.04" "17.10 Daily"
     do
             case $RELEASE in
-            Stable|"Daily testing")
+            "17.04"|"17.10 Daily")
                     break
                     ;;
             *)
@@ -582,19 +584,20 @@ if [[ $DISTRO = "Ubuntu Budgie" ]]; then
             esac
     done
 # LTS
-    if [[ $RELEASE = "Long-Term Support" ]]; then
-echo 'Now select an architecture'
-    select ARC in i386 amd64
-    do
-            case $ARC in
-            i386|amd64)
-                    break
-                    ;;
-            *)
-                    echo "Please select an architecture"
-                    ;;
-           esac
-    done
+    if [[ $RELEASE = "18.04 LTS" ]]; then
+# Architecture
+        echo 'Now select an architecture'
+        select ARC in i386 amd64
+        do
+                case $ARC in
+                i386|amd64)
+                        break
+                        ;;
+                *)
+                        echo "Please select an architecture"
+                        ;;
+               esac
+        done
 # i386
         if [[ $ARC = "i386" ]]; then
 # Message
@@ -610,20 +613,21 @@ echo 'Now select an architecture'
             wget -P ~/ISO URL
         fi
     fi
-# Stable
-    if [[ $RELEASE = "Stable" ]]; then
-echo 'Now select an architecture'
-    select ARC in i386 amd64
-    do
-            case $ARC in
-            i386|amd64)
-                    break
-                    ;;
-            *)
-                    echo "Please select an architecture"
-                    ;;
-            esac
-    done
+# 17.04
+    if [[ $RELEASE = "17.04" ]]; then
+# Architecture
+        echo 'Now select an architecture'
+        select ARC in i386 amd64
+        do
+                case $ARC in
+                i386|amd64)
+                        break
+                        ;;
+                *)
+                        echo "Please select an architecture"
+                        ;;
+                esac
+        done
 # i386
         if [[ $ARC = "i386" ]]; then
 # Message
@@ -639,20 +643,21 @@ echo 'Now select an architecture'
             wget -P ~/ISO http://cdimage.ubuntu.com/ubuntu-budgie/releases/17.04/release/ubuntu-budgie-17.04-desktop-amd64.iso
         fi
     fi
-# Daily testing
-    if [[ $RELEASE = "Daily testing" ]]; then
-echo 'Now select an architecture'
-    select ARC in i386 amd64
-    do
-            case $ARC in
-            i386|amd64)
-                    break
-                    ;;
-            *)
-                    echo "Please select an architecture"
-                    ;;
-            esac
-    done
+# 17.10 Daily
+    if [[ $RELEASE = "17.10 Daily" ]]; then
+# Architecture
+        echo 'Now select an architecture'
+        select ARC in i386 amd64
+        do
+                case $ARC in
+                i386|amd64)
+                        break
+                        ;;
+                *)
+                        echo "Please select an architecture"
+                        ;;
+                esac
+        done
 # i386
         if [[ $ARC = "i386" ]]; then
 # Message
@@ -671,11 +676,12 @@ echo 'Now select an architecture'
 fi
 # Ubuntu GNOME
 if [[ $DISTRO = "Ubuntu GNOME" ]]; then
+# Release
     echo 'Now select a release'
-    select RELEASE in "Long-Term Support" Stable
+    select RELEASE in "16.04.3 LTS" "17.04"
     do
             case $RELEASE in
-            "Long-Term Support"|Stable)
+            "16.04.3 LTS"|"17.04")
                     break
                     ;;
             *)
@@ -684,19 +690,20 @@ if [[ $DISTRO = "Ubuntu GNOME" ]]; then
             esac
     done
 # LTS
-    if [[ $RELEASE = "Long-Term Support" ]]; then
-echo 'Now select an architecture'
-    select ARC in i386 amd64
-    do
-            case $ARC in
-            i386|amd64)
-                    break
-                    ;;
-            *)
-                    echo "Please select an architecture"
-                    ;;
-            esac
-    done
+    if [[ $RELEASE = "16.04.3 LTS" ]]; then
+# Architecture
+        echo 'Now select an architecture'
+        select ARC in i386 amd64
+        do
+                case $ARC in
+                i386|amd64)
+                        break
+                        ;;
+                *)
+                        echo "Please select an architecture"
+                        ;;
+                esac
+        done
 # i386
         if [[ $ARC = "i386" ]]; then
 # Message
@@ -712,20 +719,21 @@ echo 'Now select an architecture'
             wget -P ~/ISO http://cdimage.ubuntu.com/ubuntu-gnome/releases/16.04.3/release/ubuntu-gnome-16.04.3-desktop-amd64.iso
         fi
     fi
-# Stable
-    if [[ $RELEASE = "Stable" ]]; then
-echo 'Now select an architecture'
-    select ARC in i386 amd64
-    do
-            case $ARC in
-            i386|amd64)
-                    break
-                    ;;
-            *)
-                    echo "Please select an architecture"
-                    ;;
-            esac
-    done
+# 17.04
+    if [[ $RELEASE = "17.04" ]]; then
+# Architecture
+        echo 'Now select an architecture'
+        select ARC in i386 amd64
+        do
+                case $ARC in
+                i386|amd64)
+                        break
+                        ;;
+                *)
+                        echo "Please select an architecture"
+                        ;;
+                esac
+        done
 # i386
         if [[ $ARC = "i386" ]]; then
 # Message
@@ -744,11 +752,12 @@ echo 'Now select an architecture'
 fi
 # Ubuntu MATE
 if [[ $DISTRO = "Ubuntu MATE" ]]; then
+# Release
     echo 'Now select a release'
-    select RELEASE in "Long-Term Support" Stable "Daily testing"
+    select RELEASE in "16.04.3 LTS" "17.04" "17.10 Daily"
     do
             case $RELEASE in
-            "Long-Term Support"|Stable|"Daily testing")
+            "16.04.3 LTS"|"17.04"|"17.10 Daily")
                     break
                     ;;
             *)
@@ -757,19 +766,20 @@ if [[ $DISTRO = "Ubuntu MATE" ]]; then
             esac
     done
 # LTS
-    if [[ $RELEASE = "Long-Term Support" ]]; then
-echo 'Now select an architecture'
-    select ARC in i386 amd64 PowerPC ARMv7
-    do
-            case $ARC in
-            i386|amd64|PowerPC|ARMv7)
-                    break
-                    ;;
-            *)
-                    echo "Please select an architecture"
-                    ;;
-            esac
-    done
+    if [[ $RELEASE = "16.04.3 LTS" ]]; then
+# Architecture
+        echo 'Now select an architecture'
+        select ARC in i386 amd64 PowerPC ARMv7
+        do
+                case $ARC in
+                i386|amd64|PowerPC|ARMv7)
+                        break
+                        ;;
+                *)
+                        echo "Please select an architecture"
+                        ;;
+                esac
+        done
 # i386
         if [[ $ARC = "i386" ]]; then
 # Message
@@ -799,20 +809,21 @@ echo 'Now select an architecture'
             wget -P ~/ISO https://ubuntu-mate.org/raspberry-pi/ubuntu-mate-16.04.2-desktop-armhf-raspberry-pi.img.xz
         fi
     fi
-# Stable
-    if [[ $RELEASE = "Stable" ]]; then
-echo 'Now select an architecture'
-    select ARC in i386 amd64
-    do
-            case $ARC in
-            i386|amd64)
-                    break
-                    ;;
-            *)
-                    echo "Please select an architecture"
-                    ;;
-            esac
-    done
+# 17.04
+    if [[ $RELEASE = "17.04" ]]; then
+# Architecture
+        echo 'Now select an architecture'
+        select ARC in i386 amd64
+        do
+                case $ARC in
+                i386|amd64)
+                        break
+                        ;;
+                *)
+                        echo "Please select an architecture"
+                        ;;
+                esac
+        done
 # i386
         if [[ $ARC = "i386" ]]; then
 # Message
@@ -828,20 +839,21 @@ echo 'Now select an architecture'
             wget -P ~/ISO http://cdimage.ubuntu.com/ubuntu-mate/releases/17.04/release/ubuntu-mate-17.04-desktop-amd64.iso
         fi
     fi
-# Daily testing
-    if [[ $RELEASE = "Daily testing" ]]; then
-echo 'Now select an architecture'
-    select ARC in i386 amd64
-    do
-            case $ARC in
-            i386|amd64)
-                    break
-                    ;;
-            *)
-                    echo "Please select an architecture"
-                    ;;
-            esac
-    done
+# 17.10 Daily
+    if [[ $RELEASE = "17.10 Daily" ]]; then
+# Architecture
+        echo 'Now select an architecture'
+        select ARC in i386 amd64
+        do
+                case $ARC in
+                i386|amd64)
+                        break
+                        ;;
+                *)
+                        echo "Please select an architecture"
+                        ;;
+                esac
+        done
 # i386
         if [[ $ARC = "i386" ]]; then
 # Message
@@ -860,11 +872,12 @@ echo 'Now select an architecture'
 fi
 # Xubuntu
 if [[ $DISTRO = "Xubuntu" ]]; then
+# Release
     echo 'Now select a release'
-    select RELEASE in "Long-Term Support" Stable "Daily testing"
+    select RELEASE in "16.04.3 LTS" "17.04" "17.10 Daily"
     do
             case $RELEASE in
-            "Long-Term Support"|Stable|"Daily testing")
+            "16.04.3 LTS"|"17.04"|"17.10 Daily")
                     break
                     ;;
             *)
@@ -873,19 +886,20 @@ if [[ $DISTRO = "Xubuntu" ]]; then
             esac
     done
 # LTS
-    if [[ $RELEASE = "Long-Term Support" ]]; then
-echo 'Now select an architecture'
-    select ARC in i386 amd64
-    do
-            case $ARC in
-            i386|amd64)
-                    break
-                    ;;
-            *)
-                    echo "Please select an architecture"
-                    ;;
-            esac
-    done
+    if [[ $RELEASE = "16.04.3 LTS" ]]; then
+# Architecture
+        echo 'Now select an architecture'
+        select ARC in i386 amd64
+        do
+                case $ARC in
+                i386|amd64)
+                        break
+                        ;;
+                *)
+                        echo "Please select an architecture"
+                        ;;
+                esac
+        done
 # i386
         if [[ $ARC = "i386" ]]; then
 # Message
@@ -901,20 +915,21 @@ echo 'Now select an architecture'
             wget -P ~/ISO http://cdimage.ubuntu.com/xubuntu/releases/16.04.3/release/xubuntu-16.04.3-desktop-amd64.iso
         fi
     fi
-# Stable
-    if [[ $RELEASE = "Stable" ]]; then
-echo 'Now select an architecture'
-    select ARC in i386 amd64
-    do
-            case $ARC in
-            i386|amd64)
-                    break
-                    ;;
-            *)
-                    echo "Please select an architecture"
-                    ;;
-            esac
-    done
+# 17.04
+    if [[ $RELEASE = "17.04" ]]; then
+# Architecture
+        echo 'Now select an architecture'
+        select ARC in i386 amd64
+        do
+                case $ARC in
+                i386|amd64)
+                        break
+                        ;;
+                *)
+                        echo "Please select an architecture"
+                        ;;
+                esac
+        done
 # i386
         if [[ $ARC = "i386" ]]; then
 # Message
@@ -930,20 +945,21 @@ echo 'Now select an architecture'
             wget -P ~/ISO http://cdimage.ubuntu.com/xubuntu/releases/17.04/release/xubuntu-17.04-desktop-amd64.iso
         fi
     fi
-# Daily testing
-    if [[ $RELEASE = "Daily testing" ]]; then
-echo 'Now select an architecture'
-    select ARC in i386 amd64
-    do
-            case $ARC in
-            i386|amd64)
-                    break
-                    ;;
-            *)
-                    echo "Please select an architecture"
-                    ;;
-            esac
-    done
+# 17.10 Daily
+    if [[ $RELEASE = "17.10 Daily" ]]; then
+# Architecture
+        echo 'Now select an architecture'
+        select ARC in i386 amd64
+        do
+                case $ARC in
+                i386|amd64)
+                        break
+                        ;;
+                *)
+                        echo "Please select an architecture"
+                        ;;
+                esac
+        done
 # i386
         if [[ $ARC = "i386" ]]; then
 # Message
@@ -961,6 +977,7 @@ echo 'Now select an architecture'
     fi
 fi
 
+# Repeat?
 echo 'Would you like download another ISO?'
 select REPEAT in Yes No
 do
@@ -974,11 +991,13 @@ do
         esac
 done
 
+# Repeat
 if [[ $REPEAT = "Yes" ]]; then
     echo "Here we go again"
     cd $BASEDIR
     bash linux_iso_downloader_*.sh
 fi
+# End
 if [[ $REPEAT = "No" ]]; then
     echo Goodbye
 fi
