@@ -24,7 +24,7 @@ Ubuntu amd64:  17.10 Daily
 ## Importaint information:
 
 
-This srcipt relies on the URL of each file remaining the same/not getting deleted.
+This srcipt relies on the URL of each file remaining the same/intact.
 
 In the event that any of the downloads become broken, I will attempt to fix them as soon as I notice them.
 
