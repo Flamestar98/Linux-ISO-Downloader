@@ -9,9 +9,9 @@ Debian 9 i386/amd64:  Net installer, full installer and live installers
 
 KDE Neon amd64:  User Edition, User LTS Edition and Developer Edition Git-Unstable/Stable
 
-Kubuntu/Lubuntu/Ubuntu/Ubuntu GNOME/Ubuntu MATE/Xubuntu i386/amd64:  16.04.3 LTS
+Kubuntu/Lubuntu/Ubuntu/Ubuntu GNOME/Ubuntu MATE/Xubuntu i386/amd64:  16.04 LTS
 
-Ubuntu MATE PowerPC/ARMv7:  16.04.3 LTS
+Ubuntu MATE PowerPC/ARMv7:  16.04 LTS
 
 Kubuntu/Lubuntu/Ubuntu/Ubuntu Budgie/Ubuntu GNOME/Ubuntu MATE/Xubuntu i386/amd64:  17.04
 
