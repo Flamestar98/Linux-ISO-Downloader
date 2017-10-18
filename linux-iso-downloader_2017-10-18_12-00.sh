@@ -277,10 +277,10 @@ fi
 if [[ $DISTRO = "Kubuntu" ]]; then
 # Release
     echo 'Now select a release'
-    select RELEASE in "16.04.3 LTS" "17.04" "17.10 Daily"
+    select RELEASE in "16.04  LTS" "17.04" "17.10 Daily"
     do
             case $RELEASE in
-            "16.04.3 LTS"|"17.04"|"17.10 Daily")
+            "16.04  LTS"|"17.04"|"17.10 Daily")
                     break
                     ;;
             *)
@@ -289,7 +289,7 @@ if [[ $DISTRO = "Kubuntu" ]]; then
             esac
     done
 # LTS
-    if [[ $RELEASE = "16.04.3 LTS" ]]; then
+    if [[ $RELEASE = "16.04  LTS" ]]; then
 # Architecture
         echo 'Now select an architecture'
         select ARC in i386 amd64
@@ -383,10 +383,10 @@ fi
 if [[ $DISTRO = "Lubuntu" ]]; then
 # Release
     echo 'Now select a release'
-    select RELEASE in "16.04.3 LTS" "17.04" "17.10 Daily"
+    select RELEASE in "16.04  LTS" "17.04" "17.10 Daily"
     do
             case $RELEASE in
-            "16.04.3 LTS"|"17.04"|"17.10 Daily")
+            "16.04  LTS"|"17.04"|"17.10 Daily")
                     break
                     ;;
             *)
@@ -395,7 +395,7 @@ if [[ $DISTRO = "Lubuntu" ]]; then
             esac
     done
 # LTS
-    if [[ $RELEASE = "16.04.3 LTS" ]]; then
+    if [[ $RELEASE = "16.04  LTS" ]]; then
 # Architecture
         echo 'Now select an architecture'
         select ARC in i386 amd64
@@ -489,10 +489,10 @@ fi
 if [[ $DISTRO = "Ubuntu" ]]; then
 # Release
     echo 'Now select a release'
-    select RELEASE in "16.04.3 LTS" "17.04" "17.10 Daily"
+    select RELEASE in "16.04  LTS" "17.04" "17.10 Daily"
     do
             case $RELEASE in
-            "16.04.3 LTS"|"17.04"|"17.10 Daily")
+            "16.04  LTS"|"17.04"|"17.10 Daily")
                     break
                     ;;
             *)
@@ -501,7 +501,7 @@ if [[ $DISTRO = "Ubuntu" ]]; then
             esac
     done
 # LTS
-    if [[ $RELEASE = "16.04.3 LTS" ]]; then
+    if [[ $RELEASE = "16.04  LTS" ]]; then
 # Architecture
         echo 'Now select an architecture'
         select ARC in i386 amd64
@@ -678,10 +678,10 @@ fi
 if [[ $DISTRO = "Ubuntu GNOME" ]]; then
 # Release
     echo 'Now select a release'
-    select RELEASE in "16.04.3 LTS" "17.04"
+    select RELEASE in "16.04  LTS" "17.04"
     do
             case $RELEASE in
-            "16.04.3 LTS"|"17.04")
+            "16.04  LTS"|"17.04")
                     break
                     ;;
             *)
@@ -690,7 +690,7 @@ if [[ $DISTRO = "Ubuntu GNOME" ]]; then
             esac
     done
 # LTS
-    if [[ $RELEASE = "16.04.3 LTS" ]]; then
+    if [[ $RELEASE = "16.04  LTS" ]]; then
 # Architecture
         echo 'Now select an architecture'
         select ARC in i386 amd64
@@ -754,10 +754,10 @@ fi
 if [[ $DISTRO = "Ubuntu MATE" ]]; then
 # Release
     echo 'Now select a release'
-    select RELEASE in "16.04.3 LTS" "17.04" "17.10 Daily"
+    select RELEASE in "16.04  LTS" "17.04" "17.10 Daily"
     do
             case $RELEASE in
-            "16.04.3 LTS"|"17.04"|"17.10 Daily")
+            "16.04  LTS"|"17.04"|"17.10 Daily")
                     break
                     ;;
             *)
@@ -766,7 +766,7 @@ if [[ $DISTRO = "Ubuntu MATE" ]]; then
             esac
     done
 # LTS
-    if [[ $RELEASE = "16.04.3 LTS" ]]; then
+    if [[ $RELEASE = "16.04  LTS" ]]; then
 # Architecture
         echo 'Now select an architecture'
         select ARC in i386 amd64 PowerPC ARMv7
@@ -874,10 +874,10 @@ fi
 if [[ $DISTRO = "Xubuntu" ]]; then
 # Release
     echo 'Now select a release'
-    select RELEASE in "16.04.3 LTS" "17.04" "17.10 Daily"
+    select RELEASE in "16.04  LTS" "17.04" "17.10 Daily"
     do
             case $RELEASE in
-            "16.04.3 LTS"|"17.04"|"17.10 Daily")
+            "16.04  LTS"|"17.04"|"17.10 Daily")
                     break
                     ;;
             *)
@@ -886,7 +886,7 @@ if [[ $DISTRO = "Xubuntu" ]]; then
             esac
     done
 # LTS
-    if [[ $RELEASE = "16.04.3 LTS" ]]; then
+    if [[ $RELEASE = "16.04  LTS" ]]; then
 # Architecture
         echo 'Now select an architecture'
         select ARC in i386 amd64
