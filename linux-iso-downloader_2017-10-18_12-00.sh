@@ -1,9 +1,12 @@
 #!/bin/bash
 
+# Establishes base directory of script
 BASEDIR=$(dirname $0)
 
+# Prints todays date (YYYYmmdd) when called by $DATE
 DATE=$(date '+%Y%m%d')
 
+# Linux distrobution
 echo 'Please select from the following'
 select DISTRO in "Debian 9" "KDE Neon" Kubuntu Lubuntu Ubuntu "Ubuntu Budgie" "Ubuntu GNOME" "Ubuntu MATE" Xubuntu
 do
@@ -277,10 +280,10 @@ fi
 if [[ $DISTRO = "Kubuntu" ]]; then
 # Release
     echo 'Now select a release'
-    select RELEASE in "16.04  LTS" "17.04" "17.10 Daily"
+    select RELEASE in "16.04 LTS" "17.04" "17.10 Daily"
     do
             case $RELEASE in
-            "16.04  LTS"|"17.04"|"17.10 Daily")
+            "16.04 LTS"|"17.04"|"17.10 Daily")
                     break
                     ;;
             *)
@@ -289,7 +292,7 @@ if [[ $DISTRO = "Kubuntu" ]]; then
             esac
     done
 # LTS
-    if [[ $RELEASE = "16.04  LTS" ]]; then
+    if [[ $RELEASE = "16.04 LTS" ]]; then
 # Architecture
         echo 'Now select an architecture'
         select ARC in i386 amd64
@@ -383,10 +386,10 @@ fi
 if [[ $DISTRO = "Lubuntu" ]]; then
 # Release
     echo 'Now select a release'
-    select RELEASE in "16.04  LTS" "17.04" "17.10 Daily"
+    select RELEASE in "16.04 LTS" "17.04" "17.10 Daily"
     do
             case $RELEASE in
-            "16.04  LTS"|"17.04"|"17.10 Daily")
+            "16.04 LTS"|"17.04"|"17.10 Daily")
                     break
                     ;;
             *)
@@ -395,7 +398,7 @@ if [[ $DISTRO = "Lubuntu" ]]; then
             esac
     done
 # LTS
-    if [[ $RELEASE = "16.04  LTS" ]]; then
+    if [[ $RELEASE = "16.04 LTS" ]]; then
 # Architecture
         echo 'Now select an architecture'
         select ARC in i386 amd64
@@ -489,10 +492,10 @@ fi
 if [[ $DISTRO = "Ubuntu" ]]; then
 # Release
     echo 'Now select a release'
-    select RELEASE in "16.04  LTS" "17.04" "17.10 Daily"
+    select RELEASE in "16.04 LTS" "17.04" "17.10 Daily"
     do
             case $RELEASE in
-            "16.04  LTS"|"17.04"|"17.10 Daily")
+            "16.04 LTS"|"17.04"|"17.10 Daily")
                     break
                     ;;
             *)
@@ -501,7 +504,7 @@ if [[ $DISTRO = "Ubuntu" ]]; then
             esac
     done
 # LTS
-    if [[ $RELEASE = "16.04  LTS" ]]; then
+    if [[ $RELEASE = "16.04 LTS" ]]; then
 # Architecture
         echo 'Now select an architecture'
         select ARC in i386 amd64
@@ -678,10 +681,10 @@ fi
 if [[ $DISTRO = "Ubuntu GNOME" ]]; then
 # Release
     echo 'Now select a release'
-    select RELEASE in "16.04  LTS" "17.04"
+    select RELEASE in "16.04 LTS" "17.04"
     do
             case $RELEASE in
-            "16.04  LTS"|"17.04")
+            "16.04 LTS"|"17.04")
                     break
                     ;;
             *)
@@ -690,7 +693,7 @@ if [[ $DISTRO = "Ubuntu GNOME" ]]; then
             esac
     done
 # LTS
-    if [[ $RELEASE = "16.04  LTS" ]]; then
+    if [[ $RELEASE = "16.04 LTS" ]]; then
 # Architecture
         echo 'Now select an architecture'
         select ARC in i386 amd64
@@ -754,10 +757,10 @@ fi
 if [[ $DISTRO = "Ubuntu MATE" ]]; then
 # Release
     echo 'Now select a release'
-    select RELEASE in "16.04  LTS" "17.04" "17.10 Daily"
+    select RELEASE in "16.04 LTS" "17.04" "17.10 Daily"
     do
             case $RELEASE in
-            "16.04  LTS"|"17.04"|"17.10 Daily")
+            "16.04 LTS"|"17.04"|"17.10 Daily")
                     break
                     ;;
             *)
@@ -766,7 +769,7 @@ if [[ $DISTRO = "Ubuntu MATE" ]]; then
             esac
     done
 # LTS
-    if [[ $RELEASE = "16.04  LTS" ]]; then
+    if [[ $RELEASE = "16.04 LTS" ]]; then
 # Architecture
         echo 'Now select an architecture'
         select ARC in i386 amd64 PowerPC ARMv7
@@ -874,10 +877,10 @@ fi
 if [[ $DISTRO = "Xubuntu" ]]; then
 # Release
     echo 'Now select a release'
-    select RELEASE in "16.04  LTS" "17.04" "17.10 Daily"
+    select RELEASE in "16.04 LTS" "17.04" "17.10 Daily"
     do
             case $RELEASE in
-            "16.04  LTS"|"17.04"|"17.10 Daily")
+            "16.04 LTS"|"17.04"|"17.10 Daily")
                     break
                     ;;
             *)
@@ -886,7 +889,7 @@ if [[ $DISTRO = "Xubuntu" ]]; then
             esac
     done
 # LTS
-    if [[ $RELEASE = "16.04  LTS" ]]; then
+    if [[ $RELEASE = "16.04 LTS" ]]; then
 # Architecture
         echo 'Now select an architecture'
         select ARC in i386 amd64
