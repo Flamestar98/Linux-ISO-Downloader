@@ -21,7 +21,18 @@ Ubuntu amd64:  Daily Testing
 
 
 
-### Short Disclaimer:
+## Importaint information:
+
+
+This srcipt relies on the URL of each file remaining the same/not getting deleted.
+
+In the event that any of the downloads become broken, I will attempt to fix them as soon as I notice them.
+
+Otherwise, feel free to file an issue stating which download(s) are broken, and i will attempt to fix them as soon as possible.
+
+
+
+#### Short Disclaimer:
 
 
 I am in no way associated with any of the projects that this script downloads ISO images of
