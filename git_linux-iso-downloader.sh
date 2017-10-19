@@ -45,7 +45,7 @@ else
 fi
 
 # Replace?
-ehco ""
+echo ""
 echo 'Would you like to replace your current version of Linux ISO Downloader with the most recent version on Github?'
 echo ""
 select REPLACE in Yes No
