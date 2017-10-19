@@ -981,7 +981,7 @@ if [[ $DISTRO = "Xubuntu" ]]; then
 fi
 
 # Message
-echo 'Would you like download another ISO?'
+echo 'Would you like to download another ISO?'
 # Repeat?
 select REPEAT in Yes No
 do
