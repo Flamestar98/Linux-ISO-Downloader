@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # Message
 echo "Checking for Git install..."
 # Check for Git
@@ -54,7 +52,8 @@ done
 if [[ $REPLACE = "Yes" ]]; then
 # Message
     echo "Deleting your current version of Linux ISO Downloader and downloading most recent version from Github..."
-# Remove current LID and clone Git
+# Remove current L-I-D and clone Git
+    cd ~
     sudo rm -r Linux-ISO-Downloader && git clone https://github.com/Flamestar98/Linux-ISO-Downloader.git
 fi
 # End
