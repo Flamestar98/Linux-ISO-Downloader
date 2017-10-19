@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Message
 echo "Checking for Git install..."
 # Check for Git
