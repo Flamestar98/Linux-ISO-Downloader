@@ -998,7 +998,7 @@ done
 if [[ $REPEAT = "Yes" ]]; then
     echo "Here we go again"
     cd $BASEDIR
-    bash linux_iso_downloader_*.sh
+    bash linux-iso-downloader_*.sh
 fi
 # End
 if [[ $REPEAT = "No" ]]; then
