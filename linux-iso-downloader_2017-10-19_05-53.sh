@@ -980,8 +980,9 @@ if [[ $DISTRO = "Xubuntu" ]]; then
     fi
 fi
 
-# Repeat?
+# Message
 echo 'Would you like download another ISO?'
+# Repeat?
 select REPEAT in Yes No
 do
         case $REPEAT in 
@@ -996,11 +997,15 @@ done
 
 # Repeat
 if [[ $REPEAT = "Yes" ]]; then
+# Message
     echo "Here we go again"
+# Change directory
     cd $BASEDIR
+# Relaunch script
     bash linux-iso-downloader_2017-10-19_05-53.sh
 fi
 # End
 if [[ $REPEAT = "No" ]]; then
-    echo Goodbye
+# Message
+    echo "Goodbye"
 fi
