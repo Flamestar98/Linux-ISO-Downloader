@@ -273,17 +273,17 @@ if [[ $DISTRO = "KDE Neon" ]]; then
 # Message
             echo "Now Downloading current $DISTRO $RELEASE ISO..."
 # Download
-            wget -O ~/ISO/neon-devedition-gitstable-current-amd64.iso-amd64.iso https://files.kde.org/neon/images/neon-devedition-gitstable/current/neon-devedition-gitstable-current.iso
+            wget -O ~/ISO/neon-devedition-gitstable-current-amd64.iso https://files.kde.org/neon/images/neon-devedition-gitstable/current/neon-devedition-gitstable-current.iso
     fi
 fi
 # Kubuntu
 if [[ $DISTRO = "Kubuntu" ]]; then
 # Release
     echo 'Now select a release'
-    select RELEASE in "16.04 LTS" "17.04" "17.10 Daily"
+    select RELEASE in "16.04 LTS" "17.04" "17.10"
     do
             case $RELEASE in
-            "16.04 LTS"|"17.04"|"17.10 Daily")
+            "16.04 LTS"|"17.04"|"17.10")
                     break
                     ;;
             *)
@@ -351,8 +351,8 @@ if [[ $DISTRO = "Kubuntu" ]]; then
             wget -P ~/ISO http://cdimage.ubuntu.com/kubuntu/releases/17.04/release/kubuntu-17.04-desktop-amd64.iso
         fi
     fi
-# 17.10 Daily
-    if [[ $RELEASE = "17.10 Daily" ]]; then
+# 17.10
+    if [[ $RELEASE = "17.10" ]]; then
 # Architecture
         echo 'Now select an architecture'
         select ARC in i386 amd64
@@ -371,14 +371,14 @@ if [[ $DISTRO = "Kubuntu" ]]; then
 # Message
             echo "Now downloading $DISTRO $RELEASE $ARC ISO..."
 # Download
-            wget -O ~/ISO/kubuntu-artful-desktop-$DATE-i386.iso http://cdimage.ubuntu.com/kubuntu/daily-live/current/artful-desktop-i386.iso
+            wget -P ~/ISO http://cdimage.ubuntu.com/kubuntu/releases/17.10/release/kubuntu-17.10-desktop-i386.iso
         fi
 # amd64
         if [[ $ARC = "amd64" ]]; then
 # Message
             echo "Now downloading $DISTRO $RELEASE $ARC ISO..."
 # Download
-            wget -O ~/ISO/kubuntu-artful-desktop-$DATE-amd64.iso http://cdimage.ubuntu.com/kubuntu/daily-live/current/artful-desktop-amd64.iso
+            wget -P ~/ISO http://cdimage.ubuntu.com/kubuntu/releases/17.10/release/kubuntu-17.10-desktop-amd64.iso
         fi
     fi
 fi
@@ -386,10 +386,10 @@ fi
 if [[ $DISTRO = "Lubuntu" ]]; then
 # Release
     echo 'Now select a release'
-    select RELEASE in "16.04 LTS" "17.04" "17.10 Daily"
+    select RELEASE in "16.04 LTS" "17.04" "17.10"
     do
             case $RELEASE in
-            "16.04 LTS"|"17.04"|"17.10 Daily")
+            "16.04 LTS"|"17.04"|"17.10")
                     break
                     ;;
             *)
@@ -457,8 +457,8 @@ if [[ $DISTRO = "Lubuntu" ]]; then
             wget -P ~/ISO http://cdimage.ubuntu.com/lubuntu/releases/17.04/release/lubuntu-17.04-desktop-amd64.iso
         fi
     fi
-# 17.10 Daily
-    if [[ $RELEASE = "17.10 Daily" ]]; then
+# 17.10
+    if [[ $RELEASE = "17.10" ]]; then
 # Architecture
         echo 'Now select an architecture'
         select ARC in i386 amd64
@@ -477,14 +477,14 @@ if [[ $DISTRO = "Lubuntu" ]]; then
 # Message
             echo "Now downloading $DISTRO $RELEASE $ARC ISO..."
 # Download
-            wget -O ~/ISO/lubuntu-artful-desktop-$DATE-i386.iso http://cdimage.ubuntu.com/lubuntu/daily-live/current/artful-desktop-i386.iso
+            wget -P ~/ISO http://cdimage.ubuntu.com/lubuntu/releases/17.10/release/lubuntu-17.10-desktop-i386.iso
         fi
 # amd64
         if [[ $ARC = "amd64" ]]; then
 # Message
             echo "Now downloading $DISTRO $RELEASE $ARC ISO..."
 # Download
-            wget -O ~/ISO/lubuntu-artful-desktop-$DATE-amd64.iso http://cdimage.ubuntu.com/lubuntu/daily-live/current/artful-desktop-amd64.iso
+            wget -P ~/ISO http://cdimage.ubuntu.com/lubuntu/releases/17.10/release/lubuntu-17.10-desktop-amd64.iso
         fi
     fi
 fi
@@ -492,10 +492,10 @@ fi
 if [[ $DISTRO = "Ubuntu" ]]; then
 # Release
     echo 'Now select a release'
-    select RELEASE in "16.04 LTS" "17.04" "17.10 Daily"
+    select RELEASE in "16.04 LTS" "17.04" "17.10"
     do
             case $RELEASE in
-            "16.04 LTS"|"17.04"|"17.10 Daily")
+            "16.04 LTS"|"17.04"|"17.10")
                     break
                     ;;
             *)
@@ -563,22 +563,22 @@ if [[ $DISTRO = "Ubuntu" ]]; then
             wget -P ~/ISO http://releases.ubuntu.com/17.04/ubuntu-17.04-desktop-amd64.iso
         fi
     fi
-# 17.10 Daily
-    if [[ $RELEASE = "17.10 Daily" ]]; then
+# 17.10
+    if [[ $RELEASE = "17.10" ]]; then
 # Message
             echo "Now downloading $DISTRO $RELEASE ISO..."
 # Download
-            wget -O ~/ISO/ubuntu-artful-desktop-$DATE-amd64.iso http://cdimage.ubuntu.com/ubuntu/daily-live/current/artful-desktop-amd64.iso
+            wget -P ~/ISO http://releases.ubuntu.com/17.10/ubuntu-17.10-desktop-amd64.iso
     fi
 fi
 # Ubuntu Budgie
 if [[ $DISTRO = "Ubuntu Budgie" ]]; then
 # Release
     echo 'Now select a release'
-    select RELEASE in "17.04" "17.10 Daily"
+    select RELEASE in "17.04" "17.10"
     do
             case $RELEASE in
-            "17.04"|"17.10 Daily")
+            "17.04"|"17.10")
                     break
                     ;;
             *)
@@ -646,8 +646,8 @@ if [[ $DISTRO = "Ubuntu Budgie" ]]; then
             wget -P ~/ISO http://cdimage.ubuntu.com/ubuntu-budgie/releases/17.04/release/ubuntu-budgie-17.04-desktop-amd64.iso
         fi
     fi
-# 17.10 Daily
-    if [[ $RELEASE = "17.10 Daily" ]]; then
+# 17.10
+    if [[ $RELEASE = "17.10" ]]; then
 # Architecture
         echo 'Now select an architecture'
         select ARC in i386 amd64
@@ -666,14 +666,14 @@ if [[ $DISTRO = "Ubuntu Budgie" ]]; then
 # Message
             echo "Now downloading $DISTRO $RELEASE $ARC ISO..."
 # Download
-            wget -O ~/ISO/ubuntu-budgie-artful-desktop-$DATE-i386.iso http://cdimage.ubuntu.com/ubuntu-budgie/daily-live/current/artful-desktop-i386.iso
+            wget -P ~/ISO http://cdimage.ubuntu.com/ubuntu-budgie/releases/17.10/release/ubuntu-budgie-17.10-desktop-i386.iso
         fi
 # amd64
         if [[ $ARC = "amd64" ]]; then
 # Message
             echo "Now downloading $DISTRO $RELEASE $ARC ISO..."
 # Download
-            wget -O ~/ISO/ubuntu-budgie-artful-desktop-$DATE-amd64.iso http://cdimage.ubuntu.com/ubuntu-budgie/daily-live/current/artful-desktop-amd64.iso
+            wget -P ~/ISO http://cdimage.ubuntu.com/ubuntu-budgie/releases/17.10/release/ubuntu-budgie-17.10-desktop-amd64.iso
         fi
     fi
 fi
@@ -757,10 +757,10 @@ fi
 if [[ $DISTRO = "Ubuntu MATE" ]]; then
 # Release
     echo 'Now select a release'
-    select RELEASE in "16.04 LTS" "17.04" "17.10 Daily"
+    select RELEASE in "16.04 LTS" "17.04" "17.10"
     do
             case $RELEASE in
-            "16.04 LTS"|"17.04"|"17.10 Daily")
+            "16.04 LTS"|"17.04"|"17.10")
                     break
                     ;;
             *)
@@ -842,8 +842,8 @@ if [[ $DISTRO = "Ubuntu MATE" ]]; then
             wget -P ~/ISO http://cdimage.ubuntu.com/ubuntu-mate/releases/17.04/release/ubuntu-mate-17.04-desktop-amd64.iso
         fi
     fi
-# 17.10 Daily
-    if [[ $RELEASE = "17.10 Daily" ]]; then
+# 17.10
+    if [[ $RELEASE = "17.10" ]]; then
 # Architecture
         echo 'Now select an architecture'
         select ARC in i386 amd64
@@ -862,14 +862,14 @@ if [[ $DISTRO = "Ubuntu MATE" ]]; then
 # Message
             echo "Now downloading $DISTRO $RELEASE $ARC ISO..."
 # Download
-            wget -O ~/ISO/ubuntu-mate-artful-desktop-$DATE-i386.iso http://cdimage.ubuntu.com/ubuntu-mate/daily-live/current/artful-desktop-i386.iso
+            wget -P ~/ISO http://cdimage.ubuntu.com/ubuntu-mate/releases/17.10/release/ubuntu-mate-17.10-desktop-i386.iso
         fi
 # amd64
         if [[ $ARC = "amd64" ]]; then
 # Message
             echo "Now downloading $DISTRO $RELEASE $ARC ISO..."
 # Download
-            wget -O ~/ISO/ubuntu-mate-artful-desktop-$DATE-amd64.iso http://cdimage.ubuntu.com/ubuntu-mate/daily-live/current/artful-desktop-amd64.iso
+            wget -P ~/ISO http://cdimage.ubuntu.com/ubuntu-mate/releases/17.10/release/ubuntu-mate-17.10-desktop-amd64.iso
         fi
     fi
 fi
@@ -877,10 +877,10 @@ fi
 if [[ $DISTRO = "Xubuntu" ]]; then
 # Release
     echo 'Now select a release'
-    select RELEASE in "16.04 LTS" "17.04" "17.10 Daily"
+    select RELEASE in "16.04 LTS" "17.04" "17.10"
     do
             case $RELEASE in
-            "16.04 LTS"|"17.04"|"17.10 Daily")
+            "16.04 LTS"|"17.04"|"17.10")
                     break
                     ;;
             *)
@@ -948,8 +948,8 @@ if [[ $DISTRO = "Xubuntu" ]]; then
             wget -P ~/ISO http://cdimage.ubuntu.com/xubuntu/releases/17.04/release/xubuntu-17.04-desktop-amd64.iso
         fi
     fi
-# 17.10 Daily
-    if [[ $RELEASE = "17.10 Daily" ]]; then
+# 17.10
+    if [[ $RELEASE = "17.10" ]]; then
 # Architecture
         echo 'Now select an architecture'
         select ARC in i386 amd64
@@ -968,14 +968,14 @@ if [[ $DISTRO = "Xubuntu" ]]; then
 # Message
             echo "Now downloading $DISTRO $RELEASE $ARC ISO..."
 # Download
-            wget -O ~/ISO/xubuntu-artful-desktop-$DATE-i386.iso http://cdimage.ubuntu.com/xubuntu/daily-live/current/artful-desktop-i386.iso
+            wget -P ~/ISO http://cdimage.ubuntu.com/xubuntu/releases/17.10/release/xubuntu-17.10-desktop-i386.iso
         fi
 # amd64
         if [[ $ARC = "amd64" ]]; then
 # Message
             echo "Now downloading $DISTRO $RELEASE $ARC ISO..."
 # Download
-            wget -O ~/ISO/xubuntu-artful-desktop-$DATE-amd64.iso http://cdimage.ubuntu.com/xubuntu/daily-live/current/artful-desktop-amd64.iso
+            wget -P ~/ISO http://cdimage.ubuntu.com/xubuntu/releases/17.10/release/xubuntu-17.10-desktop-amd64.iso
         fi
     fi
 fi
@@ -998,7 +998,7 @@ done
 if [[ $REPEAT = "Yes" ]]; then
     echo "Here we go again"
     cd $BASEDIR
-    bash linux-iso-downloader_*.sh
+    bash linux-iso-downloader_2017-10-19_05-53.sh
 fi
 # End
 if [[ $REPEAT = "No" ]]; then
