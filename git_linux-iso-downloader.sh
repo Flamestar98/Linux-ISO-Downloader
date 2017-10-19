@@ -69,6 +69,7 @@ if [[ $REPLACE = "Yes" ]]; then
 # Remove current L-I-D and clone Git
     cd ~
     sudo rm -r Linux-ISO-Downloader && git clone https://github.com/Flamestar98/Linux-ISO-Downloader.git
+    echo ""
 fi
 # End
 if [[ $REPLACE = "No" ]]; then
