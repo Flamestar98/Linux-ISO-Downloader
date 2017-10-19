@@ -22,7 +22,6 @@ else
             *)
                     echo ""
                     echo "Please select yes or no" 
-                    echo ""
                     ;;
             esac
     done
@@ -57,7 +56,6 @@ do
         *)
                 echo ""
                 echo "Please select yes or no"
-                echo ""
                 ;;
         esac
 done
