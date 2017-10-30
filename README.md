@@ -46,7 +46,7 @@ Currently includes
 * 17.04 (i386/amd64)
 
 #### Ubuntu MATE
-* 16.04 LTS (i386/amd64/PowerPC/ARMv7)
+* 16.04 LTS (i386/amd64/powerpc/armhf)
 * 17.04 (i386/amd64)
 * 17.10 (i386/amd64)
 
