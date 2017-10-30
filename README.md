@@ -7,7 +7,10 @@ Downloads Linux ISO of choice based on user input.
 
 [Changelog][1]
 
+[License][2]
+
 [1]: CHANGELOG.md
+[2]: LICENSE
 
 Currently includes
 ------------------
@@ -79,7 +82,7 @@ Operation
 ---------
 
 To use this script,
-* Download the source tarball (coming soon) or use Git to clone the repository (currently recommended)
+* Download the source tarball or use Git to clone the repository
 
 #### GUI
 * Right click "linux-iso-downloader_YYYYmmdd_HH-MM.sh"
