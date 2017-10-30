@@ -15,6 +15,7 @@ REVISION=$"v1.3"
 # Establishes size in KB
 SIZEKB=$"469.5"
 
+# Check if root
 if [ $USER = "root" ]; then
 
 # Build files
