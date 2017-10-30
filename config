@@ -103,7 +103,7 @@ fi" > ./create-command.sh
     echo "#!/bin/bash
 
 chown -R root:root ./linux-iso-downloader_$SCRIPTVER-$REVISION/ && dpkg-deb --build ./linux-iso-downloader_$SCRIPTVER-$REVISION
-rm -r linux-iso-downloader_$SCRIPTVER-$REVISION
+rm -r ./linux-iso-downloader_$SCRIPTVER-$REVISION
 
 if [ -e ./linux-iso-downloader_$SCRIPTVER-$REVISION.deb ]; then
     echo 'Binary file built'
@@ -158,7 +158,7 @@ cp -r ./linux-iso-downloader_$SCRIPTVER-$REVISION/usr/lib/linux-iso-downloader /
 cp ./linux-iso-downloader_$SCRIPTVER-$REVISION/usr/lib/linux-iso-downloader/linux-iso-downloader_$SCRIPTVER-$REVISION.desktop /home/*/.local/share/applications/ && update-desktop-database /home/*/.local/share/applications/
 
 # Remove source folder
-rm -r linux-iso-downloader_$SCRIPTVER-$REVISION" > ./copy-source.sh
+rm -r ./linux-iso-downloader_$SCRIPTVER-$REVISION" > ./copy-source.sh
 
 # Remove source files
     echo "#!/bin/bash
