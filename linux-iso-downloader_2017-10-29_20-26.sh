@@ -775,7 +775,7 @@ if [[ $DISTRO = "Ubuntu MATE" ]]; then
         select ARC in i386 amd64 PowerPC ARMv7
         do
                 case $ARC in
-                i386|amd64|PowerPC|ARMv7)
+                i386|amd64|powerpc|armhf)
                         break
                         ;;
                 *)
@@ -798,14 +798,14 @@ if [[ $DISTRO = "Ubuntu MATE" ]]; then
             wget -P ~/ISO http://cdimage.ubuntu.com/ubuntu-mate/releases/16.04.3/release/ubuntu-mate-16.04.3-desktop-amd64.iso
         fi
 # PowerPC
-        if [[ $ARC = "PowerPC" ]]; then
+        if [[ $ARC = "powerpc" ]]; then
 # Message
             echo "Now downloading $DISTRO $RELEASE $ARC ISO..."
 # Download
             wget -P ~/ISO http://cdimage.ubuntu.com/ubuntu-mate/releases/16.04.2/release/ubuntu-mate-16.04.1-desktop-powerpc.iso
         fi
 # ARMv7
-        if [[ $ARC = "ARMv7" ]]; then
+        if [[ $ARC = "armhf" ]]; then
 # Message
             echo "Now downloading $DISTRO $RELEASE $ARC img.xz..."
 # Download
