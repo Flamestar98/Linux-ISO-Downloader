@@ -82,7 +82,9 @@ Operation
 ---------
 
 To use this script,
-* Download the source tarball or use Git to clone the repository
+* Download the [source tarball][3] or use Git to clone the repository
+
+[3]: https://github.com/Flamestar98/Linux-ISO-Downloader/releases
 
 #### GUI
 * Right click "linux-iso-downloader_YYYYmmdd_HH-MM.sh"
