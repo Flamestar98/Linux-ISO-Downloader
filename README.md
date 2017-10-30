@@ -68,3 +68,11 @@ I am in no way associated with any of the projects that this script downloads IS
 Full credit to all of the developers that make these awesome OSes.
 
 Without them, this script wouldn't be here.
+
+Operation
+---------
+
+To use this script,
+* Download the source tarball (coming soon) or use Git to clone the repository (currently recommended)
+* GUI:  Right click "linux-iso-downloader_YYYYmmdd_HH-MM.sh", select "Properties", select "Permissions", check the "Allow executing file as program" box, then double click on the file and select "Run In Terminal"
+* CLI:  type "bash full-path-to-file" (i.e. "bash /home/user/Linux-ISO-Downloader/linux-iso-downloader_2017-10-29_20-26.sh" or "bash ~/Linux-ISO-Downloader/linux-iso-downloader_2017-10-29_20-26.sh")
