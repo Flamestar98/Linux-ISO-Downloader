@@ -4,6 +4,7 @@ Linux ISO Downloader
 Downloads Linux ISO of choice based on user input.
 
 #### All i386/amd64 Ubuntu LTS releases are currently at 16.04.3
+#### All Debian 9 releases are currently at 9.2.1
 
 [Changelog][1]
 
