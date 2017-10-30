@@ -54,6 +54,13 @@ Developer Edition Git-Stable (amd64)
 
 17.10 (i386/amd64)
 
+#### Ubuntu Studio
+16.04 LTS (i386/amd64)
+
+17.04 (i386/amd64)
+
+17.10 (i386/amd64)
+
 #### Xubuntu
 16.04 LTS (i386/amd64)
 
