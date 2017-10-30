@@ -117,3 +117,13 @@ To use this script,
 or
 * cd into the directory of the script
 * ./linux-iso-downloader_YYYY-mm-dd_HH-MM.sh
+
+Compile from source
+-------------------
+To compile from source,
+* Download the source tarball or clone the Git repo
+* Run "config"
+* Run "make" to compile the binary or "make-install" to compile and install the source
+
+To remove the source,
+* Run "remove-source" to uninstall the compiled source
