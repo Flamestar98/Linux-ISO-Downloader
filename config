@@ -174,5 +174,6 @@ rm /home/*/.local/share/applications/linux-iso-downloader_$SCRIPTVER-$REVISION.d
 
 # If not run as root
 else
+# Message
     echo "Please run this build script as root"
 fi
