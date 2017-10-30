@@ -8,10 +8,10 @@ DATE=$(date '+%Y%m%d')
 
 # Linux distrobution
 echo 'Please select from the following'
-select DISTRO in "Debian 9" "KDE Neon" Kubuntu Lubuntu Ubuntu "Ubuntu Budgie" "Ubuntu GNOME" "Ubuntu MATE" Xubuntu
+select DISTRO in "Debian 9" "KDE Neon" Kubuntu Lubuntu Ubuntu "Ubuntu Budgie" "Ubuntu GNOME" "Ubuntu MATE" "Ubuntu Studio" Xubuntu
 do
         case $DISTRO in 
-        "Debian 9"|"KDE Neon"|Kubuntu|Lubuntu|Ubuntu|"Ubuntu Budgie"|"Ubuntu GNOME"|"Ubuntu MATE"|Xubuntu)   
+        "Debian 9"|"KDE Neon"|Kubuntu|Lubuntu|Ubuntu|"Ubuntu Budgie"|"Ubuntu GNOME"|"Ubuntu MATE"|"Ubuntu Studio"|Xubuntu)   
                 break
                 ;;
         *)
@@ -873,6 +873,112 @@ if [[ $DISTRO = "Ubuntu MATE" ]]; then
         fi
     fi
 fi
+# Ubuntu Studio
+if [[ $DISTRO = "Ubuntu Studio" ]]; then
+# Release
+    echo 'Now select a release'
+    select RELEASE in "16.04 LTS" "17.04" "17.10"
+    do
+            case $RELEASE in
+            "16.04 LTS"|"17.04"|"17.10")
+                    break
+                    ;;
+            *)
+                    echo "Please select a release"
+                    ;;
+            esac
+    done
+# LTS
+    if [[ $RELEASE = "16.04 LTS" ]]; then
+# Architecture
+        echo 'Now select an architecture'
+        select ARC in i386 amd64
+        do
+                case $ARC in
+                i386|amd64)
+                        break
+                        ;;
+                *)
+                        echo "Please select an architecture"
+                        ;;
+                esac
+        done
+# i386
+        if [[ $ARC = "i386" ]]; then
+# Message
+            echo "Now downloading $DISTRO $RELEASE $ARC ISO..."
+# Download
+            wget -P ~/ISO http://cdimage.ubuntu.com/ubuntustudio/releases/16.04.3/release/ubuntustudio-16.04.3-dvd-i386.iso
+        fi
+# amd64
+        if [[ $ARC = "amd64" ]]; then
+# Message
+            echo "Now downloading $DISTRO $RELEASE $ARC ISO..."
+# Download
+            wget -P ~/ISO http://cdimage.ubuntu.com/ubuntustudio/releases/16.04.3/release/ubuntustudio-16.04.3-dvd-amd64.iso
+        fi
+    fi
+# 17.04
+    if [[ $RELEASE = "17.04" ]]; then
+# Architecture
+        echo 'Now select an architecture'
+        select ARC in i386 amd64
+        do
+                case $ARC in
+                i386|amd64)
+                        break
+                        ;;
+                *)
+                        echo "Please select an architecture"
+                        ;;
+                esac
+        done
+# i386
+        if [[ $ARC = "i386" ]]; then
+# Message
+            echo "Now downloading $DISTRO $RELEASE $ARC ISO..."
+# Download
+            wget -P ~/ISO http://cdimage.ubuntu.com/ubuntustudio/releases/17.04/release/ubuntustudio-17.04-dvd-i386.iso
+        fi
+# amd64
+        if [[ $ARC = "amd64" ]]; then
+# Message
+            echo "Now downloading $DISTRO $RELEASE $ARC ISO..."
+# Download
+            wget -P ~/ISO http://cdimage.ubuntu.com/ubuntustudio/releases/17.04/release/ubuntustudio-17.04-dvd-amd64.iso
+        fi
+    fi
+# 17.10
+    if [[ $RELEASE = "17.10" ]]; then
+# Architecture
+        echo 'Now select an architecture'
+        select ARC in i386 amd64
+        do
+                case $ARC in
+                i386|amd64)
+                        break
+                        ;;
+                *)
+                        echo "Please select an architecture"
+                        ;;
+                esac
+        done
+# i386
+        if [[ $ARC = "i386" ]]; then
+# Message
+            echo "Now downloading $DISTRO $RELEASE $ARC ISO..."
+# Download
+            wget -P ~/ISO http://cdimage.ubuntu.com/ubuntustudio/releases/17.10/release/ubuntustudio-17.10-dvd-i386.iso
+        fi
+# amd64
+        if [[ $ARC = "amd64" ]]; then
+# Message
+            echo "Now downloading $DISTRO $RELEASE $ARC ISO..."
+# Download
+            wget -P ~/ISO http://cdimage.ubuntu.com/ubuntustudio/releases/17.10/release/ubuntustudio-17.10-dvd-amd64.iso
+        fi
+    fi
+fi
 # Xubuntu
 if [[ $DISTRO = "Xubuntu" ]]; then
 # Release
@@ -1002,7 +1108,7 @@ if [[ $REPEAT = "Yes" ]]; then
 # Change directory
     cd $BASEDIR
 # Relaunch script
-    bash linux-iso-downloader_2017-10-19_05-53.sh
+    bash linux-iso-downloader_2017-10-29_20-26.sh
 fi
 # End
 if [[ $REPEAT = "No" ]]; then
