@@ -9,8 +9,8 @@ Downloads Linux ISO of choice based on user input.
 
 [License][2]
 
-[1]: CHANGELOG.md
-[2]: LICENSE
+[1]: https://github.com/Flamestar98/Linux-ISO-Downloader/blob/master/CHANGELOG.md
+[2]: https://github.com/Flamestar98/Linux-ISO-Downloader/blob/master/LICENSE
 
 Currently includes
 ------------------
