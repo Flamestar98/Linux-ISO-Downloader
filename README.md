@@ -60,6 +60,12 @@ Currently includes
 * 17.04 (i386/amd64)
 * 17.10 (i386/amd64)
 
+Download
+--------
+Both source tarballs and binaries can be downloaded from the [releases][3] page of this repo, or you can use Git to clone the most recent version of the repository
+
+[3]: https://github.com/Flamestar98/Linux-ISO-Downloader/releases
+
 Importaint information
 ----------------------
 
@@ -82,12 +88,21 @@ Operation
 ---------
 
 To use this script,
-* Download the [source tarball][3] or use Git to clone the repository
 
-[3]: https://github.com/Flamestar98/Linux-ISO-Downloader/releases
-
+### Binary
+* Download the binary .deb file of the latest release
 #### GUI
-* Right click "linux-iso-downloader_YYYYmmdd_HH-MM.sh"
+* Double-click the .deb file and click install
+* Find and open "Linux ISO Downloader" in the application menu of your desktop (the desktop file is saved under ~/.local/share/applications)
+
+#### CLI
+* run "dpkg -i FILEPATH/linux-iso-downloader_YYYY-mm-dd_HH-MM_v?.?.deb" (where "FILEPATH" is the full path (you can use "~" in the filepath if it's somewhere in your home directory) to the .deb file, and "YYYY-mm-dd_HH-MM_v?.?" is the version number of Linux ISO Downloader)
+* Once install is complete, simply run "linux-iso-downloader" from any terminal
+
+### Source
+* Download the source tarball from the releases page or clone the Git repository
+#### GUI
+* Right click "linux-iso-downloader_YYYY-mm-dd_HH-MM.sh"
 * Select "Properties"
 * Select "Permissions"
 * Check the "Allow executing file as program" box
@@ -100,4 +115,4 @@ To use this script,
 
 or
 * cd into the directory of the script
-* ./linux-iso-downloader_YYYYmmdd_HH-MM.sh
+* ./linux-iso-downloader_YYYY-mm-dd_HH-MM.sh
