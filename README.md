@@ -76,5 +76,19 @@ Operation
 
 To use this script,
 * Download the source tarball (coming soon) or use Git to clone the repository (currently recommended)
-* GUI:  Right click "linux-iso-downloader_YYYYmmdd_HH-MM.sh", select "Properties", select "Permissions", check the "Allow executing file as program" box, then double click on the file and select "Run In Terminal"
-* CLI:  type "bash full-path-to-file" (i.e. "bash /home/user/Linux-ISO-Downloader/linux-iso-downloader_2017-10-29_20-26.sh" or "bash ~/Linux-ISO-Downloader/linux-iso-downloader_2017-10-29_20-26.sh")
+
+#### GUI
+* Right click "linux-iso-downloader_YYYYmmdd_HH-MM.sh"
+* Select "Properties"
+* Select "Permissions"
+* Check the "Allow executing file as program" box
+* Double click on the file and select "Run In Terminal"
+
+#### CLI
+* Type "bash" and then the full path to the file
+* (i.e. "bash /home/user/Linux-ISO-Downloader/linux-iso-downloader_2017-10-29_20-26.sh")
+* (i.e. "bash ~/Linux-ISO-Downloader/linux-iso-downloader_2017-10-29_20-26.sh")
+
+or
+* cd into the directory of the script
+* ./linux-iso-downloader_YYYYmmdd_HH-MM.sh
