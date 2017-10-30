@@ -5,6 +5,10 @@ Downloads Linux ISO of choice based on user input.
 
 #### All i386/amd64 Ubuntu LTS releases are currently at 16.04.3
 
+[Changelog][1]
+
+[1]: CHANGELOG.md
+
 Currently includes
 ------------------
 
