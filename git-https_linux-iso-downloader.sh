@@ -40,12 +40,13 @@ else
         echo ""
         echo "Goodbye"
         echo ""
+        exit
     fi
 fi
 
 # Replace?
 echo ""
-echo 'Would you like to replace your current version of Linux ISO Downloader with the most recent version on Github?'
+echo 'Would you like to download the most recent version of Linux ISO Downloader from Github?'
 echo ""
 select REPLACE in Yes No
 do
@@ -62,14 +63,24 @@ done
 
 # Replace
 if [[ $REPLACE = "Yes" ]]; then
-# Message
-    echo ""
-    echo "Deleting your current version of Linux ISO Downloader and downloading most recent version from Github..."
-    echo ""
-# Remove current L-I-D and clone Git
     cd ~
-    sudo rm -r Linux-ISO-Downloader && git clone https://github.com/Flamestar98/Linux-ISO-Downloader.git
-    echo ""
+    if [ -d "Linux-ISO-Downloader" ]; then
+        # Message
+        echo ""
+        echo "Deleting your current version of Linux ISO Downloader and downloading most recent version from Github..."
+        echo ""
+        # Remove current L-I-D and clone Git
+        sudo rm -r Linux-ISO-Downloader && git clone https://github.com/Flamestar98/Linux-ISO-Downloader.git
+        echo ""
+    else
+        # Message
+        echo ""
+        echo "Downloading most recent version of Linux ISO Downloader from Github..."
+        echo ""
+    # Clone Git
+        git clone https://github.com/Flamestar98/Linux-ISO-Downloader.git
+        echo ""
+    fi
 fi
 # End
 if [[ $REPLACE = "No" ]]; then
