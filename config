@@ -4,13 +4,13 @@
 BASEDIR=$(dirname $0)
 
 # Establishes script version number
-SCRIPTVER=$"2017-10-29_20-26"
+SCRIPTVER=$"2017-10-30_20-36"
 
 # Establishes binary version number
-BINARYVER=$"2017.10.29-20.26"
+BINARYVER=$"2017.10.30-20.36"
 
 # Establishes revision number
-REVISION=$"v1.3"
+REVISION=$"v1.0"
 
 # Establishes size in KB
 SIZEKB=$"469.5"
