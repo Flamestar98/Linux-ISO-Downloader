@@ -13,7 +13,7 @@ BINARYVER=$"2017.10.30-20.36"
 REVISION=$"v1.0"
 
 # Establishes size in KB
-SIZEKB=$"469.5"
+SIZEKB=$"474.7"
 
 # Check if root
 if [ $USER = "root" ]; then
