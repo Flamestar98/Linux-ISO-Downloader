@@ -135,3 +135,14 @@ To compile from source,
 
 To remove the source,
 * Run "remove-install" to uninstall the compiled source
+
+Planned features
+----------------
+
+In no particular order,
+* Graphical user interface (buttons everywhere!)
+* RPM packages (the more binaries the better)
+* Windows batch script (spreading freedom around all operating systems)
+* Windows graphical binary (gotta make it easy on them somehow)
+* Streamlining of the script (kinda big at the moment)
+* Making script more modular (if that makes any sense)
