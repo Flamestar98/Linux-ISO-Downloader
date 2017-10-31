@@ -21,6 +21,10 @@ Currently includes
 * Full installer (i386/amd64)
 * Live installer (i386/amd64)
 
+#### Fedora 26
+* Net installer (i386/amd64)
+* Live installer (i386/amd64)
+
 #### KDE Neon
 * User Edition (amd64)
 * User LTS Edition (amd64)
@@ -36,6 +40,10 @@ Currently includes
 * 16.04 LTS (i386/amd64)
 * 17.04 (i386/amd64)
 * 17.10 (i386/amd64)
+
+#### Qubes
+* Qubes 3.2 (amd64)
+* Qubes 4.0-rc2 (amd64)
 
 #### Ubuntu
 * 16.04 LTS (i386/amd64)
