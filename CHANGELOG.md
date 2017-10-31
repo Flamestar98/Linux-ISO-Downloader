@@ -9,7 +9,7 @@ Changelog
 
 ### Added
 * Fedora 26 Net Install (i386/amd64)
-* Fedora 26 Live install (i386/amd64)
+* Fedora 26 Live Install (i386/amd64)
 * Qubes 3.2 (amd64)
 * Qubes 4.0-rc2 (amd64)
 
