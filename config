@@ -171,7 +171,7 @@ rm /usr/bin/linux-iso-downloader
 rm -r /usr/lib/linux-iso-downloader
 
 # Desktop
-rm /home/*/.local/share/applications/linux-iso-downloader_$SCRIPTVER-$REVISION.desktop" > ./remove-install
+rm /home/*/.local/share/applications/linux-iso-downloader_$SCRIPTVER-$REVISION.desktop" > ./make-uninstall
 
 # If not run as root
 else
