@@ -134,7 +134,7 @@ To compile from source,
 * Run "make" to compile the binary or "make-install" to compile and install the source
 
 To remove the source,
-* Run "remove-install" to uninstall the compiled source
+* Run "make-uninstall" to uninstall the compiled source
 
 Planned features
 ----------------
