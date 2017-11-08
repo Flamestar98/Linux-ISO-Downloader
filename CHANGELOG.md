@@ -1,6 +1,15 @@
 Changelog
 =========
 
+2017-11-08_v1.0
+---------------
+
+### Changed
+* Version no longer includes hour and minute of build
+
+### Added
+* Ubuntu 18.04 Daily (amd64)
+
 2017-10-30_20-36_v1.0
 ---------------------
 
