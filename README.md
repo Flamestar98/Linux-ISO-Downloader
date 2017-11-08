@@ -49,6 +49,7 @@ Currently includes
 * 16.04 LTS (i386/amd64)
 * 17.04 (i386/amd64)
 * 17.10 (amd64)
+* 18.04 Daily (amd64)
 
 #### Ubuntu GNOME
 * 16.04 LTS (i386/amd64)
@@ -105,13 +106,13 @@ To use this script,
 * Find and open "Linux ISO Downloader" in the application menu of your desktop (the desktop file is saved under ~/.local/share/applications)
 
 #### CLI
-* run "dpkg -i FILEPATH/linux-iso-downloader_YYYY-mm-dd_HH-MM_v?.?.deb" (where "FILEPATH" is the full path (you can use "~" in the filepath if it's somewhere in your home directory) to the .deb file, and "YYYY-mm-dd_HH-MM_v?.?" is the version number of Linux ISO Downloader)
+* run "dpkg -i FILEPATH/linux-iso-downloader_YYYY-mm-dd_v?.?.deb" (where "FILEPATH" is the full path (you can use "~" in the filepath if it's somewhere in your home directory) to the .deb file, and "YYYY-mm-dd_v?.?" is the version number of Linux ISO Downloader)
 * Once install is complete, simply run "linux-iso-downloader" from any terminal
 
 ### Source
 * Download the source tarball from the releases page or clone the Git repository
 #### GUI
-* Right click "linux-iso-downloader_YYYY-mm-dd_HH-MM.sh"
+* Right click "linux-iso-downloader_YYYY-mm-dd.sh"
 * Select "Properties"
 * Select "Permissions"
 * Check the "Allow executing file as program" box
@@ -119,12 +120,12 @@ To use this script,
 
 #### CLI
 * Type "bash" and then the full path to the file
-* (i.e. "bash /home/user/Linux-ISO-Downloader/linux-iso-downloader_2017-10-29_20-26.sh")
-* (i.e. "bash ~/Linux-ISO-Downloader/linux-iso-downloader_2017-10-29_20-26.sh")
+* (i.e. "bash /home/user/Linux-ISO-Downloader/linux-iso-downloader_2017-11-08-v1.0.sh")
+* (i.e. "bash ~/Linux-ISO-Downloader/linux-iso-downloader_2017-11-08-v1.0.sh")
 
 or
 * cd into the directory of the script
-* ./linux-iso-downloader_YYYY-mm-dd_HH-MM.sh
+* ./linux-iso-downloader_YYYY-mm-dd-v?.?.sh
 
 Compile from source
 -------------------
