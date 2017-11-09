@@ -63,6 +63,24 @@ done
 
 # Replace
 if [[ $REPLACE = "Yes" ]]; then
+# Install HTTPS or SSH?
+echo ""
+echo 'Would you like to use HTTPS or SSH?'
+echo ""
+    select PROTO in HTTPS SSH
+    do
+            case $PROTO in 
+            HTTPS|SSH)   
+                    break
+                    ;;
+            *)
+                    echo ""
+                    echo "Please select either HTTPS or SSH" 
+                    ;;
+            esac
+    done
+# HTTPS
+  if [[ $PROTO = "HTTPS" ]]; then
     cd ~
     if [ -d "Linux-ISO-Downloader" ]; then
         # Message
@@ -81,6 +99,28 @@ if [[ $REPLACE = "Yes" ]]; then
         git clone https://github.com/Flamestar98/Linux-ISO-Downloader.git
         echo ""
     fi
+  fi
+# SSH
+  if [[ $PROTO = "SSH" ]]; then
+    cd ~
+    if [ -d "Linux-ISO-Downloader" ]; then
+        # Message
+        echo ""
+        echo "Deleting your current version of Linux ISO Downloader and downloading most recent version from Github..."
+        echo ""
+        # Remove current L-I-D and clone Git over SSH
+        sudo rm -r Linux-ISO-Downloader && git clone git@github.com:Flamestar98/Linux-ISO-Downloader.git
+        echo ""
+    else
+        # Message
+        echo ""
+        echo "Downloading most recent version of Linux ISO Downloader from Github..."
+        echo ""
+    # Clone Git over SSH
+        git clone git@github.com:Flamestar98/Linux-ISO-Downloader.git
+        echo ""
+    fi
+  fi
 fi
 # End
 if [[ $REPLACE = "No" ]]; then
