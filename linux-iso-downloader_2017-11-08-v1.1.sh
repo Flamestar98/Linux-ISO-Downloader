@@ -6,6 +6,20 @@ BASEDIR=$(dirname $0)
 # Prints todays date (YYYYmmdd) when called by $DATE
 DATE=$(date '+%Y%m%d')
 
+echo '
+                         #############################
+                         ##                         ##
+                         ##          Linux          ##
+                         ##                         ##
+                         ##           ISO           ##
+                         ##                         ##
+                         ##        Downloader       ##
+                         ##                         ##
+                         ## Version 2017-11-08-v1.1 ##
+                         ##                         ##
+                         #############################
+'
+
 # Linux distrobution
 echo 'Please select from the following'
 select DISTRO in "Debian 9" "Fedora 26" "KDE Neon" Kubuntu Lubuntu Qubes Ubuntu "Ubuntu Budgie" "Ubuntu GNOME" "Ubuntu MATE" "Ubuntu Studio" Xubuntu
@@ -1221,7 +1235,7 @@ if [[ $REPEAT = "Yes" ]]; then
 # Change directory
     cd $BASEDIR
 # Relaunch script
-    bash linux-iso-downloader_2017-11-08-v1.0.sh
+    bash linux-iso-downloader_2017-11-08-v1.1.sh
 fi
 # End
 if [[ $REPEAT = "No" ]]; then
