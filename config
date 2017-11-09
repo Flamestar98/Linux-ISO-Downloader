@@ -4,16 +4,16 @@
 BASEDIR=$(dirname $0)
 
 # Establishes script version number
-SCRIPTVER=$"2017-10-30_20-36"
+SCRIPTVER=$"2017-11-08"
 
 # Establishes binary version number
-BINARYVER=$"2017.10.30-20.36"
+BINARYVER=$"2017.11.08"
 
 # Establishes revision number
 REVISION=$"v1.0"
 
 # Establishes size in KB
-SIZEKB=$"474.7"
+SIZEKB=$"475.5"
 
 # Check if root
 if [ $USER = "root" ]; then
@@ -27,7 +27,7 @@ echo '#!/usr/bin/env xdg-open
 [Desktop Entry]
 Categories=Utility
 Comment=
-Exec=bash /usr/lib/linux-iso-downloader/linux-iso-downloader_$SCRIPTVER.sh
+Exec=bash /usr/lib/linux-iso-downloader/linux-iso-downloader_$SCRIPTVER-$REVISION.sh
 Hidden=no
 Icon=/usr/lib/linux-iso-downloader/tux-disc.png
 Name=Linux ISO Downloader
@@ -92,12 +92,12 @@ fi" > ./create-prerm.sh
 
 echo '#!/bin/bash
 
-bash /usr/lib/linux-iso-downloader/linux-iso-downloader_$SCRIPTVER.sh' > ./linux-iso-downloader_$SCRIPTVER-$REVISION/usr/bin/linux-iso-downloader && chmod a+x ./linux-iso-downloader_$SCRIPTVER-$REVISION/usr/bin/linux-iso-downloader
+bash /usr/lib/linux-iso-downloader/linux-iso-downloader_$SCRIPTVER-$REVISION.sh' > ./linux-iso-downloader_$SCRIPTVER-$REVISION/usr/bin/linux-iso-downloader && chmod a+x ./linux-iso-downloader_$SCRIPTVER-$REVISION/usr/bin/linux-iso-downloader
 
 if [ -e ./linux-iso-downloader_$SCRIPTVER-$REVISION/usr/bin/linux-iso-downloader ]; then
     echo 'Command file built'
 else
-    echo 'Failed to command prerm file'
+    echo 'Failed to command command file'
 fi" > ./create-command.sh
 
 # Binary build
@@ -141,7 +141,7 @@ cp ./LICENSE ./linux-iso-downloader_$SCRIPTVER-$REVISION/DEBIAN/copyright
 cp ./README.md ./linux-iso-downloader_$SCRIPTVER-$REVISION/usr/lib/linux-iso-downloader/
 
 # Script
-cp ./linux-iso-downloader_$SCRIPTVER.sh ./linux-iso-downloader_$SCRIPTVER-$REVISION/usr/lib/linux-iso-downloader/
+cp ./linux-iso-downloader_$SCRIPTVER-$REVISION.sh ./linux-iso-downloader_$SCRIPTVER-$REVISION/usr/lib/linux-iso-downloader/
 
 # Tux
 cp ./tux-disc.png ./linux-iso-downloader_$SCRIPTVER-$REVISION/usr/lib/linux-iso-downloader/" > ./copy-files.sh
