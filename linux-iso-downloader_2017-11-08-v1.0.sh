@@ -598,10 +598,10 @@ fi
 if [[ $DISTRO = "Ubuntu" ]]; then
 # Release
     echo 'Now select a release'
-    select RELEASE in "16.04 LTS" "17.04" "17.10"
+    select RELEASE in "16.04 LTS" "17.04" "17.10" "18.04 Daily"
     do
             case $RELEASE in
-            "16.04 LTS"|"17.04"|"17.10")
+            "16.04 LTS"|"17.04"|"17.10"|"18.04 Daily")
                     break
                     ;;
             *)
@@ -675,6 +675,13 @@ if [[ $DISTRO = "Ubuntu" ]]; then
             echo "Now downloading $DISTRO $RELEASE ISO..."
 # Download
             wget -P ~/ISO http://releases.ubuntu.com/17.10/ubuntu-17.10-desktop-amd64.iso
+    fi
+# 18.04 Daily
+    if [[ $RELEASE = "18.04 Daily" ]]; then
+# Message
+            echo "Now downloading $DISTRO $RELEASE ISO..."
+# Download
+            wget -O ~/ISO/ubuntu-bionic-desktop-$DATE-amd64.iso http://cdimage.ubuntu.com/daily-live/current/bionic-desktop-amd64.iso
     fi
 fi
 # Ubuntu Budgie
@@ -1214,7 +1221,7 @@ if [[ $REPEAT = "Yes" ]]; then
 # Change directory
     cd $BASEDIR
 # Relaunch script
-    bash linux-iso-downloader_2017-10-29_20-26.sh
+    bash linux-iso-downloader_2017-11-08-v1.0.sh
 fi
 # End
 if [[ $REPEAT = "No" ]]; then
