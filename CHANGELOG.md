@@ -1,7 +1,13 @@
 Changelog
 =========
 
-2017-11-08_v1.0
+2017-11-08-v1.1
+---------------
+
+## #Added
+* Stylization to begining of script
+
+2017-11-08-v1.0
 ---------------
 
 ### Changed
