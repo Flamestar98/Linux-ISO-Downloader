@@ -4,7 +4,7 @@ Changelog
 2017-11-08-v1.1
 ---------------
 
-## #Added
+### Added
 * Stylization to begining of script
 
 2017-11-08-v1.0
