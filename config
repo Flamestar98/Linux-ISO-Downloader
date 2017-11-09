@@ -10,10 +10,10 @@ SCRIPTVER=$"2017-11-08"
 BINARYVER=$"2017.11.08"
 
 # Establishes revision number
-REVISION=$"v1.0"
+REVISION=$"v1.1"
 
 # Establishes size in KB
-SIZEKB=$"475.5"
+SIZEKB=$"437"
 
 # Check if root
 if [ $USER = "root" ]; then
