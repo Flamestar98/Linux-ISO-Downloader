@@ -1,6 +1,16 @@
 Changelog
 =========
 
+2017-11-09-v1.0
+---------------
+
+### Added
+* Kubuntu 18.04 Daily (i386/amd64)
+* Lubuntu 18.04 Daily (i386/amd64)
+* Ubuntu Budgie 18.04 Daily (i386/amd64)
+* Ubuntu MATE 18.04 Daily (i386/amd64)
+* Xubuntu 18.04 Daily (i386/amd64)
+
 2017-11-08-v1.1
 ---------------
 

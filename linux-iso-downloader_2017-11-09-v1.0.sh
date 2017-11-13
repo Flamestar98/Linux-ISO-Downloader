@@ -15,7 +15,7 @@ echo '
                          ##                         ##
                          ##        Downloader       ##
                          ##                         ##
-                         ## Version 2017-11-08-v1.1 ##
+                         ## Version 2017-11-09-v1.0 ##
                          ##                         ##
                          #############################
 '
@@ -370,10 +370,10 @@ fi
 if [[ $DISTRO = "Kubuntu" ]]; then
 # Release
     echo 'Now select a release'
-    select RELEASE in "16.04 LTS" "17.04" "17.10"
+    select RELEASE in "16.04 LTS" "17.04" "17.10" "18.04 Daily"
     do
             case $RELEASE in
-            "16.04 LTS"|"17.04"|"17.10")
+            "16.04 LTS"|"17.04"|"17.10"|"18.04 Daily")
                     break
                     ;;
             *)
@@ -471,15 +471,45 @@ if [[ $DISTRO = "Kubuntu" ]]; then
             wget -P ~/ISO http://cdimage.ubuntu.com/kubuntu/releases/17.10/release/kubuntu-17.10-desktop-amd64.iso
         fi
     fi
+# 18.04 Daily
+    if [[ $RELEASE = "18.04 Daily" ]]; then
+# Architecture
+        echo 'Now select an architecture'
+        select ARC in i386 amd64
+        do
+                case $ARC in
+                i386|amd64)
+                        break
+                        ;;
+                *)
+                        echo "Please select an architecture"
+                        ;;
+                esac
+        done
+# i386
+        if [[ $ARC = "i386" ]]; then
+# Message
+            echo "Now downloading $DISTRO $RELEASE $ARC ISO..."
+# Download
+            wget -O ~/ISO/kubuntu-bionic-desktop-$DATE-i386.iso http://cdimage.ubuntu.com/kubuntu/daily-live/current/bionic-desktop-i386.iso
+        fi
+#amd64
+        if [[ $ARC = "amd64" ]]; then
+# Message
+            echo "Now downloading $DISTRO $RELEASE $ARC ISO..."
+# Download
+            wget -O ~/ISO/kubuntu-bionic-desktop-$DATE-amd64.iso http://cdimage.ubuntu.com/kubuntu/daily-live/current/bionic-desktop-amd64.iso
+        fi
+    fi
 fi
 # Lubuntu
 if [[ $DISTRO = "Lubuntu" ]]; then
 # Release
     echo 'Now select a release'
-    select RELEASE in "16.04 LTS" "17.04" "17.10"
+    select RELEASE in "16.04 LTS" "17.04" "17.10" "18.04 Daily"
     do
             case $RELEASE in
-            "16.04 LTS"|"17.04"|"17.10")
+            "16.04 LTS"|"17.04"|"17.10"|"18.04 Daily")
                     break
                     ;;
             *)
@@ -575,6 +605,36 @@ if [[ $DISTRO = "Lubuntu" ]]; then
             echo "Now downloading $DISTRO $RELEASE $ARC ISO..."
 # Download
             wget -P ~/ISO http://cdimage.ubuntu.com/lubuntu/releases/17.10/release/lubuntu-17.10-desktop-amd64.iso
+        fi
+    fi
+# 18.04 Daily
+    if [[ $RELEASE = "18.04 Daily" ]]; then
+# Architecture
+        echo 'Now select an architecture'
+        select ARC in i386 amd64
+        do
+                case $ARC in
+                i386|amd64)
+                        break
+                        ;;
+                *)
+                        echo "Please select an architecture"
+                        ;;
+                esac
+        done
+# i386
+        if [[ $ARC = "i386" ]]; then
+# Message
+            echo "Now downloading $DISTRO $RELEASE $ARC ISO..."
+# Download
+            wget -O ~/ISO/lubuntu-bionic-desktop-$DATE-i386.iso http://cdimage.ubuntu.com/lubuntu/daily-live/current/bionic-desktop-i386.iso
+        fi
+#amd64
+        if [[ $ARC = "amd64" ]]; then
+# Message
+            echo "Now downloading $DISTRO $RELEASE $ARC ISO..."
+# Download
+            wget -O ~/ISO/lubuntu-bionic-desktop-$DATE-amd64.iso http://cdimage.ubuntu.com/lubuntu/daily-live/current/bionic-desktop-amd64.iso
         fi
     fi
 fi
@@ -702,10 +762,10 @@ fi
 if [[ $DISTRO = "Ubuntu Budgie" ]]; then
 # Release
     echo 'Now select a release'
-    select RELEASE in "17.04" "17.10"
+    select RELEASE in "17.04" "17.10" "18.04 Daily"
     do
             case $RELEASE in
-            "17.04"|"17.10")
+            "17.04"|"17.10"|"18.04 Daily")
                     break
                     ;;
             *)
@@ -803,6 +863,36 @@ if [[ $DISTRO = "Ubuntu Budgie" ]]; then
             wget -P ~/ISO http://cdimage.ubuntu.com/ubuntu-budgie/releases/17.10/release/ubuntu-budgie-17.10-desktop-amd64.iso
         fi
     fi
+# 18.04 Daily
+    if [[ $RELEASE = "18.04 Daily" ]]; then
+# Architecture
+        echo 'Now select an architecture'
+        select ARC in i386 amd64
+        do
+                case $ARC in
+                i386|amd64)
+                        break
+                        ;;
+                *)
+                        echo "Please select an architecture"
+                        ;;
+                esac
+        done
+# i386
+        if [[ $ARC = "i386" ]]; then
+# Message
+            echo "Now downloading $DISTRO $RELEASE $ARC ISO..."
+# Download
+            wget -O ~/ISO/ubuntu-budgie-bionic-desktop-$DATE-i386.iso http://cdimage.ubuntu.com/ubuntu-budgie/daily-live/current/bionic-desktop-i386.iso
+        fi
+#amd64
+        if [[ $ARC = "amd64" ]]; then
+# Message
+            echo "Now downloading $DISTRO $RELEASE $ARC ISO..."
+# Download
+            wget -O ~/ISO/ubuntu-budgie-bionic-desktop-$DATE-amd64.iso http://cdimage.ubuntu.com/ubuntu-budgie/daily-live/current/bionic-desktop-amd64.iso
+        fi
+    fi
 fi
 # Ubuntu GNOME
 if [[ $DISTRO = "Ubuntu GNOME" ]]; then
@@ -884,10 +974,10 @@ fi
 if [[ $DISTRO = "Ubuntu MATE" ]]; then
 # Release
     echo 'Now select a release'
-    select RELEASE in "16.04 LTS" "17.04" "17.10"
+    select RELEASE in "16.04 LTS" "17.04" "17.10" "18.04 Daily"
     do
             case $RELEASE in
-            "16.04 LTS"|"17.04"|"17.10")
+            "16.04 LTS"|"17.04"|"17.10"|"18.04 Daily")
                     break
                     ;;
             *)
@@ -999,6 +1089,36 @@ if [[ $DISTRO = "Ubuntu MATE" ]]; then
             wget -P ~/ISO http://cdimage.ubuntu.com/ubuntu-mate/releases/17.10/release/ubuntu-mate-17.10-desktop-amd64.iso
         fi
     fi
+# 18.04 Daily
+    if [[ $RELEASE = "18.04 Daily" ]]; then
+# Architecture
+        echo 'Now select an architecture'
+        select ARC in i386 amd64
+        do
+                case $ARC in
+                i386|amd64)
+                        break
+                        ;;
+                *)
+                        echo "Please select an architecture"
+                        ;;
+                esac
+        done
+# i386
+        if [[ $ARC = "i386" ]]; then
+# Message
+            echo "Now downloading $DISTRO $RELEASE $ARC ISO..."
+# Download
+            wget -O ~/ISO/ubuntu-mate-bionic-desktop-$DATE-i386.iso http://cdimage.ubuntu.com/ubuntu-mate/daily-live/current/bionic-desktop-i386.iso
+        fi
+#amd64
+        if [[ $ARC = "amd64" ]]; then
+# Message
+            echo "Now downloading $DISTRO $RELEASE $ARC ISO..."
+# Download
+            wget -O ~/ISO/ubuntu-mate-bionic-desktop-$DATE-amd64.iso http://cdimage.ubuntu.com/ubuntu-mate/daily-live/current/bionic-desktop-amd64.iso
+        fi
+    fi
 fi
 # Ubuntu Studio
 if [[ $DISTRO = "Ubuntu Studio" ]]; then
@@ -1105,15 +1225,45 @@ if [[ $DISTRO = "Ubuntu Studio" ]]; then
             wget -P ~/ISO http://cdimage.ubuntu.com/ubuntustudio/releases/17.10/release/ubuntustudio-17.10-dvd-amd64.iso
         fi
     fi
+# 18.04 Daily
+    if [[ $RELEASE = "18.04 Daily" ]]; then
+# Architecture
+        echo 'Now select an architecture'
+        select ARC in i386 amd64
+        do
+                case $ARC in
+                i386|amd64)
+                        break
+                        ;;
+                *)
+                        echo "Please select an architecture"
+                        ;;
+                esac
+        done
+# i386
+        if [[ $ARC = "i386" ]]; then
+# Message
+            echo "Now downloading $DISTRO $RELEASE $ARC ISO..."
+# Download
+            wget -O ~/ISO/ubuntustudio-bionic-desktop-$DATE-i386.iso http://cdimage.ubuntu.com/ubuntustudio/daily-live/current/bionic-desktop-i386.iso
+        fi
+#amd64
+        if [[ $ARC = "amd64" ]]; then
+# Message
+            echo "Now downloading $DISTRO $RELEASE $ARC ISO..."
+# Download
+            wget -O ~/ISO/ubuntustudio-bionic-desktop-$DATE-amd64.iso http://cdimage.ubuntu.com/ubuntustudio/daily-live/current/bionic-desktop-amd64.iso
+        fi
+    fi
 fi
 # Xubuntu
 if [[ $DISTRO = "Xubuntu" ]]; then
 # Release
     echo 'Now select a release'
-    select RELEASE in "16.04 LTS" "17.04" "17.10"
+    select RELEASE in "16.04 LTS" "17.04" "17.10" "18.04 Daily"
     do
             case $RELEASE in
-            "16.04 LTS"|"17.04"|"17.10")
+            "16.04 LTS"|"17.04"|"17.10"|"18.04 Daily")
                     break
                     ;;
             *)
@@ -1211,6 +1361,36 @@ if [[ $DISTRO = "Xubuntu" ]]; then
             wget -P ~/ISO http://cdimage.ubuntu.com/xubuntu/releases/17.10/release/xubuntu-17.10-desktop-amd64.iso
         fi
     fi
+# 18.04 Daily
+    if [[ $RELEASE = "18.04 Daily" ]]; then
+# Architecture
+        echo 'Now select an architecture'
+        select ARC in i386 amd64
+        do
+                case $ARC in
+                i386|amd64)
+                        break
+                        ;;
+                *)
+                        echo "Please select an architecture"
+                        ;;
+                esac
+        done
+# i386
+        if [[ $ARC = "i386" ]]; then
+# Message
+            echo "Now downloading $DISTRO $RELEASE $ARC ISO..."
+# Download
+            wget -O ~/ISO/xubuntu-bionic-desktop-$DATE-i386.iso http://cdimage.ubuntu.com/xubuntu/daily-live/current/bionic-desktop-i386.iso
+        fi
+#amd64
+        if [[ $ARC = "amd64" ]]; then
+# Message
+            echo "Now downloading $DISTRO $RELEASE $ARC ISO..."
+# Download
+            wget -O ~/ISO/xubuntu-bionic-desktop-$DATE-amd64.iso http://cdimage.ubuntu.com/xubuntu/daily-live/current/bionic-desktop-amd64.iso
+        fi
+    fi
 fi
 
 # Message
@@ -1235,7 +1415,7 @@ if [[ $REPEAT = "Yes" ]]; then
 # Change directory
     cd $BASEDIR
 # Relaunch script
-    bash linux-iso-downloader_2017-11-08-v1.1.sh
+    bash linux-iso-downloader_2017-11-09-v1.0.sh
 fi
 # End
 if [[ $REPEAT = "No" ]]; then

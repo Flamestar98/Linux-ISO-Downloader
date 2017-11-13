@@ -4,16 +4,16 @@
 BASEDIR=$(dirname $0)
 
 # Establishes script version number
-SCRIPTVER=$"2017-11-08"
+SCRIPTVER=$"2017-11-09"
 
 # Establishes binary version number
-BINARYVER=$"2017.11.08"
+BINARYVER=$"2017.11.09"
 
 # Establishes revision number
-REVISION=$"v1.1"
+REVISION=$"v1.0"
 
 # Establishes size in KB
-SIZEKB=$"437"
+SIZEKB=$"482.7"
 
 # Check if root
 if [ $USER = "root" ]; then
@@ -50,7 +50,7 @@ echo 'Package: linux-iso-downloader
 Architecture: all
 Essential: no
 Maintainer: John F. Smith
-Depends: 
+Depends:
 Priority: optional
 Section: utilities
 Version: $BINARYVER-$REVISION
@@ -91,6 +91,8 @@ fi" > ./create-prerm.sh
     echo "#!/bin/bash
 
 echo '#!/bin/bash
+
+$STYLEVER = $SCRIPTVER-$REVISION
 
 bash /usr/lib/linux-iso-downloader/linux-iso-downloader_$SCRIPTVER-$REVISION.sh' > ./linux-iso-downloader_$SCRIPTVER-$REVISION/usr/bin/linux-iso-downloader && chmod a+x ./linux-iso-downloader_$SCRIPTVER-$REVISION/usr/bin/linux-iso-downloader
 
