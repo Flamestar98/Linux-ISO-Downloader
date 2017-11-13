@@ -35,11 +35,13 @@ Currently includes
 * 16.04 LTS (i386/amd64)
 * 17.04 (i386/amd64)
 * 17.10 (i386/amd64)
+* 18.04 Daily (i386/amd64)
 
 #### Lubuntu
 * 16.04 LTS (i386/amd64)
 * 17.04 (i386/amd64)
 * 17.10 (i386/amd64)
+* 18.04 Daily (i386/amd64)
 
 #### Qubes
 * Qubes 3.2 (amd64)
@@ -51,6 +53,11 @@ Currently includes
 * 17.10 (amd64)
 * 18.04 Daily (amd64)
 
+#### Ubuntu Budgie
+* 17.04 (i386/amd64)
+* 17.10 (i386/amd64)
+* 18.04 Daily (i386/amd64)
+
 #### Ubuntu GNOME
 * 16.04 LTS (i386/amd64)
 * 17.04 (i386/amd64)
@@ -59,6 +66,7 @@ Currently includes
 * 16.04 LTS (i386/amd64/powerpc/armhf)
 * 17.04 (i386/amd64)
 * 17.10 (i386/amd64)
+* 18.04 Daily (i386/amd64)
 
 #### Ubuntu Studio
 * 16.04 LTS (i386/amd64)
@@ -69,6 +77,7 @@ Currently includes
 * 16.04 LTS (i386/amd64)
 * 17.04 (i386/amd64)
 * 17.10 (i386/amd64)
+* 18.04 Daily (i386/amd64)
 
 Download
 --------
