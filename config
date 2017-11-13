@@ -13,7 +13,7 @@ BINARYVER=$"2017.11.09"
 REVISION=$"v1.0"
 
 # Establishes size in KB
-SIZEKB=$"437"
+SIZEKB=$"482.7"
 
 # Check if root
 if [ $USER = "root" ]; then
@@ -50,7 +50,7 @@ echo 'Package: linux-iso-downloader
 Architecture: all
 Essential: no
 Maintainer: John F. Smith
-Depends: 
+Depends:
 Priority: optional
 Section: utilities
 Version: $BINARYVER-$REVISION
