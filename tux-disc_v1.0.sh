@@ -9,13 +9,11 @@ DATE=$(date '+%Y%m%d')
 echo '
                          #############################
                          ##                         ##
-                         ##          Linux          ##
+                         ##          Tux            ##
                          ##                         ##
-                         ##           ISO           ##
+                         ##          Disc           ##
                          ##                         ##
-                         ##        Downloader       ##
-                         ##                         ##
-                         ## Version 2017-11-09-v1.0 ##
+                         ##       Version 1.0       ##
                          ##                         ##
                          #############################
 '
@@ -24,12 +22,12 @@ echo '
 echo 'Please select from the following'
 select DISTRO in "Debian 9" "Fedora 26" "KDE Neon" Kubuntu Lubuntu Qubes Ubuntu "Ubuntu Budgie" "Ubuntu GNOME" "Ubuntu MATE" "Ubuntu Studio" Xubuntu
 do
-        case $DISTRO in 
-        "Debian 9"|"Fedora 26"|"KDE Neon"|Kubuntu|Lubuntu|Qubes|Ubuntu|"Ubuntu Budgie"|"Ubuntu GNOME"|"Ubuntu MATE"|"Ubuntu Studio"|Xubuntu)   
+        case $DISTRO in
+        "Debian 9"|"Fedora 26"|"KDE Neon"|Kubuntu|Lubuntu|Qubes|Ubuntu|"Ubuntu Budgie"|"Ubuntu GNOME"|"Ubuntu MATE"|"Ubuntu Studio"|Xubuntu)
                 break
                 ;;
         *)
-                echo "Please select a distrobution" 
+                echo "Please select a distrobution"
                 ;;
         esac
 done
@@ -1398,12 +1396,12 @@ echo 'Would you like to download another ISO?'
 # Repeat?
 select REPEAT in Yes No
 do
-        case $REPEAT in 
-        Yes|No)   
+        case $REPEAT in
+        Yes|No)
                 break
                 ;;
         *)
-                echo "Please select yes or no" 
+                echo "Please select yes or no"
                 ;;
         esac
 done
@@ -1415,7 +1413,7 @@ if [[ $REPEAT = "Yes" ]]; then
 # Change directory
     cd $BASEDIR
 # Relaunch script
-    bash linux-iso-downloader_2017-11-09-v1.0.sh
+    bash tux-disc_v1.0.sh
 fi
 # End
 if [[ $REPEAT = "No" ]]; then
