@@ -1,0 +1,180 @@
+#!/bin/bash
+
+# Establishes base directory of script
+BASEDIR=$(dirname $0)
+
+# Establishes script version number
+SCRIPTVER=$"2017-11-08"
+
+# Establishes binary version number
+BINARYVER=$"2017.11.08"
+
+# Establishes revision number
+REVISION=$"v1.0"
+
+# Establishes size in KB
+SIZEKB=$"475.5"
+
+# Check if root
+if [ $USER = "root" ]; then
+
+# Build files
+
+# Desktop
+    echo "#!/bin/bash
+
+echo '#!/usr/bin/env xdg-open
+[Desktop Entry]
+Categories=Utility
+Comment=
+Exec=bash /usr/lib/linux-iso-downloader/linux-iso-downloader_$SCRIPTVER-$REVISION.sh
+Hidden=no
+Icon=/usr/lib/linux-iso-downloader/tux-disc.png
+Name=Linux ISO Downloader
+Terminal=true
+Type=Application
+Version=$BINARYVER-$REVISION' > ./linux-iso-downloader_$SCRIPTVER-$REVISION/usr/lib/linux-iso-downloader/linux-iso-downloader_$SCRIPTVER-$REVISION.desktop
+
+chmod a+x ./linux-iso-downloader_$SCRIPTVER-$REVISION/usr/lib/linux-iso-downloader/linux-iso-downloader_$SCRIPTVER-$REVISION.desktop
+
+if [ -e ./linux-iso-downloader_$SCRIPTVER-$REVISION/usr/lib/linux-iso-downloader/linux-iso-downloader_$SCRIPTVER-$REVISION.desktop ]; then
+    echo 'Desktop file built'
+else
+    echo 'Failed to build desktop file'
+fi" > ./create-desktop.sh
+
+# Control
+    echo "#!/bin/bash
+
+echo 'Package: linux-iso-downloader
+Architecture: all
+Essential: no
+Maintainer: John F. Smith
+Depends: 
+Priority: optional
+Section: utilities
+Version: $BINARYVER-$REVISION
+Installed-Size: $SIZEKB
+Description: Downloads Linux ISO of choice based on user input' > ./linux-iso-downloader_$SCRIPTVER-$REVISION/DEBIAN/control && chmod a+x ./linux-iso-downloader_$SCRIPTVER-$REVISION/DEBIAN/control
+
+if [ -e ./linux-iso-downloader_$SCRIPTVER-$REVISION/DEBIAN/control ]; then
+    echo 'Control file built'
+else
+    echo 'Failed to build control file'
+fi" > ./create-control.sh
+
+# Postinst
+    echo "#!/bin/bash
+
+echo '#!/bin/bash
+
+cp /usr/lib/linux-iso-downloader/linux-iso-downloader_$SCRIPTVER-$REVISION.desktop /home/*/.local/share/applications/ && update-desktop-database /home/*/.local/share/applications/' > ./linux-iso-downloader_$SCRIPTVER-$REVISION/DEBIAN/postinst && chmod a+x ./linux-iso-downloader_$SCRIPTVER-$REVISION/DEBIAN/postinst
+
+if [ -e ./linux-iso-downloader_$SCRIPTVER-$REVISION/DEBIAN/postinst ]; then
+    echo 'Postinst file built'
+else
+    echo 'Failed to build postinst file'
+fi" > ./create-postinst.sh
+
+# Prerm
+    echo "#!/bin/bash
+
+echo 'rm /home/*/.local/share/applications/linux-iso-downloader_$SCRIPTVER-$REVISION.desktop' > ./linux-iso-downloader_$SCRIPTVER-$REVISION/DEBIAN/prerm && chmod a+x ./linux-iso-downloader_$SCRIPTVER-$REVISION/DEBIAN/prerm
+
+if [ -e ./linux-iso-downloader_$SCRIPTVER-$REVISION/DEBIAN/prerm ]; then
+    echo 'Prerm file built'
+else
+    echo 'Failed to build prerm file'
+fi" > ./create-prerm.sh
+
+# Command
+    echo "#!/bin/bash
+
+echo '#!/bin/bash
+
+bash /usr/lib/linux-iso-downloader/linux-iso-downloader_$SCRIPTVER-$REVISION.sh' > ./linux-iso-downloader_$SCRIPTVER-$REVISION/usr/bin/linux-iso-downloader && chmod a+x ./linux-iso-downloader_$SCRIPTVER-$REVISION/usr/bin/linux-iso-downloader
+
+if [ -e ./linux-iso-downloader_$SCRIPTVER-$REVISION/usr/bin/linux-iso-downloader ]; then
+    echo 'Command file built'
+else
+    echo 'Failed to command command file'
+fi" > ./create-command.sh
+
+# Binary build
+    echo "#!/bin/bash
+
+chown -R root:root ./linux-iso-downloader_$SCRIPTVER-$REVISION/ && dpkg-deb --build ./linux-iso-downloader_$SCRIPTVER-$REVISION
+rm -r ./linux-iso-downloader_$SCRIPTVER-$REVISION
+
+if [ -e ./linux-iso-downloader_$SCRIPTVER-$REVISION.deb ]; then
+    echo 'Binary file built'
+else
+    echo 'Failed to command binary file'
+fi" > ./create-binary.sh
+
+# Directories
+    echo "#!/bin/bash
+
+mkdir ./linux-iso-downloader_$SCRIPTVER-$REVISION
+mkdir ./linux-iso-downloader_$SCRIPTVER-$REVISION/DEBIAN
+mkdir ./linux-iso-downloader_$SCRIPTVER-$REVISION/usr
+mkdir ./linux-iso-downloader_$SCRIPTVER-$REVISION/usr/bin
+mkdir ./linux-iso-downloader_$SCRIPTVER-$REVISION/usr/lib
+mkdir ./linux-iso-downloader_$SCRIPTVER-$REVISION/usr/lib/linux-iso-downloader
+
+if [ -d ./linux-iso-downloader_$SCRIPTVER-$REVISION ]; then
+    echo 'Directories built'
+else
+    echo 'Failed to build directories'
+fi" > ./create-directories.sh
+
+# Move and copy files
+    echo "#!/bin/bash
+
+# Changelog
+cp ./CHANGELOG.md ./linux-iso-downloader_$SCRIPTVER-$REVISION/DEBIAN/changelog
+
+# License
+cp ./LICENSE ./linux-iso-downloader_$SCRIPTVER-$REVISION/DEBIAN/copyright
+
+# README
+cp ./README.md ./linux-iso-downloader_$SCRIPTVER-$REVISION/usr/lib/linux-iso-downloader/
+
+# Script
+cp ./linux-iso-downloader_$SCRIPTVER-$REVISION.sh ./linux-iso-downloader_$SCRIPTVER-$REVISION/usr/lib/linux-iso-downloader/
+
+# Tux
+cp ./tux-disc.png ./linux-iso-downloader_$SCRIPTVER-$REVISION/usr/lib/linux-iso-downloader/" > ./copy-files.sh
+
+# Copy source files
+    echo "#!/bin/bash
+
+# Command
+cp ./linux-iso-downloader_$SCRIPTVER-$REVISION/usr/bin/linux-iso-downloader /usr/bin/
+
+# Folder
+cp -r ./linux-iso-downloader_$SCRIPTVER-$REVISION/usr/lib/linux-iso-downloader /usr/lib/
+
+# Desktop
+cp ./linux-iso-downloader_$SCRIPTVER-$REVISION/usr/lib/linux-iso-downloader/linux-iso-downloader_$SCRIPTVER-$REVISION.desktop /home/*/.local/share/applications/ && update-desktop-database /home/*/.local/share/applications/
+
+# Remove source folder
+rm -r ./linux-iso-downloader_$SCRIPTVER-$REVISION" > ./copy-source.sh
+
+# Remove source files
+    echo "#!/bin/bash
+
+# Command
+rm /usr/bin/linux-iso-downloader
+
+# Folder
+rm -r /usr/lib/linux-iso-downloader
+
+# Desktop
+rm /home/*/.local/share/applications/linux-iso-downloader_$SCRIPTVER-$REVISION.desktop" > ./make-uninstall
+
+# If not run as root
+else
+# Message
+    echo "Please run this build script as root"
+fi
