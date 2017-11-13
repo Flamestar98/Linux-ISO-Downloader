@@ -7,7 +7,7 @@ BASEDIR=$(dirname $0)
 VERSION=$"1.0"
 
 # Establishes size in KB
-SIZEKB=$"482.7"
+SIZEKB=$"584"
 
 # Check if root
 if [ $USER = "root" ]; then
