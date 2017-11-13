@@ -1,5 +1,5 @@
-Linux ISO Downloader
-====================
+Tux Disc
+========
 
 Downloads Linux ISO of choice based on user input.
 
@@ -10,8 +10,8 @@ Downloads Linux ISO of choice based on user input.
 
 [License][2]
 
-[1]: https://github.com/Flamestar98/Linux-ISO-Downloader/blob/master/CHANGELOG.md
-[2]: https://github.com/Flamestar98/Linux-ISO-Downloader/blob/master/LICENSE
+[1]: https://github.com/Flamestar98/tux-disc/blob/master/CHANGELOG.md
+[2]: https://github.com/Flamestar98/tux-disc/blob/master/LICENSE
 
 Currently includes
 ------------------
@@ -83,7 +83,7 @@ Download
 --------
 Both source tarballs and binaries can be downloaded from the [releases][3] page of this repo, or you can use Git to clone the most recent version of the repository
 
-[3]: https://github.com/Flamestar98/Linux-ISO-Downloader/releases
+[3]: https://github.com/Flamestar98/tux-disc/releases
 
 Importaint information
 ----------------------
@@ -112,16 +112,16 @@ To use this script,
 * Download the binary .deb file of the latest release
 #### GUI
 * Double-click the .deb file and click install
-* Find and open "Linux ISO Downloader" in the application menu of your desktop (the desktop file is saved under ~/.local/share/applications)
+* Find and open "Tux Disc" in the application menu of your desktop (the desktop file is saved under ~/.local/share/applications)
 
 #### CLI
-* run "dpkg -i FILEPATH/linux-iso-downloader_YYYY-mm-dd_v?.?.deb" (where "FILEPATH" is the full path (you can use "~" in the filepath if it's somewhere in your home directory) to the .deb file, and "YYYY-mm-dd_v?.?" is the version number of Linux ISO Downloader)
-* Once install is complete, simply run "linux-iso-downloader" from any terminal
+* run "dpkg -i FILEPATH/tux-disc_v?.?.deb" (where "FILEPATH" is the full path (you can use "~" in the filepath if it's somewhere in your home directory) to the .deb file, and "v?.?" is the version number of Tux Disc)
+* Once install is complete, simply run "tux-disc" from any terminal
 
 ### Source
 * Download the source tarball from the releases page or clone the Git repository
 #### GUI
-* Right click "linux-iso-downloader_YYYY-mm-dd.sh"
+* Right click "tux-disc_v?.?.sh"
 * Select "Properties"
 * Select "Permissions"
 * Check the "Allow executing file as program" box
@@ -129,12 +129,12 @@ To use this script,
 
 #### CLI
 * Type "bash" and then the full path to the file
-* (i.e. "bash /home/user/Linux-ISO-Downloader/linux-iso-downloader_2017-11-08-v1.0.sh")
-* (i.e. "bash ~/Linux-ISO-Downloader/linux-iso-downloader_2017-11-08-v1.0.sh")
+* (i.e. "bash /home/user/Tux-Disc/tux-disc_v1.0.sh")
+* (i.e. "bash ~/Tux-Disc/tux-disc_v1.0.sh")
 
 or
 * cd into the directory of the script
-* ./linux-iso-downloader_YYYY-mm-dd-v?.?.sh
+* ./tux-disc_v?.?.sh
 
 Compile from source
 -------------------

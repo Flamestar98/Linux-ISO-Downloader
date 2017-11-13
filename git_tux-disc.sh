@@ -15,13 +15,13 @@ else
 # Install Git?
     select GIT in Yes No
     do
-            case $GIT in 
-            Yes|No)   
+            case $GIT in
+            Yes|No)
                     break
                     ;;
             *)
                     echo ""
-                    echo "Please select yes or no" 
+                    echo "Please select yes or no"
                     ;;
             esac
     done
@@ -46,12 +46,12 @@ fi
 
 # Replace?
 echo ""
-echo 'Would you like to download the most recent version of Linux ISO Downloader from Github?'
+echo 'Would you like to download the most recent version of Tux Disc from Github?'
 echo ""
 select REPLACE in Yes No
 do
-        case $REPLACE in 
-        Yes|No)   
+        case $REPLACE in
+        Yes|No)
                 break
                 ;;
         *)
@@ -69,55 +69,55 @@ echo 'Would you like to use HTTPS or SSH?'
 echo ""
     select PROTO in HTTPS SSH
     do
-            case $PROTO in 
-            HTTPS|SSH)   
+            case $PROTO in
+            HTTPS|SSH)
                     break
                     ;;
             *)
                     echo ""
-                    echo "Please select either HTTPS or SSH" 
+                    echo "Please select either HTTPS or SSH"
                     ;;
             esac
     done
 # HTTPS
   if [[ $PROTO = "HTTPS" ]]; then
     cd ~
-    if [ -d "Linux-ISO-Downloader" ]; then
+    if [ -d "Tux-Disc" ]; then
         # Message
         echo ""
-        echo "Deleting your current version of Linux ISO Downloader and downloading most recent version from Github..."
+        echo "Deleting your current version of Tux Disc and downloading most recent version from Github..."
         echo ""
         # Remove current L-I-D and clone Git
-        sudo rm -r Linux-ISO-Downloader && git clone https://github.com/Flamestar98/Linux-ISO-Downloader.git
+        sudo rm -r Tux-Disc && git clone https://github.com/Flamestar98/Tux-Disc.git
         echo ""
     else
         # Message
         echo ""
-        echo "Downloading most recent version of Linux ISO Downloader from Github..."
+        echo "Downloading most recent version of Tux Disc from Github..."
         echo ""
     # Clone Git
-        git clone https://github.com/Flamestar98/Linux-ISO-Downloader.git
+        git clone https://github.com/Flamestar98/Tux-Disc.git
         echo ""
     fi
   fi
 # SSH
   if [[ $PROTO = "SSH" ]]; then
     cd ~
-    if [ -d "Linux-ISO-Downloader" ]; then
+    if [ -d "Tux-Disc" ]; then
         # Message
         echo ""
-        echo "Deleting your current version of Linux ISO Downloader and downloading most recent version from Github..."
+        echo "Deleting your current version of Tux Disc and downloading most recent version from Github..."
         echo ""
         # Remove current L-I-D and clone Git over SSH
-        sudo rm -r Linux-ISO-Downloader && git clone git@github.com:Flamestar98/Linux-ISO-Downloader.git
+        sudo rm -r Tux-Disc && git clone git@github.com:Flamestar98/Tux-Disc.git
         echo ""
     else
         # Message
         echo ""
-        echo "Downloading most recent version of Linux ISO Downloader from Github..."
+        echo "Downloading most recent version of Tux Disc from Github..."
         echo ""
     # Clone Git over SSH
-        git clone git@github.com:Flamestar98/Linux-ISO-Downloader.git
+        git clone git@github.com:Flamestar98/Tux-Disc.git
         echo ""
     fi
   fi
