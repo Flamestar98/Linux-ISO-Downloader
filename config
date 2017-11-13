@@ -105,6 +105,9 @@ fi" > ./create-command.sh
 # Binary build
     echo "#!/bin/bash
 
+echo 'V Folder size V'
+du -sh ./tux-disc_v$VERSION
+
 chown -R root:root ./linux-iso-downloader_$SCRIPTVER-$REVISION/ && dpkg-deb --build ./linux-iso-downloader_$SCRIPTVER-$REVISION
 rm -r ./linux-iso-downloader_$SCRIPTVER-$REVISION
 
