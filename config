@@ -86,8 +86,6 @@ fi" > ./create-prerm.sh
 
 echo '#!/bin/bash
 
-$STYLEVER = v$VERSION
-
 bash /usr/lib/tux-disc/tux-disc_v$VERSION.sh' > ./tux-disc_v$VERSION/usr/bin/tux-disc && chmod a+x ./tux-disc_v$VERSION/usr/bin/tux-disc
 
 if [ -e ./tux-disc_v$VERSION/usr/bin/tux-disc ]; then
