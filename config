@@ -43,6 +43,12 @@ else
     echo 'Failed to build desktop file'
 fi" > ./create-desktop.sh
 
+if [ -e ./create-desktop.sh ]; then
+    echo 'create-desktop.sh configured'
+else
+    echo 'Failed to configure create-desktop.sh'
+fi
+
 # Control
     echo "#!/bin/bash
 
@@ -63,6 +69,12 @@ else
     echo 'Failed to build control file'
 fi" > ./create-control.sh
 
+if [ -e ./create-control.sh ]; then
+    echo 'create-control.sh configured'
+else
+    echo 'Failed to configure create-control.sh'
+fi
+
 # Postinst
     echo "#!/bin/bash
 
@@ -76,6 +88,12 @@ else
     echo 'Failed to build postinst file'
 fi" > ./create-postinst.sh
 
+if [ -e ./create-postinst.sh ]; then
+    echo 'create-postinst.sh configured'
+else
+    echo 'Failed to configure create-postinst.sh'
+fi
+
 # Prerm
     echo "#!/bin/bash
 
@@ -86,6 +104,12 @@ if [ -e ./tux-disc_$SCRIPTVER-$REVISION/DEBIAN/prerm ]; then
 else
     echo 'Failed to build prerm file'
 fi" > ./create-prerm.sh
+
+if [ -e ./create-prerm.sh ]; then
+    echo 'create-prerm.sh configured'
+else
+    echo 'Failed to configure create-prerm.sh'
+fi
 
 # Command
     echo "#!/bin/bash
@@ -99,6 +123,12 @@ if [ -e ./tux-disc_$SCRIPTVER-$REVISION/usr/bin/tux-disc ]; then
 else
     echo 'Failed to command command file'
 fi" > ./create-command.sh
+
+if [ -e ./create-command.sh ]; then
+    echo 'create-command.sh configured'
+else
+    echo 'Failed to configure create-command.sh'
+fi
 
 # Binary build
     echo "#!/bin/bash
@@ -115,6 +145,12 @@ else
     echo 'Failed to build binary file'
 fi" > ./create-binary.sh
 
+if [ -e ./create-binary.sh ]; then
+    echo 'create-binary.sh configured'
+else
+    echo 'Failed to configure create-binary.sh'
+fi
+
 # Directories
     echo "#!/bin/bash
 
@@ -130,6 +166,12 @@ if [ -d ./tux-disc_$SCRIPTVER-$REVISION ]; then
 else
     echo 'Failed to build directories'
 fi" > ./create-directories.sh
+
+if [ -e ./create-directories.sh ]; then
+    echo 'create-directories.sh configured'
+else
+    echo 'Failed to configure create-directories.sh'
+fi
 
 # Move and copy files
     echo "#!/bin/bash
@@ -149,6 +191,12 @@ cp ./tux-disc_$SCRIPTVER-$REVISION.sh ./tux-disc_$SCRIPTVER-$REVISION/usr/lib/tu
 # Tux
 cp ./tux-disc.png ./tux-disc_$SCRIPTVER-$REVISION/usr/lib/tux-disc/" > ./copy-files.sh
 
+if [ -e ./copy-files.sh ]; then
+    echo 'copy-files.sh configured'
+else
+    echo 'Failed to configure copy-files.sh'
+fi
+
 # Copy source files
     echo "#!/bin/bash
 
@@ -164,6 +212,12 @@ cp ./tux-disc_$SCRIPTVER-$REVISION/usr/lib/tux-disc/tux-disc_$SCRIPTVER-$REVISIO
 # Remove source folder
 rm -r ./tux-disc_$SCRIPTVER-$REVISION" > ./copy-source.sh
 
+if [ -e ./copy-source.sh ]; then
+    echo 'copy-source.sh configured'
+else
+    echo 'Failed to configure copy-source.sh'
+fi
+
 # Remove source files
     echo "#!/bin/bash
 
@@ -175,6 +229,12 @@ rm -r /usr/lib/tux-disc
 
 # Desktop
 rm /home/*/.local/share/applications/tux-disc_$SCRIPTVER-$REVISION.desktop" > ./make-uninstall
+
+if [ -e ./make-uninstall.sh ]; then
+    echo 'make-uninstall.sh configured'
+else
+    echo 'Failed to configure make-uninstall.sh'
+fi
 
 # If not run as root
 else
