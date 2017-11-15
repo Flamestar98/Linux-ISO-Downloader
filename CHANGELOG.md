@@ -1,7 +1,7 @@
 Changelog
 =========
 
-Version 1.0
+2017-11-12-v1.0
 -----------
 ### Changed
 * Renamed application from Linux ISO Downloader to Tux Disc
