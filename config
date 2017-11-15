@@ -230,10 +230,10 @@ rm -r /usr/lib/tux-disc
 # Desktop
 rm /home/*/.local/share/applications/tux-disc_$SCRIPTVER-$REVISION.desktop" > ./make-uninstall
 
-if [ -e ./make-uninstall.sh ]; then
-    echo 'make-uninstall.sh configured'
+if [ -e ./make-uninstall ]; then
+    echo 'make-uninstall configured'
 else
-    echo 'Failed to configure make-uninstall.sh'
+    echo 'Failed to configure make-uninstall'
 fi
 
 # If not run as root

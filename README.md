@@ -115,13 +115,13 @@ To use this script,
 * Find and open "Tux Disc" in the application menu of your desktop (the desktop file is saved under ~/.local/share/applications)
 
 #### CLI
-* run "dpkg -i FILEPATH/tux-disc_v?.?.deb" (where "FILEPATH" is the full path (you can use "~" in the filepath if it's somewhere in your home directory) to the .deb file, and "v?.?" is the version number of Tux Disc)
+* run "dpkg -i FILEPATH/tux-disc_YYYY-mm-dd-v?.?.deb" (where "FILEPATH" is the full path (you can use "~" in the filepath if it's somewhere in your home directory) to the .deb file, and "YYYY-mm-dd-v?.?" is the version number of Tux Disc)
 * Once install is complete, simply run "tux-disc" from any terminal
 
 ### Source
 * Download the source tarball from the releases page or clone the Git repository
 #### GUI
-* Right click "tux-disc_v?.?.sh"
+* Right click "tux-disc_YYYY-mm-dd-v?.?.sh"
 * Select "Properties"
 * Select "Permissions"
 * Check the "Allow executing file as program" box
@@ -129,12 +129,12 @@ To use this script,
 
 #### CLI
 * Type "bash" and then the full path to the file
-* (i.e. "bash /home/user/Tux-Disc/tux-disc_v1.0.sh")
-* (i.e. "bash ~/Tux-Disc/tux-disc_v1.0.sh")
+* (i.e. "bash /home/user/Tux-Disc/tux-disc_2017-11-12-v1.0-v1.0.sh")
+* (i.e. "bash ~/Tux-Disc/tux-disc_2017-11-12-v1.0-v1.0.sh")
 
 or
 * cd into the directory of the script
-* ./tux-disc_v?.?.sh
+* ./tux-disc_YYYY-mm-dd-v?.?.sh
 
 Compile from source
 -------------------
