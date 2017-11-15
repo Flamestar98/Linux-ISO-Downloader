@@ -1,4 +1,4 @@
-$BINARYVER-$REVISION#!/bin/bash
+#!/bin/bash
 
 # Establishes base directory of script
 BASEDIR=$(dirname $0)
