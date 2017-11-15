@@ -2,25 +2,25 @@
 
 if [ $USER = "root" ]; then
 # Directories
-    bash ./create-directories.sh
+    bash ./create-directories.sh && \
 
 # Desktop
-    bash ./create-desktop.sh
+    bash ./create-desktop.sh && \
 
 # Control
-    bash ./create-control.sh
+    bash ./create-control.sh && \
 
 # Postinst
-    bash ./create-postinst.sh
+    bash ./create-postinst.sh && \
 
 # Prerm
-    bash ./create-prerm.sh
+    bash ./create-prerm.sh && \
 
 # Command
-    bash ./create-command.sh
+    bash ./create-command.sh && \
 
 # Move and copy files
-    bash ./copy-files.sh
+    bash ./copy-files.sh && \
 
 # Binary build
     bash ./create-binary.sh
