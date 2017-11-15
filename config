@@ -239,5 +239,5 @@ fi
 # If not run as root
 else
 # Message
-    echo "Please run this build script as root"
+    echo "Please run this build script as root or with sudo"
 fi
