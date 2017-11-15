@@ -27,5 +27,5 @@ if [ $USER = "root" ]; then
 
 # If not run as root
 else
-    echo "Please run this build script as root"
+    echo "Please run this build script as root or with sudo"
 fi
