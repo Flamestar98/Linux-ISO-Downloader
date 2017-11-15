@@ -1,10 +1,16 @@
-#!/bin/bash
+$BINARYVER-$REVISION#!/bin/bash
 
 # Establishes base directory of script
 BASEDIR=$(dirname $0)
 
-# Establishes version number
-VERSION=$"1.0"
+# Establishes script version number
+SCRIPTVER=$"2017-11-12"
+
+# Establishes binary version number
+BINARYVER=$"2017.11.12"
+
+# Establishes revision number
+REVISION=$"v1.0"
 
 # Establishes size in KB
 SIZEKB=$"584"
@@ -21,17 +27,17 @@ echo '#!/usr/bin/env xdg-open
 [Desktop Entry]
 Categories=Utility
 Comment=
-Exec=bash /usr/lib/tux-disc/tux-disc_v$VERSION.sh
+Exec=bash /usr/lib/tux-disc/tux-disc_$SCRIPTVER-$REVISION.sh
 Hidden=no
 Icon=/usr/lib/tux-disc/tux-disc.png
 Name=Tux Disc
 Terminal=true
 Type=Application
-Version=$VERSION' > ./tux-disc_v$VERSION/usr/lib/tux-disc/tux-disc_v$VERSION.desktop
+Version=$BINARYVER-$REVISION' > ./tux-disc_$SCRIPTVER-$REVISION/usr/lib/tux-disc/tux-disc_$SCRIPTVER-$REVISION.desktop
 
-chmod a+x ./tux-disc_v$VERSION/usr/lib/tux-disc/tux-disc_v$VERSION.desktop
+chmod a+x ./tux-disc_$SCRIPTVER-$REVISION/usr/lib/tux-disc/tux-disc_$SCRIPTVER-$REVISION.desktop
 
-if [ -e ./tux-disc_v$VERSION/usr/lib/tux-disc/tux-disc_v$VERSION.desktop ]; then
+if [ -e ./tux-disc_$SCRIPTVER-$REVISION/usr/lib/tux-disc/tux-disc_$SCRIPTVER-$REVISION.desktop ]; then
     echo 'Desktop file built'
 else
     echo 'Failed to build desktop file'
@@ -47,11 +53,11 @@ Maintainer: John G Laufert
 Depends:
 Priority: optional
 Section: utilities
-Version: $VERSION
+Version: $BINARYVER-$REVISION
 Installed-Size: $SIZEKB
-Description: Downloads Linux ISO of choice based on user input' > ./tux-disc_v$VERSION/DEBIAN/control && chmod a+x ./tux-disc_v$VERSION/DEBIAN/control
+Description: Downloads Linux ISO of choice based on user input' > ./tux-disc_$SCRIPTVER-$REVISION/DEBIAN/control && chmod a+x ./tux-disc_$SCRIPTVER-$REVISION/DEBIAN/control
 
-if [ -e ./tux-disc_v$VERSION/DEBIAN/control ]; then
+if [ -e ./tux-disc_$SCRIPTVER-$REVISION/DEBIAN/control ]; then
     echo 'Control file built'
 else
     echo 'Failed to build control file'
@@ -62,9 +68,9 @@ fi" > ./create-control.sh
 
 echo '#!/bin/bash
 
-cp /usr/lib/tux-disc/tux-disc_v$VERSION.desktop /home/*/.local/share/applications/ && update-desktop-database /home/*/.local/share/applications/' > ./tux-disc_v$VERSION/DEBIAN/postinst && chmod a+x ./tux-disc_v$VERSION/DEBIAN/postinst
+cp /usr/lib/tux-disc/tux-disc_$SCRIPTVER-$REVISION.desktop /home/*/.local/share/applications/ && update-desktop-database /home/*/.local/share/applications/' > ./tux-disc_$SCRIPTVER-$REVISION/DEBIAN/postinst && chmod a+x ./tux-disc_$SCRIPTVER-$REVISION/DEBIAN/postinst
 
-if [ -e ./tux-disc_v$VERSION/DEBIAN/postinst ]; then
+if [ -e ./tux-disc_$SCRIPTVER-$REVISION/DEBIAN/postinst ]; then
     echo 'Postinst file built'
 else
     echo 'Failed to build postinst file'
@@ -73,9 +79,9 @@ fi" > ./create-postinst.sh
 # Prerm
     echo "#!/bin/bash
 
-echo 'rm /home/*/.local/share/applications/tux-disc_v$VERSION.desktop' > ./tux-disc_v$VERSION/DEBIAN/prerm && chmod a+x ./tux-disc_v$VERSION/DEBIAN/prerm
+echo 'rm /home/*/.local/share/applications/tux-disc_$SCRIPTVER-$REVISION.desktop' > ./tux-disc_$SCRIPTVER-$REVISION/DEBIAN/prerm && chmod a+x ./tux-disc_$SCRIPTVER-$REVISION/DEBIAN/prerm
 
-if [ -e ./tux-disc_v$VERSION/DEBIAN/prerm ]; then
+if [ -e ./tux-disc_$SCRIPTVER-$REVISION/DEBIAN/prerm ]; then
     echo 'Prerm file built'
 else
     echo 'Failed to build prerm file'
@@ -86,9 +92,9 @@ fi" > ./create-prerm.sh
 
 echo '#!/bin/bash
 
-bash /usr/lib/tux-disc/tux-disc_v$VERSION.sh' > ./tux-disc_v$VERSION/usr/bin/tux-disc && chmod a+x ./tux-disc_v$VERSION/usr/bin/tux-disc
+bash /usr/lib/tux-disc/tux-disc_$SCRIPTVER-$REVISION.sh' > ./tux-disc_$SCRIPTVER-$REVISION/usr/bin/tux-disc && chmod a+x ./tux-disc_$SCRIPTVER-$REVISION/usr/bin/tux-disc
 
-if [ -e ./tux-disc_v$VERSION/usr/bin/tux-disc ]; then
+if [ -e ./tux-disc_$SCRIPTVER-$REVISION/usr/bin/tux-disc ]; then
     echo 'Command file built'
 else
     echo 'Failed to command command file'
@@ -98,28 +104,28 @@ fi" > ./create-command.sh
     echo "#!/bin/bash
 
 echo 'V Folder size V'
-du -sh ./tux-disc_v$VERSION
+du -sh ./tux-disc_$SCRIPTVER-$REVISION
 
-chown -R root:root ./tux-disc_v$VERSION/ && dpkg-deb --build ./tux-disc_v$VERSION
-rm -r ./tux-disc_v$VERSION
+chown -R root:root ./tux-disc_$SCRIPTVER-$REVISION/ && dpkg-deb --build ./tux-disc_$SCRIPTVER-$REVISION
+rm -r ./tux-disc_$SCRIPTVER-$REVISION
 
-if [ -e ./tux-disc_v$VERSION.deb ]; then
+if [ -e ./tux-disc_$SCRIPTVER-$REVISION.deb ]; then
     echo 'Binary file built'
 else
-    echo 'Failed to command binary file'
+    echo 'Failed to build binary file'
 fi" > ./create-binary.sh
 
 # Directories
     echo "#!/bin/bash
 
-mkdir ./tux-disc_v$VERSION
-mkdir ./tux-disc_v$VERSION/DEBIAN
-mkdir ./tux-disc_v$VERSION/usr
-mkdir ./tux-disc_v$VERSION/usr/bin
-mkdir ./tux-disc_v$VERSION/usr/lib
-mkdir ./tux-disc_v$VERSION/usr/lib/tux-disc
+mkdir ./tux-disc_$SCRIPTVER-$REVISION
+mkdir ./tux-disc_$SCRIPTVER-$REVISION/DEBIAN
+mkdir ./tux-disc_$SCRIPTVER-$REVISION/usr
+mkdir ./tux-disc_$SCRIPTVER-$REVISION/usr/bin
+mkdir ./tux-disc_$SCRIPTVER-$REVISION/usr/lib
+mkdir ./tux-disc_$SCRIPTVER-$REVISION/usr/lib/tux-disc
 
-if [ -d ./tux-disc_v$VERSION ]; then
+if [ -d ./tux-disc_$SCRIPTVER-$REVISION ]; then
     echo 'Directories built'
 else
     echo 'Failed to build directories'
@@ -129,34 +135,34 @@ fi" > ./create-directories.sh
     echo "#!/bin/bash
 
 # Changelog
-cp ./CHANGELOG.md ./tux-disc_v$VERSION/DEBIAN/changelog
+cp ./CHANGELOG.md ./tux-disc_$SCRIPTVER-$REVISION/DEBIAN/changelog
 
 # License
-cp ./LICENSE ./tux-disc_v$VERSION/DEBIAN/copyright
+cp ./LICENSE ./tux-disc_$SCRIPTVER-$REVISION/DEBIAN/copyright
 
 # README
-cp ./README.md ./tux-disc_v$VERSION/usr/lib/tux-disc/
+cp ./README.md ./tux-disc_$SCRIPTVER-$REVISION/usr/lib/tux-disc/
 
 # Script
-cp ./tux-disc_v$VERSION.sh ./tux-disc_v$VERSION/usr/lib/tux-disc/
+cp ./tux-disc_$SCRIPTVER-$REVISION.sh ./tux-disc_$SCRIPTVER-$REVISION/usr/lib/tux-disc/
 
 # Tux
-cp ./tux-disc.png ./tux-disc_v$VERSION/usr/lib/tux-disc/" > ./copy-files.sh
+cp ./tux-disc.png ./tux-disc_$SCRIPTVER-$REVISION/usr/lib/tux-disc/" > ./copy-files.sh
 
 # Copy source files
     echo "#!/bin/bash
 
 # Command
-cp ./tux-disc_v$VERSION/usr/bin/tux-disc /usr/bin/
+cp ./tux-disc_$SCRIPTVER-$REVISION/usr/bin/tux-disc /usr/bin/
 
 # Folder
-cp -r ./tux-disc_v$VERSION/usr/lib/tux-disc /usr/lib/
+cp -r ./tux-disc_$SCRIPTVER-$REVISION/usr/lib/tux-disc /usr/lib/
 
 # Desktop
-cp ./tux-disc_v$VERSION/usr/lib/tux-disc/tux-disc_v$VERSION.desktop /home/*/.local/share/applications/ && update-desktop-database /home/*/.local/share/applications/
+cp ./tux-disc_$SCRIPTVER-$REVISION/usr/lib/tux-disc/tux-disc_$SCRIPTVER-$REVISION.desktop /home/*/.local/share/applications/ && update-desktop-database /home/*/.local/share/applications/
 
 # Remove source folder
-rm -r ./tux-disc_v$VERSION" > ./copy-source.sh
+rm -r ./tux-disc_$SCRIPTVER-$REVISION" > ./copy-source.sh
 
 # Remove source files
     echo "#!/bin/bash
@@ -168,7 +174,7 @@ rm /usr/bin/tux-disc
 rm -r /usr/lib/tux-disc
 
 # Desktop
-rm /home/*/.local/share/applications/tux-disc_v$VERSION.desktop" > ./make-uninstall
+rm /home/*/.local/share/applications/tux-disc_$SCRIPTVER-$REVISION.desktop" > ./make-uninstall
 
 # If not run as root
 else

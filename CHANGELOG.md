@@ -1,7 +1,7 @@
 Changelog
 =========
 
-Version 1.0
+2017-11-12-v1.0
 -----------
 ### Changed
 * Renamed application from Linux ISO Downloader to Tux Disc
@@ -23,7 +23,7 @@ Older Versions
 ---------------
 
 ### Added
-* Stylization to begining of script
+* Stylization to beginning of script
 
 2017-11-08-v1.0
 ---------------
