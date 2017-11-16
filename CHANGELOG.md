@@ -1,8 +1,19 @@
 Changelog
 =========
 
+2017-11-16-v1.0
+---------------
+### Added
+* Fedora Workstation 27
+- Net Install (i386/amd64)
+- Live Install (amd64)
+
+### Changed
+* Fedora 26 now separate section under "Fedora"
+- Now labeled as "Workstation 26"
+
 2017-11-12-v1.0
------------
+---------------
 ### Changed
 * Renamed application from Linux ISO Downloader to Tux Disc
 
