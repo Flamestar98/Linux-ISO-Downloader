@@ -13,17 +13,17 @@ echo '
                          ##                         ##
                          ##          Disc           ##
                          ##                         ##
-                         ## Version 2017-11-12-v1.0 ##
+                         ## Version 2017-11-16-v1.0 ##
                          ##                         ##
                          #############################
 '
 
 # Linux distrobution
 echo 'Please select from the following'
-select DISTRO in "Debian 9" "Fedora 26" "KDE Neon" Kubuntu Lubuntu Qubes Ubuntu "Ubuntu Budgie" "Ubuntu GNOME" "Ubuntu MATE" "Ubuntu Studio" Xubuntu
+select DISTRO in "Debian 9" "Fedora" "KDE Neon" Kubuntu Lubuntu Qubes Ubuntu "Ubuntu Budgie" "Ubuntu GNOME" "Ubuntu MATE" "Ubuntu Studio" Xubuntu
 do
         case $DISTRO in
-        "Debian 9"|"Fedora 26"|"KDE Neon"|Kubuntu|Lubuntu|Qubes|Ubuntu|"Ubuntu Budgie"|"Ubuntu GNOME"|"Ubuntu MATE"|"Ubuntu Studio"|Xubuntu)
+        "Debian 9"|"Fedora"|"KDE Neon"|Kubuntu|Lubuntu|Qubes|Ubuntu|"Ubuntu Budgie"|"Ubuntu GNOME"|"Ubuntu MATE"|"Ubuntu Studio"|Xubuntu)
                 break
                 ;;
         *)
@@ -245,8 +245,22 @@ if [[ $DISTRO = "Debian 9" ]]; then
     fi
 fi
 # Fedora
-if [[ $DISTRO = "Fedora 26" ]]; then
+if [[ $DISTRO = "Fedora" ]]; then
+  # Fedora version
+      echo 'Please select your version of Fedora for download'
+      select FED in "Workstation 26" "Workstation 27"
+      do
+              case $FED in
+              "Workstation 26"|"Workstation 27")
+                      break
+                      ;;
+              *)
+                      echo "Please select a Fedora version"
+                      ;;
+              esac
+      done
 # Install method
+if [[ $FED = "Workstation 26" ]]; then
     echo 'Now select an install method'
     select RELEASE in "Net Install" "Live Install"
     do
@@ -277,14 +291,14 @@ if [[ $DISTRO = "Fedora 26" ]]; then
 # i386
         if [[ $ARC = "i386" ]]; then
 # Message
-            echo "Now downloading $DISTRO $ARC $RELEASE ISO..."
+            echo "Now downloading $DISTRO $FED $ARC $RELEASE ISO..."
 # Download
             wget -P ~/ISO https://download.fedoraproject.org/pub/fedora-secondary/releases/26/Workstation/i386/iso/Fedora-Workstation-netinst-i386-26-1.5.iso
         fi
 # amd64
         if [[ $ARC = "amd64" ]]; then
 # Message
-            echo "Now downloading $DISTRO $ARC $RELEASE ISO..."
+            echo "Now downloading $DISTRO $FED $ARC $RELEASE ISO..."
 # Download
             wget -P ~/ISO https://download.fedoraproject.org/pub/fedora/linux/releases/26/Workstation/x86_64/iso/Fedora-Workstation-netinst-x86_64-26-1.5.iso
         fi
@@ -307,18 +321,95 @@ if [[ $DISTRO = "Fedora 26" ]]; then
 # i386
         if [[ $ARC = "i386" ]]; then
 # Message
-            echo "Now downloading $DISTRO $ARC $RELEASE ISO..."
+            echo "Now downloading $DISTRO $FED $ARC $RELEASE ISO..."
 # Download
             wget -P ~/ISO https://download.fedoraproject.org/pub/fedora-secondary/releases/26/Workstation/i386/iso/Fedora-Workstation-Live-i386-26-1.5.iso
         fi
 # amd64
         if [[ $ARC = "amd64" ]]; then
 # Message
-            echo "Now downloading $DISTRO $ARC $RELEASE ISO..."
+            echo "Now downloading $DISTRO $FED $ARC $RELEASE ISO..."
 # Download
             wget -P ~/ISO https://download.fedoraproject.org/pub/fedora/linux/releases/26/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-26-1.5.iso
         fi
     fi
+  fi
+    # Install method
+    if [[ $FED = "Workstation 27" ]]; then
+
+        echo 'Now select an install method'
+        select RELEASE in "Net Install" "Live Install"
+        do
+                case $RELEASE in
+                "Net Install"|"Live Install")
+                        break
+                        ;;
+                *)
+                        echo "Please select an install method"
+                        ;;
+                esac
+        done
+    # Net install
+        if [[ $RELEASE = "Net Install" ]]; then
+    # Architecture
+            echo 'Now select an architecture'
+            select ARC in i386 amd64
+            do
+                    case $ARC in
+                    i386|amd64)
+                            break
+                            ;;
+                    *)
+                            echo "Please select an architecture"
+                            ;;
+                    esac
+            done
+    # i386
+            if [[ $ARC = "i386" ]]; then
+    # Message
+                echo "Now downloading $DISTRO $FED $ARC $RELEASE ISO..."
+    # Download
+                wget -P ~/ISO https://download.fedoraproject.org/pub/fedora-secondary/releases/27/Workstation/i386/iso/Fedora-Workstation-netinst-i386-27-1.6.iso
+            fi
+    # amd64
+            if [[ $ARC = "amd64" ]]; then
+    # Message
+                echo "Now downloading $DISTRO $FED $ARC $RELEASE ISO..."
+    # Download
+                wget -P ~/ISO https://download.fedoraproject.org/pub/fedora/linux/releases/27/Workstation/x86_64/iso/Fedora-Workstation-netinst-x86_64-27-1.6.iso
+            fi
+        fi
+    # Live Install
+        if [[ $RELEASE = "Live Install" ]]; then
+    # Architecture
+#            echo 'Now select an architecture'
+#            select ARC in i386 amd64
+#            do
+#                    case $ARC in
+#                    i386|amd64)
+#                            break
+#                            ;;
+#                    *)
+#                            echo "Please select an architecture"
+#                            ;;
+#                    esac
+#            done
+    # i386
+#            if [[ $ARC = "i386" ]]; then
+    # Message
+#                echo "Now downloading $DISTRO $FED $ARC $RELEASE ISO..."
+    # Download
+#                wget -P ~/ISO https://download.fedoraproject.org/
+#            fi
+    # amd64
+#            if [[ $ARC = "amd64" ]]; then
+    # Message
+                echo "Now downloading $DISTRO $FED amd64 $RELEASE ISO..."
+    # Download
+                wget -P ~/ISO https://download.fedoraproject.org/pub/fedora/linux/releases/27/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-27-1.6.iso
+            fi
+        fi
+  fi
 fi
 # KDE Neon
 if [[ $DISTRO = "KDE Neon" ]]; then

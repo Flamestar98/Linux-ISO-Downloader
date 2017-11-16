@@ -4,16 +4,16 @@
 BASEDIR=$(dirname $0)
 
 # Establishes script version number
-SCRIPTVER=$"2017-11-12"
+SCRIPTVER=$"2017-11-16"
 
 # Establishes binary version number
-BINARYVER=$"2017.11.12"
+BINARYVER=$"2017.11.16"
 
 # Establishes revision number
 REVISION=$"v1.0"
 
 # Establishes size in KB
-SIZEKB=$"584"
+SIZEKB=$"588"
 
 # Check if root
 if [ $USER = "root" ]; then

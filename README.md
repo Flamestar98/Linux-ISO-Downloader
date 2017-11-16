@@ -21,9 +21,14 @@ Currently includes
 * Full installer (i386/amd64)
 * Live installer (i386/amd64)
 
-#### Fedora 26
+#### Fedora
+* **Fedora Workstation 26**
 * Net installer (i386/amd64)
 * Live installer (i386/amd64)
+
+* **Fedora Workstation 27**
+* Net Installer (i386/amd64)
+* Live Installer (amd64)
 
 #### KDE Neon
 * User Edition (amd64)
