@@ -13,7 +13,7 @@ echo '
                          ##                         ##
                          ##          Disc           ##
                          ##                         ##
-                         ## Version 2017-11-16-v1.0 ##
+                         ## Version 2017-11-16-v1.1 ##
                          ##                         ##
                          #############################
 '
@@ -407,7 +407,7 @@ if [[ $FED = "Workstation 26" ]]; then
                 echo "Now downloading $DISTRO $FED amd64 $RELEASE ISO..."
     # Download
                 wget -P ~/ISO https://download.fedoraproject.org/pub/fedora/linux/releases/27/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-27-1.6.iso
-            fi
+#            fi
         fi
   fi
 fi
@@ -1504,7 +1504,7 @@ if [[ $REPEAT = "Yes" ]]; then
 # Change directory
     cd $BASEDIR
 # Relaunch script
-    bash tux-disc_v1.0.sh
+    bash tux-disc_2017-11-16-v1.1.sh
 fi
 # End
 if [[ $REPEAT = "No" ]]; then
