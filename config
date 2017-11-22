@@ -10,7 +10,7 @@ SCRIPTVER=$"2017-11-16"
 BINARYVER=$"2017.11.16"
 
 # Establishes revision number
-REVISION=$"v1.1"
+REVISION=$"v1.2"
 
 # Establishes size in KB
 SIZEKB=$"588"
