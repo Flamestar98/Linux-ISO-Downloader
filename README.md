@@ -115,6 +115,7 @@ To use this script,
 
 ### Binary
 * Download the binary .deb file of the latest release
+
 #### GUI
 * Double-click the .deb file and click install
 * Find and open "Tux Disc" in the application menu of your desktop (the desktop file is saved under ~/.local/share/applications)
@@ -125,6 +126,7 @@ To use this script,
 
 ### Source
 * Download the source tarball from the releases page or clone the Git repository
+
 #### GUI
 * Right click "tux-disc_YYYY-mm-dd-v?.?.sh"
 * Select "Properties"

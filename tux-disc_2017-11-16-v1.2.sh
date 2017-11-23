@@ -6,17 +6,23 @@ BASEDIR=$(dirname $0)
 # Prints todays date (YYYYmmdd) when called by $DATE
 DATE=$(date '+%Y%m%d')
 
-echo '
+# Establishes script version number
+SCRIPTVER=$"2017-11-16"
+
+# Establishes revision number
+REVISION=$"v1.2"
+
+echo "
                          #############################
                          ##                         ##
                          ##          Tux            ##
                          ##                         ##
                          ##          Disc           ##
                          ##                         ##
-                         ## Version 2017-11-16-v1.1 ##
+                         ## Version $SCRIPTVER-$REVISION ##
                          ##                         ##
                          #############################
-'
+"
 
 # Linux distrobution
 echo 'Please select from the following'
@@ -35,7 +41,7 @@ done
 # Debian
 if [[ $DISTRO = "Debian 9" ]]; then
 # Install method
-    echo 'Now select an install method'
+    echo "Now select an install method for $DISTRO"
     select RELEASE in "Net Install" "Full Install" "Live Install"
     do
             case $RELEASE in
@@ -50,7 +56,7 @@ if [[ $DISTRO = "Debian 9" ]]; then
 # Net Install
     if [[ $RELEASE = "Net Install" ]]; then
 # Architecture
-        echo 'Now select an architecture'
+        echo "Now select an architecture for $DISTRO $RELEASE"
         select ARC in i386 amd64
         do
                 case $ARC in
@@ -80,7 +86,7 @@ if [[ $DISTRO = "Debian 9" ]]; then
 # Full Install
     if [[ $RELEASE = "Full Install" ]]; then
 # Architecture
-        echo 'Now select an architecture'
+        echo "Now select an architecture for $DISTRO $RELEASE"
         select ARC in i386 amd64
         do
                 case $ARC in
@@ -114,7 +120,7 @@ if [[ $DISTRO = "Debian 9" ]]; then
 # Live Install
     if [[ $RELEASE = "Live Install" ]]; then
 # Architecture
-        echo 'Now select an architecture'
+        echo "Now select an architecture for $DISTRO $RELEASE"
         select ARC in i386 amd64
         do
                 case $ARC in
@@ -129,7 +135,7 @@ if [[ $DISTRO = "Debian 9" ]]; then
 # i386
         if [[ $ARC = "i386" ]]; then
 # Which desktop?
-            echo 'Which desktop would you like?'
+            echo "Which desktop would you like for $DISTRO $ARC $RELEASE?"
             select DEBDESK in Cinnamon GNOME KDE LXDE MATE XFCE
             do
                     case $DEBDESK in
@@ -187,7 +193,7 @@ if [[ $DISTRO = "Debian 9" ]]; then
 # amd64
         if [[ $ARC = "amd64" ]]; then
 # Which desktop?
-            echo 'Which desktop would you like?'
+            echo "Which desktop would you like for $DISTRO $ARC $RELEASE?"
             select DEBDESK in Cinnamon GNOME KDE LXDE MATE XFCE
             do
                     case $DEBDESK in
@@ -247,7 +253,7 @@ fi
 # Fedora
 if [[ $DISTRO = "Fedora" ]]; then
   # Fedora version
-      echo 'Please select your version of Fedora for download'
+      echo "Please select your version of $DISTRO for download"
       select FED in "Workstation 26" "Workstation 27"
       do
               case $FED in
@@ -261,7 +267,7 @@ if [[ $DISTRO = "Fedora" ]]; then
       done
 # Install method
 if [[ $FED = "Workstation 26" ]]; then
-    echo 'Now select an install method'
+    echo "Now select an install method for $DISTRO $FED"
     select RELEASE in "Net Install" "Live Install"
     do
             case $RELEASE in
@@ -276,7 +282,7 @@ if [[ $FED = "Workstation 26" ]]; then
 # Net install
     if [[ $RELEASE = "Net Install" ]]; then
 # Architecture
-        echo 'Now select an architecture'
+        echo "Now select an architecture for $DISTRO $FED $RELEASE"
         select ARC in i386 amd64
         do
                 case $ARC in
@@ -306,7 +312,7 @@ if [[ $FED = "Workstation 26" ]]; then
 # Live Install
     if [[ $RELEASE = "Live Install" ]]; then
 # Architecture
-        echo 'Now select an architecture'
+        echo "Now select an architecture for $DISTRO $FED $RELEASE"
         select ARC in i386 amd64
         do
                 case $ARC in
@@ -337,7 +343,7 @@ if [[ $FED = "Workstation 26" ]]; then
     # Install method
     if [[ $FED = "Workstation 27" ]]; then
 
-        echo 'Now select an install method'
+        echo "Now select an install method for $DISTRO $FED"
         select RELEASE in "Net Install" "Live Install"
         do
                 case $RELEASE in
@@ -352,7 +358,7 @@ if [[ $FED = "Workstation 26" ]]; then
     # Net install
         if [[ $RELEASE = "Net Install" ]]; then
     # Architecture
-            echo 'Now select an architecture'
+            echo "Now select an architecture for $DISTRO $FED $RELEASE"
             select ARC in i386 amd64
             do
                     case $ARC in
@@ -381,28 +387,6 @@ if [[ $FED = "Workstation 26" ]]; then
         fi
     # Live Install
         if [[ $RELEASE = "Live Install" ]]; then
-    # Architecture
-#            echo 'Now select an architecture'
-#            select ARC in i386 amd64
-#            do
-#                    case $ARC in
-#                    i386|amd64)
-#                            break
-#                            ;;
-#                    *)
-#                            echo "Please select an architecture"
-#                            ;;
-#                    esac
-#            done
-    # i386
-#            if [[ $ARC = "i386" ]]; then
-    # Message
-#                echo "Now downloading $DISTRO $FED $ARC $RELEASE ISO..."
-    # Download
-#                wget -P ~/ISO https://download.fedoraproject.org/
-#            fi
-    # amd64
-#            if [[ $ARC = "amd64" ]]; then
     # Message
                 echo "Now downloading $DISTRO $FED amd64 $RELEASE ISO..."
     # Download
@@ -414,7 +398,7 @@ fi
 # KDE Neon
 if [[ $DISTRO = "KDE Neon" ]]; then
 # Release
-    echo 'Now select a release'
+    echo "Now select a release for $DISTRO"
     select RELEASE in "User Edition" "User LTS Edition" "Developer Edition Git-Unstable" "Developer Edition Git-Stable"
     do
             case $RELEASE in
@@ -458,7 +442,7 @@ fi
 # Kubuntu
 if [[ $DISTRO = "Kubuntu" ]]; then
 # Release
-    echo 'Now select a release'
+    echo "Now select a release for $DISTRO"
     select RELEASE in "16.04 LTS" "17.04" "17.10" "18.04 Daily"
     do
             case $RELEASE in
@@ -473,7 +457,7 @@ if [[ $DISTRO = "Kubuntu" ]]; then
 # LTS
     if [[ $RELEASE = "16.04 LTS" ]]; then
 # Architecture
-        echo 'Now select an architecture'
+        echo "Now select an architecture for $DISTRO $RELEASE"
         select ARC in i386 amd64
         do
                 case $ARC in
@@ -503,7 +487,7 @@ if [[ $DISTRO = "Kubuntu" ]]; then
 # 17.04
     if [[ $RELEASE = "17.04" ]]; then
 # Architecture
-        echo 'Now select an architecture'
+        echo "Now select an architecture for $DISTRO $RELEASE"
         select ARC in i386 amd64
         do
                 case $ARC in
@@ -533,7 +517,7 @@ if [[ $DISTRO = "Kubuntu" ]]; then
 # 17.10
     if [[ $RELEASE = "17.10" ]]; then
 # Architecture
-        echo 'Now select an architecture'
+        echo "Now select an architecture for $DISTRO $RELEASE"
         select ARC in i386 amd64
         do
                 case $ARC in
@@ -563,7 +547,7 @@ if [[ $DISTRO = "Kubuntu" ]]; then
 # 18.04 Daily
     if [[ $RELEASE = "18.04 Daily" ]]; then
 # Architecture
-        echo 'Now select an architecture'
+        echo "Now select an architecture for $DISTRO $RELEASE"
         select ARC in i386 amd64
         do
                 case $ARC in
@@ -594,7 +578,7 @@ fi
 # Lubuntu
 if [[ $DISTRO = "Lubuntu" ]]; then
 # Release
-    echo 'Now select a release'
+    echo "Now select a release for $DISTRO"
     select RELEASE in "16.04 LTS" "17.04" "17.10" "18.04 Daily"
     do
             case $RELEASE in
@@ -609,7 +593,7 @@ if [[ $DISTRO = "Lubuntu" ]]; then
 # LTS
     if [[ $RELEASE = "16.04 LTS" ]]; then
 # Architecture
-        echo 'Now select an architecture'
+        echo "Now select an architecture for $DISTRO $RELEASE"
         select ARC in i386 amd64
         do
                 case $ARC in
@@ -639,7 +623,7 @@ if [[ $DISTRO = "Lubuntu" ]]; then
 # 17.04
     if [[ $RELEASE = "17.04" ]]; then
 # Architecture
-        echo 'Now select an architecture'
+        echo "Now select an architecture for $DISTRO $RELEASE"
         select ARC in i386 amd64
         do
                 case $ARC in
@@ -669,7 +653,7 @@ if [[ $DISTRO = "Lubuntu" ]]; then
 # 17.10
     if [[ $RELEASE = "17.10" ]]; then
 # Architecture
-        echo 'Now select an architecture'
+        echo "Now select an architecture for $DISTRO $RELEASE"
         select ARC in i386 amd64
         do
                 case $ARC in
@@ -699,7 +683,7 @@ if [[ $DISTRO = "Lubuntu" ]]; then
 # 18.04 Daily
     if [[ $RELEASE = "18.04 Daily" ]]; then
 # Architecture
-        echo 'Now select an architecture'
+        echo "Now select an architecture for $DISTRO $RELEASE"
         select ARC in i386 amd64
         do
                 case $ARC in
@@ -730,7 +714,7 @@ fi
 # Qubes
 if [[ $DISTRO = "Qubes" ]]; then
 # Release
-    echo 'Now select a release'
+    echo "Now select a release for $DISTRO"
     select RELEASE in "3.2" "4.0-rc2"
     do
             case $RELEASE in
@@ -760,7 +744,7 @@ fi
 # Ubuntu
 if [[ $DISTRO = "Ubuntu" ]]; then
 # Release
-    echo 'Now select a release'
+    echo "Now select a release for $DISTRO"
     select RELEASE in "16.04 LTS" "17.04" "17.10" "18.04 Daily"
     do
             case $RELEASE in
@@ -775,7 +759,7 @@ if [[ $DISTRO = "Ubuntu" ]]; then
 # LTS
     if [[ $RELEASE = "16.04 LTS" ]]; then
 # Architecture
-        echo 'Now select an architecture'
+        echo "Now select an architecture for $DISTRO $RELEASE"
         select ARC in i386 amd64
         do
                 case $ARC in
@@ -805,7 +789,7 @@ if [[ $DISTRO = "Ubuntu" ]]; then
 # 17.04
     if [[ $RELEASE = "17.04" ]]; then
 # Architecture
-        echo 'Now select an architecture'
+        echo "Now select an architecture for $DISTRO $RELEASE"
         select ARC in i386 amd64
         do
                 case $ARC in
@@ -850,7 +834,7 @@ fi
 # Ubuntu Budgie
 if [[ $DISTRO = "Ubuntu Budgie" ]]; then
 # Release
-    echo 'Now select a release'
+    echo "Now select a release for $DISTRO"
     select RELEASE in "17.04" "17.10" "18.04 Daily"
     do
             case $RELEASE in
@@ -862,40 +846,10 @@ if [[ $DISTRO = "Ubuntu Budgie" ]]; then
                     ;;
             esac
     done
-# LTS
-    if [[ $RELEASE = "18.04 LTS" ]]; then
-# Architecture
-        echo 'Now select an architecture'
-        select ARC in i386 amd64
-        do
-                case $ARC in
-                i386|amd64)
-                        break
-                        ;;
-                *)
-                        echo "Please select an architecture"
-                        ;;
-               esac
-        done
-# i386
-        if [[ $ARC = "i386" ]]; then
-# Message
-            echo "Now downloading $DISTRO $RELEASE $ARC ISO..."
-# Download
-            wget -P ~/ISO URL
-        fi
-# amd64
-        if [[ $ARC = "amd64" ]]; then
-# Message
-            echo "Now downloading $DISTRO $RELEASE $ARC ISO..."
-# Download
-            wget -P ~/ISO URL
-        fi
-    fi
 # 17.04
     if [[ $RELEASE = "17.04" ]]; then
 # Architecture
-        echo 'Now select an architecture'
+        echo "Now select an architecture for $DISTRO $RELEASE"
         select ARC in i386 amd64
         do
                 case $ARC in
@@ -925,7 +879,7 @@ if [[ $DISTRO = "Ubuntu Budgie" ]]; then
 # 17.10
     if [[ $RELEASE = "17.10" ]]; then
 # Architecture
-        echo 'Now select an architecture'
+        echo "Now select an architecture for $DISTRO $RELEASE"
         select ARC in i386 amd64
         do
                 case $ARC in
@@ -955,7 +909,7 @@ if [[ $DISTRO = "Ubuntu Budgie" ]]; then
 # 18.04 Daily
     if [[ $RELEASE = "18.04 Daily" ]]; then
 # Architecture
-        echo 'Now select an architecture'
+        echo "Now select an architecture for $DISTRO $RELEASE"
         select ARC in i386 amd64
         do
                 case $ARC in
@@ -986,7 +940,7 @@ fi
 # Ubuntu GNOME
 if [[ $DISTRO = "Ubuntu GNOME" ]]; then
 # Release
-    echo 'Now select a release'
+    echo "Now select a release for $DISTRO"
     select RELEASE in "16.04 LTS" "17.04"
     do
             case $RELEASE in
@@ -1001,7 +955,7 @@ if [[ $DISTRO = "Ubuntu GNOME" ]]; then
 # LTS
     if [[ $RELEASE = "16.04 LTS" ]]; then
 # Architecture
-        echo 'Now select an architecture'
+        echo "Now select an architecture for $DISTRO $RELEASE"
         select ARC in i386 amd64
         do
                 case $ARC in
@@ -1031,7 +985,7 @@ if [[ $DISTRO = "Ubuntu GNOME" ]]; then
 # 17.04
     if [[ $RELEASE = "17.04" ]]; then
 # Architecture
-        echo 'Now select an architecture'
+        echo "Now select an architecture for $DISTRO $RELEASE"
         select ARC in i386 amd64
         do
                 case $ARC in
@@ -1062,7 +1016,7 @@ fi
 # Ubuntu MATE
 if [[ $DISTRO = "Ubuntu MATE" ]]; then
 # Release
-    echo 'Now select a release'
+    echo "Now select a release for $DISTRO"
     select RELEASE in "16.04 LTS" "17.04" "17.10" "18.04 Daily"
     do
             case $RELEASE in
@@ -1077,7 +1031,7 @@ if [[ $DISTRO = "Ubuntu MATE" ]]; then
 # LTS
     if [[ $RELEASE = "16.04 LTS" ]]; then
 # Architecture
-        echo 'Now select an architecture'
+        echo "Now select an architecture for $DISTRO $RELEASE"
         select ARC in i386 amd64 PowerPC ARMv7
         do
                 case $ARC in
@@ -1121,7 +1075,7 @@ if [[ $DISTRO = "Ubuntu MATE" ]]; then
 # 17.04
     if [[ $RELEASE = "17.04" ]]; then
 # Architecture
-        echo 'Now select an architecture'
+        echo "Now select an architecture for $DISTRO $RELEASE"
         select ARC in i386 amd64
         do
                 case $ARC in
@@ -1151,7 +1105,7 @@ if [[ $DISTRO = "Ubuntu MATE" ]]; then
 # 17.10
     if [[ $RELEASE = "17.10" ]]; then
 # Architecture
-        echo 'Now select an architecture'
+        echo "Now select an architecture for $DISTRO $RELEASE"
         select ARC in i386 amd64
         do
                 case $ARC in
@@ -1181,7 +1135,7 @@ if [[ $DISTRO = "Ubuntu MATE" ]]; then
 # 18.04 Daily
     if [[ $RELEASE = "18.04 Daily" ]]; then
 # Architecture
-        echo 'Now select an architecture'
+        echo "Now select an architecture for $DISTRO $RELEASE"
         select ARC in i386 amd64
         do
                 case $ARC in
@@ -1212,7 +1166,7 @@ fi
 # Ubuntu Studio
 if [[ $DISTRO = "Ubuntu Studio" ]]; then
 # Release
-    echo 'Now select a release'
+    echo "Now select a release for $DISTRO"
     select RELEASE in "16.04 LTS" "17.04" "17.10"
     do
             case $RELEASE in
@@ -1227,7 +1181,7 @@ if [[ $DISTRO = "Ubuntu Studio" ]]; then
 # LTS
     if [[ $RELEASE = "16.04 LTS" ]]; then
 # Architecture
-        echo 'Now select an architecture'
+        echo "Now select an architecture for $DISTRO $RELEASE"
         select ARC in i386 amd64
         do
                 case $ARC in
@@ -1257,7 +1211,7 @@ if [[ $DISTRO = "Ubuntu Studio" ]]; then
 # 17.04
     if [[ $RELEASE = "17.04" ]]; then
 # Architecture
-        echo 'Now select an architecture'
+        echo "Now select an architecture for $DISTRO $RELEASE"
         select ARC in i386 amd64
         do
                 case $ARC in
@@ -1287,7 +1241,7 @@ if [[ $DISTRO = "Ubuntu Studio" ]]; then
 # 17.10
     if [[ $RELEASE = "17.10" ]]; then
 # Architecture
-        echo 'Now select an architecture'
+        echo "Now select an architecture for $DISTRO $RELEASE"
         select ARC in i386 amd64
         do
                 case $ARC in
@@ -1317,7 +1271,7 @@ if [[ $DISTRO = "Ubuntu Studio" ]]; then
 # 18.04 Daily
     if [[ $RELEASE = "18.04 Daily" ]]; then
 # Architecture
-        echo 'Now select an architecture'
+        echo "Now select an architecture for $DISTRO $RELEASE"
         select ARC in i386 amd64
         do
                 case $ARC in
@@ -1348,7 +1302,7 @@ fi
 # Xubuntu
 if [[ $DISTRO = "Xubuntu" ]]; then
 # Release
-    echo 'Now select a release'
+    echo "Now select a release for $DISTRO"
     select RELEASE in "16.04 LTS" "17.04" "17.10" "18.04 Daily"
     do
             case $RELEASE in
@@ -1363,7 +1317,7 @@ if [[ $DISTRO = "Xubuntu" ]]; then
 # LTS
     if [[ $RELEASE = "16.04 LTS" ]]; then
 # Architecture
-        echo 'Now select an architecture'
+        echo "Now select an architecture for $DISTRO $RELEASE"
         select ARC in i386 amd64
         do
                 case $ARC in
@@ -1393,7 +1347,7 @@ if [[ $DISTRO = "Xubuntu" ]]; then
 # 17.04
     if [[ $RELEASE = "17.04" ]]; then
 # Architecture
-        echo 'Now select an architecture'
+        echo "Now select an architecture for $DISTRO $RELEASE"
         select ARC in i386 amd64
         do
                 case $ARC in
@@ -1423,7 +1377,7 @@ if [[ $DISTRO = "Xubuntu" ]]; then
 # 17.10
     if [[ $RELEASE = "17.10" ]]; then
 # Architecture
-        echo 'Now select an architecture'
+        echo "Now select an architecture for $DISTRO $RELEASE"
         select ARC in i386 amd64
         do
                 case $ARC in
@@ -1453,7 +1407,7 @@ if [[ $DISTRO = "Xubuntu" ]]; then
 # 18.04 Daily
     if [[ $RELEASE = "18.04 Daily" ]]; then
 # Architecture
-        echo 'Now select an architecture'
+        echo "Now select an architecture for $DISTRO $RELEASE"
         select ARC in i386 amd64
         do
                 case $ARC in
@@ -1504,7 +1458,7 @@ if [[ $REPEAT = "Yes" ]]; then
 # Change directory
     cd $BASEDIR
 # Relaunch script
-    bash tux-disc_2017-11-16-v1.1.sh
+    bash tux-disc_$SCRIPTVER-$REVISION.sh
 fi
 # End
 if [[ $REPEAT = "No" ]]; then
