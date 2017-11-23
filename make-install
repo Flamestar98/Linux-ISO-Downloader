@@ -1,29 +1,29 @@
 #!/bin/bash
 
 if [ $USER = "root" ]; then
-# Directories
-    bash ./create-directories.sh
+  # Directories
+  bash ./create-directories.sh && \
 
-# Desktop
-    bash ./create-desktop.sh
+  # Desktop
+  bash ./create-desktop.sh && \
 
-# Control
-    bash ./create-control.sh
+  # Control
+  bash ./create-control.sh && \
 
-# Postinst
-    bash ./create-postinst.sh
+  # Postinst
+  bash ./create-postinst.sh && \
 
-# Prerm
-    bash ./create-prerm.sh
+  # Prerm
+  bash ./create-prerm.sh && \
 
-# Command
-    bash ./create-command.sh
+  # Command
+  bash ./create-command.sh && \
 
-# Move and copy files
-    bash ./copy-files.sh
+  # Move and copy files
+  bash ./copy-files.sh && \
 
-# Build source
-    bash ./copy-source.sh
+  # Build source
+  bash ./copy-source.sh
 
 # If not run as root
 else
