@@ -1,29 +1,32 @@
 #!/bin/bash
 
+# Establishes base directory of script
+BASEDIR=$(dirname $0)
+
 if [ $USER = "root" ]; then
 # Directories
-    bash ./create-directories.sh && \
+    bash $BASEDIR/create-directories.sh && \
 
 # Desktop
-    bash ./create-desktop.sh && \
+    bash $BASEDIR/create-desktop.sh && \
 
 # Control
-    bash ./create-control.sh && \
+    bash $BASEDIR/create-control.sh && \
 
 # Postinst
-    bash ./create-postinst.sh && \
+    bash $BASEDIR/create-postinst.sh && \
 
 # Prerm
-    bash ./create-prerm.sh && \
+    bash $BASEDIR/create-prerm.sh && \
 
 # Command
-    bash ./create-command.sh && \
+    bash $BASEDIR/create-command.sh && \
 
 # Move and copy files
-    bash ./copy-files.sh && \
+    bash $BASEDIR/copy-files.sh && \
 
 # Binary build
-    bash ./create-binary.sh
+    bash $BASEDIR/create-binary.sh
 
 # If not run as root
 else

@@ -33,17 +33,17 @@ Icon=/usr/lib/tux-disc/tux-disc.png
 Name=Tux Disc
 Terminal=true
 Type=Application
-Version=$BINARYVER-$REVISION' > ./tux-disc_$SCRIPTVER-$REVISION/usr/lib/tux-disc/tux-disc_$SCRIPTVER-$REVISION.desktop
+Version=$BINARYVER-$REVISION' > $BASEDIR/tux-disc_$SCRIPTVER-$REVISION/usr/lib/tux-disc/tux-disc_$SCRIPTVER-$REVISION.desktop
 
-chmod a+x ./tux-disc_$SCRIPTVER-$REVISION/usr/lib/tux-disc/tux-disc_$SCRIPTVER-$REVISION.desktop
+chmod a+x $BASEDIR/tux-disc_$SCRIPTVER-$REVISION/usr/lib/tux-disc/tux-disc_$SCRIPTVER-$REVISION.desktop
 
-if [ -e ./tux-disc_$SCRIPTVER-$REVISION/usr/lib/tux-disc/tux-disc_$SCRIPTVER-$REVISION.desktop ]; then
+if [ -e $BASEDIR/tux-disc_$SCRIPTVER-$REVISION/usr/lib/tux-disc/tux-disc_$SCRIPTVER-$REVISION.desktop ]; then
     echo 'Desktop file built'
 else
     echo 'Failed to build desktop file'
-fi" > ./create-desktop.sh
+fi" > $BASEDIR/create-desktop.sh
 
-if [ -e ./create-desktop.sh ]; then
+if [ -e $BASEDIR/create-desktop.sh ]; then
     echo 'create-desktop.sh configured'
 else
     echo 'Failed to configure create-desktop.sh'
@@ -61,15 +61,15 @@ Priority: optional
 Section: utilities
 Version: $BINARYVER-$REVISION
 Installed-Size: $SIZEKB
-Description: Downloads Linux ISO of choice based on user input' > ./tux-disc_$SCRIPTVER-$REVISION/DEBIAN/control && chmod a+x ./tux-disc_$SCRIPTVER-$REVISION/DEBIAN/control
+Description: Downloads Linux ISO of choice based on user input' > $BASEDIR/tux-disc_$SCRIPTVER-$REVISION/DEBIAN/control && chmod a+x $BASEDIR/tux-disc_$SCRIPTVER-$REVISION/DEBIAN/control
 
-if [ -e ./tux-disc_$SCRIPTVER-$REVISION/DEBIAN/control ]; then
+if [ -e $BASEDIR/tux-disc_$SCRIPTVER-$REVISION/DEBIAN/control ]; then
     echo 'Control file built'
 else
     echo 'Failed to build control file'
-fi" > ./create-control.sh
+fi" > $BASEDIR/create-control.sh
 
-if [ -e ./create-control.sh ]; then
+if [ -e $BASEDIR/create-control.sh ]; then
     echo 'create-control.sh configured'
 else
     echo 'Failed to configure create-control.sh'
@@ -80,15 +80,15 @@ fi
 
 echo '#!/bin/bash
 
-cp /usr/lib/tux-disc/tux-disc_$SCRIPTVER-$REVISION.desktop /home/*/.local/share/applications/ && update-desktop-database /home/*/.local/share/applications/' > ./tux-disc_$SCRIPTVER-$REVISION/DEBIAN/postinst && chmod a+x ./tux-disc_$SCRIPTVER-$REVISION/DEBIAN/postinst
+cp /usr/lib/tux-disc/tux-disc_$SCRIPTVER-$REVISION.desktop /home/*/.local/share/applications/ && update-desktop-database /home/*/.local/share/applications/' > $BASEDIR/tux-disc_$SCRIPTVER-$REVISION/DEBIAN/postinst && chmod a+x $BASEDIR/tux-disc_$SCRIPTVER-$REVISION/DEBIAN/postinst
 
-if [ -e ./tux-disc_$SCRIPTVER-$REVISION/DEBIAN/postinst ]; then
+if [ -e $BASEDIR/tux-disc_$SCRIPTVER-$REVISION/DEBIAN/postinst ]; then
     echo 'Postinst file built'
 else
     echo 'Failed to build postinst file'
-fi" > ./create-postinst.sh
+fi" > $BASEDIR/create-postinst.sh
 
-if [ -e ./create-postinst.sh ]; then
+if [ -e $BASEDIR/create-postinst.sh ]; then
     echo 'create-postinst.sh configured'
 else
     echo 'Failed to configure create-postinst.sh'
@@ -97,15 +97,15 @@ fi
 # Prerm
     echo "#!/bin/bash
 
-echo 'rm /home/*/.local/share/applications/tux-disc_$SCRIPTVER-$REVISION.desktop' > ./tux-disc_$SCRIPTVER-$REVISION/DEBIAN/prerm && chmod a+x ./tux-disc_$SCRIPTVER-$REVISION/DEBIAN/prerm
+echo 'rm /home/*/.local/share/applications/tux-disc_$SCRIPTVER-$REVISION.desktop' > $BASEDIR/tux-disc_$SCRIPTVER-$REVISION/DEBIAN/prerm && chmod a+x $BASEDIR/tux-disc_$SCRIPTVER-$REVISION/DEBIAN/prerm
 
-if [ -e ./tux-disc_$SCRIPTVER-$REVISION/DEBIAN/prerm ]; then
+if [ -e $BASEDIR/tux-disc_$SCRIPTVER-$REVISION/DEBIAN/prerm ]; then
     echo 'Prerm file built'
 else
     echo 'Failed to build prerm file'
-fi" > ./create-prerm.sh
+fi" > $BASEDIR/create-prerm.sh
 
-if [ -e ./create-prerm.sh ]; then
+if [ -e $BASEDIR/create-prerm.sh ]; then
     echo 'create-prerm.sh configured'
 else
     echo 'Failed to configure create-prerm.sh'
@@ -116,15 +116,15 @@ fi
 
 echo '#!/bin/bash
 
-bash /usr/lib/tux-disc/tux-disc_$SCRIPTVER-$REVISION.sh' > ./tux-disc_$SCRIPTVER-$REVISION/usr/bin/tux-disc && chmod a+x ./tux-disc_$SCRIPTVER-$REVISION/usr/bin/tux-disc
+bash /usr/lib/tux-disc/tux-disc_$SCRIPTVER-$REVISION.sh' > $BASEDIR/tux-disc_$SCRIPTVER-$REVISION/usr/bin/tux-disc && chmod a+x $BASEDIR/tux-disc_$SCRIPTVER-$REVISION/usr/bin/tux-disc
 
-if [ -e ./tux-disc_$SCRIPTVER-$REVISION/usr/bin/tux-disc ]; then
+if [ -e $BASEDIR/tux-disc_$SCRIPTVER-$REVISION/usr/bin/tux-disc ]; then
     echo 'Command file built'
 else
     echo 'Failed to command command file'
-fi" > ./create-command.sh
+fi" > $BASEDIR/create-command.sh
 
-if [ -e ./create-command.sh ]; then
+if [ -e $BASEDIR/create-command.sh ]; then
     echo 'create-command.sh configured'
 else
     echo 'Failed to configure create-command.sh'
@@ -134,18 +134,18 @@ fi
     echo "#!/bin/bash
 
 echo 'V Folder size V'
-du -sh ./tux-disc_$SCRIPTVER-$REVISION
+du -sh $BASEDIR/tux-disc_$SCRIPTVER-$REVISION
 
-chown -R root:root ./tux-disc_$SCRIPTVER-$REVISION/ && dpkg-deb --build ./tux-disc_$SCRIPTVER-$REVISION
-rm -r ./tux-disc_$SCRIPTVER-$REVISION
+chown -R root:root $BASEDIR/tux-disc_$SCRIPTVER-$REVISION/ && dpkg-deb --build $BASEDIR/tux-disc_$SCRIPTVER-$REVISION
+rm -r $BASEDIR/tux-disc_$SCRIPTVER-$REVISION
 
-if [ -e ./tux-disc_$SCRIPTVER-$REVISION.deb ]; then
+if [ -e $BASEDIR/tux-disc_$SCRIPTVER-$REVISION.deb ]; then
     echo 'Binary file built'
 else
     echo 'Failed to build binary file'
-fi" > ./create-binary.sh
+fi" > $BASEDIR/create-binary.sh
 
-if [ -e ./create-binary.sh ]; then
+if [ -e $BASEDIR/create-binary.sh ]; then
     echo 'create-binary.sh configured'
 else
     echo 'Failed to configure create-binary.sh'
@@ -154,20 +154,20 @@ fi
 # Directories
     echo "#!/bin/bash
 
-mkdir ./tux-disc_$SCRIPTVER-$REVISION
-mkdir ./tux-disc_$SCRIPTVER-$REVISION/DEBIAN
-mkdir ./tux-disc_$SCRIPTVER-$REVISION/usr
-mkdir ./tux-disc_$SCRIPTVER-$REVISION/usr/bin
-mkdir ./tux-disc_$SCRIPTVER-$REVISION/usr/lib
-mkdir ./tux-disc_$SCRIPTVER-$REVISION/usr/lib/tux-disc
+mkdir $BASEDIR/tux-disc_$SCRIPTVER-$REVISION
+mkdir $BASEDIR/tux-disc_$SCRIPTVER-$REVISION/DEBIAN
+mkdir $BASEDIR/tux-disc_$SCRIPTVER-$REVISION/usr
+mkdir $BASEDIR/tux-disc_$SCRIPTVER-$REVISION/usr/bin
+mkdir $BASEDIR/tux-disc_$SCRIPTVER-$REVISION/usr/lib
+mkdir $BASEDIR/tux-disc_$SCRIPTVER-$REVISION/usr/lib/tux-disc
 
-if [ -d ./tux-disc_$SCRIPTVER-$REVISION ]; then
+if [ -d $BASEDIR/tux-disc_$SCRIPTVER-$REVISION ]; then
     echo 'Directories built'
 else
     echo 'Failed to build directories'
-fi" > ./create-directories.sh
+fi" > $BASEDIR/create-directories.sh
 
-if [ -e ./create-directories.sh ]; then
+if [ -e $BASEDIR/create-directories.sh ]; then
     echo 'create-directories.sh configured'
 else
     echo 'Failed to configure create-directories.sh'
@@ -177,21 +177,21 @@ fi
     echo "#!/bin/bash
 
 # Changelog
-cp ./CHANGELOG.md ./tux-disc_$SCRIPTVER-$REVISION/DEBIAN/changelog
+cp $BASEDIR/CHANGELOG.md $BASEDIR/tux-disc_$SCRIPTVER-$REVISION/DEBIAN/changelog
 
 # License
-cp ./LICENSE ./tux-disc_$SCRIPTVER-$REVISION/DEBIAN/copyright
+cp $BASEDIR/LICENSE $BASEDIR/tux-disc_$SCRIPTVER-$REVISION/DEBIAN/copyright
 
 # README
-cp ./README.md ./tux-disc_$SCRIPTVER-$REVISION/usr/lib/tux-disc/
+cp $BASEDIR/README.md $BASEDIR/tux-disc_$SCRIPTVER-$REVISION/usr/lib/tux-disc/
 
 # Script
-cp ./tux-disc_$SCRIPTVER-$REVISION.sh ./tux-disc_$SCRIPTVER-$REVISION/usr/lib/tux-disc/
+cp $BASEDIR/tux-disc_$SCRIPTVER-$REVISION.sh $BASEDIR/tux-disc_$SCRIPTVER-$REVISION/usr/lib/tux-disc/
 
 # Tux
-cp ./tux-disc.png ./tux-disc_$SCRIPTVER-$REVISION/usr/lib/tux-disc/" > ./copy-files.sh
+cp $BASEDIR/tux-disc.png $BASEDIR/tux-disc_$SCRIPTVER-$REVISION/usr/lib/tux-disc/" > $BASEDIR/copy-files.sh
 
-if [ -e ./copy-files.sh ]; then
+if [ -e $BASEDIR/copy-files.sh ]; then
     echo 'copy-files.sh configured'
 else
     echo 'Failed to configure copy-files.sh'
@@ -201,18 +201,18 @@ fi
     echo "#!/bin/bash
 
 # Command
-cp ./tux-disc_$SCRIPTVER-$REVISION/usr/bin/tux-disc /usr/bin/
+cp $BASEDIR/tux-disc_$SCRIPTVER-$REVISION/usr/bin/tux-disc /usr/bin/
 
 # Folder
-cp -r ./tux-disc_$SCRIPTVER-$REVISION/usr/lib/tux-disc /usr/lib/
+cp -r $BASEDIR/tux-disc_$SCRIPTVER-$REVISION/usr/lib/tux-disc /usr/lib/
 
 # Desktop
-cp ./tux-disc_$SCRIPTVER-$REVISION/usr/lib/tux-disc/tux-disc_$SCRIPTVER-$REVISION.desktop /home/*/.local/share/applications/ && update-desktop-database /home/*/.local/share/applications/
+cp $BASEDIR/tux-disc_$SCRIPTVER-$REVISION/usr/lib/tux-disc/tux-disc_$SCRIPTVER-$REVISION.desktop /home/*/.local/share/applications/ && update-desktop-database /home/*/.local/share/applications/
 
 # Remove source folder
-rm -r ./tux-disc_$SCRIPTVER-$REVISION" > ./copy-source.sh
+rm -r $BASEDIR/tux-disc_$SCRIPTVER-$REVISION" > $BASEDIR/copy-source.sh
 
-if [ -e ./copy-source.sh ]; then
+if [ -e $BASEDIR/copy-source.sh ]; then
     echo 'copy-source.sh configured'
 else
     echo 'Failed to configure copy-source.sh'
@@ -228,9 +228,9 @@ rm /usr/bin/tux-disc
 rm -r /usr/lib/tux-disc
 
 # Desktop
-rm /home/*/.local/share/applications/tux-disc_$SCRIPTVER-$REVISION.desktop" > ./make-uninstall
+rm /home/*/.local/share/applications/tux-disc_$SCRIPTVER-$REVISION.desktop" > $BASEDIR/make-uninstall
 
-if [ -e ./make-uninstall ]; then
+if [ -e $BASEDIR/make-uninstall ]; then
     echo 'make-uninstall configured'
 else
     echo 'Failed to configure make-uninstall'
