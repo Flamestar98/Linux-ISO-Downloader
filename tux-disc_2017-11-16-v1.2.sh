@@ -387,28 +387,6 @@ if [[ $FED = "Workstation 26" ]]; then
         fi
     # Live Install
         if [[ $RELEASE = "Live Install" ]]; then
-    # Architecture
-#            echo 'Now select an architecture'
-#            select ARC in i386 amd64
-#            do
-#                    case $ARC in
-#                    i386|amd64)
-#                            break
-#                            ;;
-#                    *)
-#                            echo "Please select an architecture"
-#                            ;;
-#                    esac
-#            done
-    # i386
-#            if [[ $ARC = "i386" ]]; then
-    # Message
-#                echo "Now downloading $DISTRO $FED $ARC $RELEASE ISO..."
-    # Download
-#                wget -P ~/ISO https://download.fedoraproject.org/
-#            fi
-    # amd64
-#            if [[ $ARC = "amd64" ]]; then
     # Message
                 echo "Now downloading $DISTRO $FED amd64 $RELEASE ISO..."
     # Download
