@@ -1,6 +1,19 @@
 Changelog
 =========
 
+2017-11-16-v1.2
+---------------
+### Added
+* Option to download a specific branch _(source only)_
+
+### Changed
+* Removed leftover code no longer being used
+
+2017-11-16-v1.1
+---------------
+### Fixed
+* Ubuntu Studio downloads
+
 2017-11-16-v1.0
 ---------------
 ### Added
