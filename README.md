@@ -3,8 +3,8 @@ Tux Disc
 
 Downloads Linux ISO of choice based on user input.
 
-#### All i386/amd64 Ubuntu LTS releases are currently at 16.04.3
-#### All Debian 9 releases are currently at 9.2.1
+#### All 32-bit/64-bit Ubuntu LTS releases are currently at 16.04.3
+#### All Debian 9 releases are currently at 9.3.0
 
 [Changelog][1]
 
@@ -17,72 +17,76 @@ Currently includes
 ------------------
 
 #### Debian 9
-* Net installer (i386/amd64)
-* Full installer (i386/amd64)
-* Live installer (i386/amd64)
+* Net installer (32-bit/64-bit)
+* Full installer (32-bit/64-bit)
+* Live installer (32-bit/64-bit)
 
 #### Fedora
 * **Fedora Workstation 26**
-* Net installer (i386/amd64)
-* Live installer (i386/amd64)
+* Net installer (32-bit/64-bit)
+* Live installer (32-bit/64-bit)
 
 * **Fedora Workstation 27**
-* Net Installer (i386/amd64)
-* Live Installer (amd64)
+* Net Installer (32-bit/64-bit)
+* Live Installer (64-bit)
 
 #### KDE Neon
-* User Edition (amd64)
-* User LTS Edition (amd64)
-* Developer Edition Git-Unstable (amd64)
-* Developer Edition Git-Stable (amd64)
+* User Edition (64-bit)
+* User LTS Edition (64-bit)
+* Developer Edition Git-Unstable (64-bit)
+* Developer Edition Git-Stable (64-bit)
 
 #### Kubuntu
-* 16.04 LTS (i386/amd64)
-* 17.04 (i386/amd64)
-* 17.10 (i386/amd64)
-* 18.04 Daily (i386/amd64)
+* 16.04 LTS (32-bit/64-bit)
+* 17.04 (32-bit/64-bit)
+* 17.10 (32-bit/64-bit)
+* 18.04 Daily (32-bit/64-bit)
+
+#### Linux Mint 18.3
+* Cinnamon desktop (32-bit/64-bit)
+* MATE desktop (32-bit/64-bit)
 
 #### Lubuntu
-* 16.04 LTS (i386/amd64)
-* 17.04 (i386/amd64)
-* 17.10 (i386/amd64)
-* 18.04 Daily (i386/amd64)
+* 16.04 LTS (32-bit/64-bit)
+* 17.04 (32-bit/64-bit)
+* 17.10 (32-bit/64-bit)
+* 18.04 Daily (32-bit/64-bit)
 
 #### Qubes
-* Qubes 3.2 (amd64)
-* Qubes 4.0-rc2 (amd64)
+* Qubes 3.2 (64-bit)
+* Qubes 4.0-rc2 (64-bit)
 
 #### Ubuntu
-* 16.04 LTS (i386/amd64)
-* 17.04 (i386/amd64)
-* 17.10 (amd64)
-* 18.04 Daily (amd64)
+* 16.04 LTS (32-bit/64-bit)
+* 17.04 (32-bit/64-bit)
+* 17.10 (64-bit)
+* 18.04 Daily (64-bit)
 
 #### Ubuntu Budgie
-* 17.04 (i386/amd64)
-* 17.10 (i386/amd64)
-* 18.04 Daily (i386/amd64)
+* 17.04 (32-bit/64-bit)
+* 17.10 (32-bit/64-bit)
+* 18.04 Daily (32-bit/64-bit)
 
 #### Ubuntu GNOME
-* 16.04 LTS (i386/amd64)
-* 17.04 (i386/amd64)
+* 16.04 LTS (32-bit/64-bit)
+* 17.04 (32-bit/64-bit)
 
 #### Ubuntu MATE
-* 16.04 LTS (i386/amd64/powerpc/armhf)
-* 17.04 (i386/amd64)
-* 17.10 (i386/amd64)
-* 18.04 Daily (i386/amd64)
+* 16.04 LTS (32-bit/64-bit)
+* 17.04 (32-bit/64-bit)
+* 17.10 (32-bit/64-bit)
+* 18.04 Daily (32-bit/64-bit)
 
 #### Ubuntu Studio
-* 16.04 LTS (i386/amd64)
-* 17.04 (i386/amd64)
-* 17.10 (i386/amd64)
+* 16.04 LTS (32-bit/64-bit)
+* 17.04 (32-bit/64-bit)
+* 17.10 (32-bit/64-bit)
 
 #### Xubuntu
-* 16.04 LTS (i386/amd64)
-* 17.04 (i386/amd64)
-* 17.10 (i386/amd64)
-* 18.04 Daily (i386/amd64)
+* 16.04 LTS (32-bit/64-bit)
+* 17.04 (32-bit/64-bit)
+* 17.10 (32-bit/64-bit)
+* 18.04 Daily (32-bit/64-bit)
 
 Download
 --------
@@ -158,8 +162,7 @@ Planned features
 
 In no particular order,
 * Graphical user interface (buttons everywhere!)
-* RPM packages (the more binaries the better)
+* Flatpak packaging (for easier cross-distro distribution)
+* Complete recoding into Python (Might make the GUI easier, and should make it easier to port to other OSes)
 * Windows batch script (spreading freedom around all operating systems)
 * Windows graphical binary (gotta make it easy on them somehow)
-* Streamlining of the script (kinda big at the moment)
-* Making script more modular (if that makes any sense)
