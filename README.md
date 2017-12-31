@@ -117,6 +117,10 @@ Operation
 
 To use this script,
 
+### PPA
+* Run "sudo add-apt-repository ppa:flamestar/tux-disc"
+* Then run "sudo apt-get update && sudo apt install tux-disc"
+
 ### Binary
 * Download the binary .deb file of the latest release
 
