@@ -1,6 +1,27 @@
 Changelog
 =========
 
+1.8-1
+-----
+### Changed
+* Rework of entire script
+* Script size reduced to 1/3 previous size
+
+### Removed
+* Ubuntu MATE PowerPC and ARMv7 temporarily removed due to rework
+
+1.7-1 _(The lost version)_
+-----
+### New
+* Proper package created and signed
+* PPA available for easy software installation and updating
+* ppa:flamestar/tux-disc
+
+### Added
+* Linux Mint 18.3
+* - Cinnamon desktop 32bit and 64bit
+* - MATE desktop 32bit and 64bit
+
 2017-11-16-v1.2
 ---------------
 ### Added
