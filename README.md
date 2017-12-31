@@ -88,6 +88,13 @@ Currently includes
 * 17.10 (32-bit/64-bit)
 * 18.04 Daily (32-bit/64-bit)
 
+PPA
+---
+To install Tux Disc and receive updates,
+
+* Run "sudo add-apt-repository ppa:flamestar/tux-disc"
+* Then run "sudo apt-get update && sudo apt install tux-disc"
+
 Download
 --------
 Both source tarballs and binaries can be downloaded from the [releases][3] page of this repo, or you can use Git to clone the most recent version of the repository
@@ -116,10 +123,6 @@ Operation
 ---------
 
 To use this script,
-
-### PPA
-* Run "sudo add-apt-repository ppa:flamestar/tux-disc"
-* Then run "sudo apt-get update && sudo apt install tux-disc"
 
 ### Binary
 * Download the binary .deb file of the latest release
