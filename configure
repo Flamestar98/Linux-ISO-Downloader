@@ -114,8 +114,6 @@ fi
 
 echo 'if [ -e /home/*/.local/share/applications/tux-disc_$BINARYVER-$PATCHVER.desktop ]; then
   rm /home/*/.local/share/applications/tux-disc_$BINARYVER-$PATCHVER.desktop
-else
-  echo -
 fi' > ./tux-disc_$BINARYVER-$PATCHVER/DEBIAN/prerm && chmod a+x ./tux-disc_$BINARYVER-$PATCHVER/DEBIAN/prerm
 
 if [ -e ./tux-disc_$BINARYVER-$PATCHVER/DEBIAN/prerm ]; then
@@ -213,10 +211,7 @@ cp ./tux-disc_$BINARYVER-$PATCHVER/usr/bin/tux-disc /usr/bin/
 cp -r ./tux-disc_$BINARYVER-$PATCHVER/usr/lib/tux-disc /usr/lib/
 
 # Desktop
-cp ./tux-disc_$BINARYVER-$PATCHVER/usr/lib/tux-disc/tux-disc_$BINARYVER-$PATCHVER.desktop /home/*/.local/share/applications/ && update-desktop-database /home/*/.local/share/applications/
-
-# Remove source folder
-rm -r ./tux-disc_$BINARYVER-$PATCHVER" > ./copy-source.sh
+cp ./tux-disc_$BINARYVER-$PATCHVER/usr/lib/tux-disc/tux-disc_$BINARYVER-$PATCHVER.desktop /home/*/.local/share/applications/ && update-desktop-database /home/*/.local/share/applications/" > ./copy-source.sh
 
 if [ -e ./copy-source.sh ]; then
     echo 'copy-source.sh configured'
