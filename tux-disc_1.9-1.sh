@@ -320,10 +320,10 @@ fi
 # Linux Mint
 if [[ $DISTRO = "Linux Mint $MINTVER" ]]; then
     echo "Which desktop would you like?"
-    select MINTDESK in Cinnamon MATE
+    select MINTDESK in Cinnamon KDE MATE Xfce
     do
             case $MINTDESK in
-            Cinnamon|MATE)
+            Cinnamon|KDE|MATE|Xfce)
                     break
                     ;;
             *)
@@ -398,10 +398,10 @@ if [[ "$DISTRO" = "Kubuntu" ]] || [[ "$DISTRO" = "Lubuntu" ]] || [[ "$DISTRO" = 
 
     if [[ $DISTRO = "Ubuntu Budgie" ]]; then
         echo 'Please select a release'
-        select RELEASE in "17.04" "17.10" "18.04 Daily"
+        select RELEASE in "17.10.1" "18.04 Daily"
         do
                 case $RELEASE in
-                "17.04"|"17.10"|"18.04 Daily")
+                "17.10.1"|"18.04 Daily")
                         break
                         ;;
             *)
@@ -413,10 +413,10 @@ if [[ "$DISTRO" = "Kubuntu" ]] || [[ "$DISTRO" = "Lubuntu" ]] || [[ "$DISTRO" = 
 
     if [[ $DISTRO = "Ubuntu GNOME" ]]; then
         echo 'Please select a release'
-        select RELEASE in "16.04.3" "17.04"
+        select RELEASE in "16.04.3"
         do
                 case $RELEASE in
-                "16.04.3"|"17.04")
+                "16.04.3")
                         break
                         ;;
                 *)
@@ -428,10 +428,10 @@ if [[ "$DISTRO" = "Kubuntu" ]] || [[ "$DISTRO" = "Lubuntu" ]] || [[ "$DISTRO" = 
 
     if [[ $DISTRO = "Ubuntu Studio" ]]; then
         echo 'Please select a release'
-        select RELEASE in "16.04.3" "17.04" "17.10"
+        select RELEASE in "16.04.3" "17.10.1"
         do
                 case $RELEASE in
-                "16.04.3"|"17.04"|"17.10")
+                "16.04.3"|"17.10.1")
                         break
                         ;;
                 *)
@@ -443,10 +443,10 @@ if [[ "$DISTRO" = "Kubuntu" ]] || [[ "$DISTRO" = "Lubuntu" ]] || [[ "$DISTRO" = 
 
     if [[ "$DISTRO" = "Kubuntu" ]] || [[ "$DISTRO" = "Lubuntu" ]] || [[ "$DISTRO" = "Ubuntu" ]] || [[ "$DISTRO" = "Ubuntu MATE" ]] || [[ "$DISTRO" = "Xubuntu" ]]; then
         echo 'Please select a release'
-        select RELEASE in "16.04.3" "17.04" "17.10" "18.04 Daily"
+        select RELEASE in "16.04.3" "17.10.1" "18.04 Daily"
         do
                 case $RELEASE in
-                "16.04.3"|"17.04"|"17.10"|"18.04 Daily")
+                "16.04.3"|"17.10.1"|"18.04 Daily")
                         break
                         ;;
                 *)
@@ -456,7 +456,7 @@ if [[ "$DISTRO" = "Kubuntu" ]] || [[ "$DISTRO" = "Lubuntu" ]] || [[ "$DISTRO" = 
         done
     fi
 
-    if ( [[ $DISTRO = "Ubuntu" ]] && [[ $RELEASE = "17.10" ]] ) || ( [[ $DISTRO = "Ubuntu" ]] && [[ $RELEASE = "18.04 Daily" ]] ); then
+    if ( [[ $DISTRO = "Ubuntu" ]] && [[ $RELEASE = "17.10.1" ]] ) || ( [[ $DISTRO = "Ubuntu" ]] && [[ $RELEASE = "18.04 Daily" ]] ); then
         ARC=$"64-bit"
     else
         echo 'Please select an architecture'

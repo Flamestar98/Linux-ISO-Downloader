@@ -4,7 +4,7 @@
 BASEDIR=$(dirname $0)
 
 # Establishes binary version number
-BINARYVER=$"1.8"
+BINARYVER=$"1.9"
 
 # Establishes patch version
 PATCHVER=$"1"
