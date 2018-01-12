@@ -498,7 +498,7 @@ if [[ "$DISTRO" = "Kubuntu" ]] || [[ "$DISTRO" = "Lubuntu" ]] || [[ "$DISTRO" = 
     fi
   fi
 
-  read -p "Is this what you wanted to download? $FINAL (y/n) " YN
+  read -p "Is this what you wanted to download? $FINAL (Y/n) " YN
   case "$YN" in
     y|Y ) YN=$"yes";;
     n|N ) YN=$"no";;
@@ -507,7 +507,7 @@ if [[ "$DISTRO" = "Kubuntu" ]] || [[ "$DISTRO" = "Lubuntu" ]] || [[ "$DISTRO" = 
 
 if [[ $YN = "yes" ]]; then
 
-  read -p "Where would you like to download $FINAL? (d for default) " DIRECT
+  read -p "Where in your home directory would you like to download $FINAL? (d for default) " DIRECT
   case "$DIRECT" in
     d|D ) DIRECT=$"ISO";;
    *);;
@@ -533,7 +533,7 @@ fi
     bash $BASEDIR/tux-disc_$BINARYVER-$PATCHVER.sh
   fi
 
-  read -p "Would you like to download another ISO? (y/n) " REPEAT
+  read -p "Would you like to download another ISO? (Y/n) " REPEAT
   case "$REPEAT" in
     y|Y ) REPEAT=$"yes";;
     n|N ) REPEAT=$"no";;
