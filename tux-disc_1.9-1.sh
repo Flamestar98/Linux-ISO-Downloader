@@ -18,6 +18,9 @@ DEBVER=$(grep "" $BASEDIR/debver)
 # Establishes Linux Mint version
 MINTVER=$(grep "" $BASEDIR/mintver)
 
+# Establishes Kali Linux version
+KALIVER=$(grep "" $BASEDIR/kaliver)
+
 echo "
                         ##############################
                         ##                          ##
@@ -32,10 +35,10 @@ echo "
 
 # Linux distrobution
 echo 'Please select from the following'
-select DISTRO in "Debian $DEBVER" "Fedora" "KDE Neon" "Kubuntu" "Linux Mint $MINTVER" "Lubuntu" "Qubes" "Ubuntu" "Ubuntu Budgie" "Ubuntu GNOME" "Ubuntu MATE" "Ubuntu Studio" "Xubuntu"
+select DISTRO in "Debian $DEBVER" "Fedora" "Kali Linux" "KDE Neon" "Kubuntu" "Linux Mint $MINTVER" "Lubuntu" "Qubes" "Ubuntu" "Ubuntu Budgie" "Ubuntu GNOME" "Ubuntu MATE" "Ubuntu Studio" "Xubuntu"
 do
         case $DISTRO in
-        "Debian $DEBVER"|"Fedora"|"KDE Neon"|"Kubuntu"|"Linux Mint $MINTVER"|"Lubuntu"|"Qubes"|"Ubuntu"|"Ubuntu Budgie"|"Ubuntu GNOME"|"Ubuntu MATE"|"Ubuntu Studio"|"Xubuntu")
+        "Debian $DEBVER"|"Fedora"|"Kali Linux"|"KDE Neon"|"Kubuntu"|"Linux Mint $MINTVER"|"Lubuntu"|"Qubes"|"Ubuntu"|"Ubuntu Budgie"|"Ubuntu GNOME"|"Ubuntu MATE"|"Ubuntu Studio"|"Xubuntu")
                 break
                 ;;
         *)
@@ -278,6 +281,55 @@ if [[ $DISTRO = "Fedora" ]]; then
                 OPTION=$"-P" URL=$" https://download.fedoraproject.org/pub/fedora/linux/releases/27/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-27-1.6.iso"
         fi
     FINAL=$"$DISTRO $FED $ARC $RELEASE"
+fi
+# Kali Linux
+if [[ $DISTRO = "Kali Linux" ]]; then
+  echo "Now select a release for $DISTRO"
+  select RELEASE in "Kali" "Kali Light"
+  do
+          case $RELEASE in
+          "Kali"|"Kali Light")
+                  break
+                  ;;
+          *)
+                  echo "Please select a release"
+                  ;;
+          esac
+  done
+
+  echo "Now select an architecture for $DISTRO $RELEASE"
+  select ARC in "32-bit" "64-bit"
+  do
+          case $ARC in
+          "32-bit"|"64-bit")
+                  break
+                  ;;
+          *)
+                  ;;
+          esac
+  done
+
+  if [[ $ARC = "32-bit" ]]; then
+    arc=$"i386"
+  fi
+
+  if [[ $ARC = "64-bit" ]]; then
+    arc=$"amd64"
+  fi
+
+  if [[ $RELEASE = "Kali" ]]; then
+    distro=$"kali-linux"
+    FINAL=$"$DISTRO $ARC"
+  fi
+
+  if [[ $RELEASE = "Kali Light" ]]; then
+    distro=$"kali-linux-light"
+    FINAL=$"$RELEASE $ARC"
+  fi
+
+  OPTION=$"-P"
+
+  URL=$" http://cdimage.kali.org/kali-$KALIVER/$distro-$KALIVER-$arc.iso"
 fi
 # KDE Neon
 if [[ $DISTRO = "KDE Neon" ]]; then

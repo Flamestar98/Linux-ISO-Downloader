@@ -15,6 +15,9 @@ DEBVER=$"9.3.0"
 # Establishes Linux Mint version
 MINTVER=$"18.3"
 
+# Establishes Kali Linux version
+KALIVER=$"2017.3"
+
 # Establishes size in KB
 SIZEKB=$"588"
 
@@ -34,6 +37,9 @@ if [ $USER = "root" ]; then
 
   # Creates mintver file
   echo "$MINTVER" > $BASEDIR/mintver
+
+  # Creates mintver file
+  echo "$KALIVER" > $BASEDIR/kaliver
 
 # Build files
 
@@ -192,6 +198,8 @@ cp ./debver ./tux-disc_$BINARYVER-$PATCHVER/usr/lib/tux-disc/
 cp ./binaryver ./tux-disc_$BINARYVER-$PATCHVER/usr/lib/tux-disc/
 
 cp ./mintver ./tux-disc_$BINARYVER-$PATCHVER/usr/lib/tux-disc/
+
+cp ./kaliver ./tux-disc_$BINARYVER-$PATCHVER/usr/lib/tux-disc/
 
 cp ./patchver ./tux-disc_$BINARYVER-$PATCHVER/usr/lib/tux-disc/" > ./copy-files.sh
 

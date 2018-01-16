@@ -30,6 +30,10 @@ Currently includes
 * Net Installer (32-bit/64-bit)
 * Live Installer (64-bit)
 
+#### Kali Linux
+* Kali Linux (32-bit/64-bit)
+* Kali Linux Light (32-bit/64-bit)
+
 #### KDE Neon
 * User Edition (64-bit)
 * User LTS Edition (64-bit)
