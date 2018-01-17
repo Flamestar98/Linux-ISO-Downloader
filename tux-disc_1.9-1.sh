@@ -35,10 +35,10 @@ echo "
 
 # Linux distrobution
 echo 'Please select from the following'
-select DISTRO in "Debian $DEBVER" "Fedora" "Kali Linux" "KDE Neon" "Kubuntu" "Linux Mint $MINTVER" "Lubuntu" "Qubes" "Ubuntu" "Ubuntu Budgie" "Ubuntu GNOME" "Ubuntu MATE" "Ubuntu Studio" "Xubuntu"
+select DISTRO in "Debian $DEBVER" "Fedora" "Kali Linux $KALIVER" "KDE Neon" "Kubuntu" "Linux Mint $MINTVER" "Lubuntu" "Qubes" "Ubuntu" "Ubuntu Budgie" "Ubuntu GNOME" "Ubuntu MATE" "Ubuntu Studio" "Xubuntu"
 do
         case $DISTRO in
-        "Debian $DEBVER"|"Fedora"|"Kali Linux"|"KDE Neon"|"Kubuntu"|"Linux Mint $MINTVER"|"Lubuntu"|"Qubes"|"Ubuntu"|"Ubuntu Budgie"|"Ubuntu GNOME"|"Ubuntu MATE"|"Ubuntu Studio"|"Xubuntu")
+        "Debian $DEBVER"|"Fedora"|"Kali Linux $KALIVER"|"KDE Neon"|"Kubuntu"|"Linux Mint $MINTVER"|"Lubuntu"|"Qubes"|"Ubuntu"|"Ubuntu Budgie"|"Ubuntu GNOME"|"Ubuntu MATE"|"Ubuntu Studio"|"Xubuntu")
                 break
                 ;;
         *)
