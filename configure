@@ -38,7 +38,7 @@ if [ $USER = "root" ]; then
   # Creates mintver file
   echo "$MINTVER" > $BASEDIR/mintver
 
-  # Creates mintver file
+  # Creates kaliver file
   echo "$KALIVER" > $BASEDIR/kaliver
 
 # Build files
