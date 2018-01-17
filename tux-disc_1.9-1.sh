@@ -283,7 +283,7 @@ if [[ $DISTRO = "Fedora" ]]; then
     FINAL=$"$DISTRO $FED $ARC $RELEASE"
 fi
 # Kali Linux
-if [[ $DISTRO = "Kali Linux" ]]; then
+if [[ $DISTRO = "Kali Linux $KALIVER" ]]; then
   echo "Now select a release for $DISTRO"
   select RELEASE in "Kali" "Kali Light"
   do
