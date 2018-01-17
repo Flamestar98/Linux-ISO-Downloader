@@ -297,7 +297,11 @@ if [[ $DISTRO = "Kali Linux" ]]; then
           esac
   done
 
-  echo "Now select an architecture for $DISTRO $RELEASE"
+  if [[ $RELEASE = "Kali" ]]; then
+    echo "Now select an architecture for $DISTRO"
+  else
+    echo "Now select an architecture for $DISTRO $RELEASE"
+  fi
   select ARC in "32-bit" "64-bit"
   do
           case $ARC in
