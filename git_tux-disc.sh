@@ -104,7 +104,7 @@ echo ""
         echo "Deleting your current version of Tux Disc $BRANCH branch and downloading most recent version from Github..."
         echo ""
         # Remove current Tux Disc and clone Git
-        sudo rm -r ~/Tux-Disc/master && git clone -b master --single-branch https://github.com/Flamestar98/Tux-Disc.git ~/Tux-Disc/master
+        sudo rm -r $HOME/Tux-Disc/master && git clone -b master --single-branch https://github.com/Flamestar98/Tux-Disc.git $HOME/Tux-Disc/master
         echo ""
     else
         # Message
@@ -112,7 +112,7 @@ echo ""
         echo "Downloading most recent version of Tux Disc $BRANCH branch from Github..."
         echo ""
     # Clone Git
-        git clone -b master --single-branch https://github.com/Flamestar98/Tux-Disc.git ~/Tux-Disc/master
+        git clone -b master --single-branch https://github.com/Flamestar98/Tux-Disc.git $HOME/Tux-Disc/master
         echo ""
       fi
     fi
@@ -125,7 +125,7 @@ echo ""
         echo "Deleting your current version of Tux Disc $BRANCH branch and downloading most recent version from Github..."
         echo ""
         # Remove current Tux Disc and clone Git
-        sudo rm -r ~/Tux-Disc/master && git clone -b development --single-branch https://github.com/Flamestar98/Tux-Disc.git ~/Tux-Disc/development
+        sudo rm -r $HOME/Tux-Disc/master && git clone -b development --single-branch https://github.com/Flamestar98/Tux-Disc.git $HOME/Tux-Disc/development
         echo ""
     else
         # Message
@@ -133,7 +133,7 @@ echo ""
         echo "Downloading most recent version of Tux Disc $BRANCH branch from Github..."
         echo ""
     # Clone Git
-        git clone -b development --single-branch https://github.com/Flamestar98/Tux-Disc.git ~/Tux-Disc/development
+        git clone -b development --single-branch https://github.com/Flamestar98/Tux-Disc.git $HOME/Tux-Disc/development
         echo ""
       fi
     fi
@@ -146,7 +146,7 @@ echo ""
         echo "Deleting your current version of Tux Disc and downloading most recent version from Github..."
         echo ""
         # Remove current Tux Disc and clone Git
-        sudo rm -r ~/Tux-Disc && git clone -b master --single-branch https://github.com/Flamestar98/Tux-Disc.git ~/Tux-Disc/master && git clone -b development --single-branch https://github.com/Flamestar98/Tux-Disc.git ~/Tux-Disc/development
+        sudo rm -r $HOME/Tux-Disc && git clone -b master --single-branch https://github.com/Flamestar98/Tux-Disc.git $HOME/Tux-Disc/master && git clone -b development --single-branch https://github.com/Flamestar98/Tux-Disc.git $HOME/Tux-Disc/development
         echo ""
     else
         # Message
@@ -154,7 +154,7 @@ echo ""
         echo "Downloading most recent version of Tux Disc from Github..."
         echo ""
     # Clone Git
-        git clone -b master --single-branch https://github.com/Flamestar98/Tux-Disc.git ~/Tux-Disc/master && git clone -b development --single-branch https://github.com/Flamestar98/Tux-Disc.git ~/Tux-Disc/development
+        git clone -b master --single-branch https://github.com/Flamestar98/Tux-Disc.git $HOME/Tux-Disc/master && git clone -b development --single-branch https://github.com/Flamestar98/Tux-Disc.git $HOME/Tux-Disc/development
         echo ""
       fi
     fi
@@ -185,7 +185,7 @@ echo ""
         echo "Deleting your current version of Tux Disc $BRANCH branch and downloading most recent version from Github..."
         echo ""
         # Remove current Tux Disc and clone Git
-        sudo rm -r ~/Tux-Disc/master && git clone -b master --single-branch git@github.com:Flamestar98/Tux-Disc.git ~/Tux-Disc/master
+        sudo rm -r $HOME/Tux-Disc/master && git clone -b master --single-branch git@github.com:Flamestar98/Tux-Disc.git $HOME/Tux-Disc/master
         echo ""
     else
         # Message
@@ -193,7 +193,7 @@ echo ""
         echo "Downloading most recent version of Tux Disc $BRANCH branch from Github..."
         echo ""
     # Clone Git
-        git clone -b master --single-branch git@github.com:Flamestar98/Tux-Disc.git ~/Tux-Disc/master
+        git clone -b master --single-branch git@github.com:Flamestar98/Tux-Disc.git $HOME/Tux-Disc/master
         echo ""
       fi
     fi
@@ -206,7 +206,7 @@ echo ""
         echo "Deleting your current version of Tux Disc $BRANCH branch and downloading most recent version from Github..."
         echo ""
         # Remove current Tux Disc and clone Git
-        sudo rm -r ~/Tux-Disc/master && git clone -b development --single-branch git@github.com:Flamestar98/Tux-Disc.git ~/Tux-Disc/development
+        sudo rm -r $HOME/Tux-Disc/development && git clone -b development --single-branch git@github.com:Flamestar98/Tux-Disc.git $HOME/Tux-Disc/development
         echo ""
     else
         # Message
@@ -214,7 +214,7 @@ echo ""
         echo "Downloading most recent version of Tux Disc $BRANCH branch from Github..."
         echo ""
     # Clone Git
-        git clone -b development --single-branch git@github.com:Flamestar98/Tux-Disc.git ~/Tux-Disc/development
+        git clone -b development --single-branch git@github.com:Flamestar98/Tux-Disc.git $HOME/Tux-Disc/development
         echo ""
       fi
     fi
@@ -227,7 +227,7 @@ echo ""
         echo "Deleting your current version of Tux Disc and downloading most recent version from Github..."
         echo ""
         # Remove current Tux Disc and clone Git
-        sudo rm -r ~/Tux-Disc && git clone -b master --single-branch git@github.com:Flamestar98/Tux-Disc.git ~/Tux-Disc/master && git clone -b development --single-branch git@github.com:Flamestar98/Tux-Disc.git ~/Tux-Disc/development
+        sudo rm -r $HOME/Tux-Disc && git clone -b master --single-branch git@github.com:Flamestar98/Tux-Disc.git $HOME/Tux-Disc/master && git clone -b development --single-branch git@github.com:Flamestar98/Tux-Disc.git $HOME/Tux-Disc/development
         echo ""
     else
         # Message
@@ -235,7 +235,7 @@ echo ""
         echo "Downloading most recent version of Tux Disc from Github..."
         echo ""
     # Clone Git
-        git clone -b master --single-branch git@github.com:Flamestar98/Tux-Disc.git ~/Tux-Disc/master && git clone -b development --single-branch git@github.com:Flamestar98/Tux-Disc.git ~/Tux-Disc/development
+        git clone -b master --single-branch git@github.com:Flamestar98/Tux-Disc.git $HOME/Tux-Disc/master && git clone -b development --single-branch git@github.com:Flamestar98/Tux-Disc.git $HOME/Tux-Disc/development
         echo ""
       fi
     fi

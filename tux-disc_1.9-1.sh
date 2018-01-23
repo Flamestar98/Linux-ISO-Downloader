@@ -18,6 +18,9 @@ DEBVER=$(grep "" $BASEDIR/debver)
 # Establishes Linux Mint version
 MINTVER=$(grep "" $BASEDIR/mintver)
 
+# Establishes Kali Linux version
+KALIVER=$(grep "" $BASEDIR/kaliver)
+
 echo "
                         ##############################
                         ##                          ##
@@ -32,10 +35,10 @@ echo "
 
 # Linux distrobution
 echo 'Please select from the following'
-select DISTRO in "Debian $DEBVER" "Fedora" "KDE Neon" "Kubuntu" "Linux Mint $MINTVER" "Lubuntu" "Qubes" "Ubuntu" "Ubuntu Budgie" "Ubuntu GNOME" "Ubuntu MATE" "Ubuntu Studio" "Xubuntu"
+select DISTRO in "Debian $DEBVER" "Fedora" "Kali Linux $KALIVER" "KDE Neon" "Kubuntu" "Linux Mint $MINTVER" "Lubuntu" "Qubes" "Ubuntu" "Ubuntu Budgie" "Ubuntu GNOME" "Ubuntu MATE" "Ubuntu Studio" "Xubuntu"
 do
         case $DISTRO in
-        "Debian $DEBVER"|"Fedora"|"KDE Neon"|"Kubuntu"|"Linux Mint $MINTVER"|"Lubuntu"|"Qubes"|"Ubuntu"|"Ubuntu Budgie"|"Ubuntu GNOME"|"Ubuntu MATE"|"Ubuntu Studio"|"Xubuntu")
+        "Debian $DEBVER"|"Fedora"|"Kali Linux $KALIVER"|"KDE Neon"|"Kubuntu"|"Linux Mint $MINTVER"|"Lubuntu"|"Qubes"|"Ubuntu"|"Ubuntu Budgie"|"Ubuntu GNOME"|"Ubuntu MATE"|"Ubuntu Studio"|"Xubuntu")
                 break
                 ;;
         *)
@@ -279,6 +282,59 @@ if [[ $DISTRO = "Fedora" ]]; then
         fi
     FINAL=$"$DISTRO $FED $ARC $RELEASE"
 fi
+# Kali Linux
+if [[ $DISTRO = "Kali Linux $KALIVER" ]]; then
+  echo "Now select a release for $DISTRO"
+  select RELEASE in "Kali" "Kali Light"
+  do
+          case $RELEASE in
+          "Kali"|"Kali Light")
+                  break
+                  ;;
+          *)
+                  echo "Please select a release"
+                  ;;
+          esac
+  done
+
+  if [[ $RELEASE = "Kali" ]]; then
+    echo "Now select an architecture for $DISTRO"
+  else
+    echo "Now select an architecture for $DISTRO $RELEASE"
+  fi
+  select ARC in "32-bit" "64-bit"
+  do
+          case $ARC in
+          "32-bit"|"64-bit")
+                  break
+                  ;;
+          *)
+                  ;;
+          esac
+  done
+
+  if [[ $ARC = "32-bit" ]]; then
+    arc=$"i386"
+  fi
+
+  if [[ $ARC = "64-bit" ]]; then
+    arc=$"amd64"
+  fi
+
+  if [[ $RELEASE = "Kali" ]]; then
+    distro=$"kali-linux"
+    FINAL=$"$DISTRO $ARC"
+  fi
+
+  if [[ $RELEASE = "Kali Light" ]]; then
+    distro=$"kali-linux-light"
+    FINAL=$"$RELEASE $ARC"
+  fi
+
+  OPTION=$"-P"
+
+  URL=$" http://cdimage.kali.org/kali-$KALIVER/$distro-$KALIVER-$arc.iso"
+fi
 # KDE Neon
 if [[ $DISTRO = "KDE Neon" ]]; then
 # Release
@@ -320,10 +376,10 @@ fi
 # Linux Mint
 if [[ $DISTRO = "Linux Mint $MINTVER" ]]; then
     echo "Which desktop would you like?"
-    select MINTDESK in Cinnamon MATE
+    select MINTDESK in Cinnamon KDE MATE Xfce
     do
             case $MINTDESK in
-            Cinnamon|MATE)
+            Cinnamon|KDE|MATE|Xfce)
                     break
                     ;;
             *)
@@ -398,10 +454,10 @@ if [[ "$DISTRO" = "Kubuntu" ]] || [[ "$DISTRO" = "Lubuntu" ]] || [[ "$DISTRO" = 
 
     if [[ $DISTRO = "Ubuntu Budgie" ]]; then
         echo 'Please select a release'
-        select RELEASE in "17.04" "17.10" "18.04 Daily"
+        select RELEASE in "17.10.1" "18.04 Daily"
         do
                 case $RELEASE in
-                "17.04"|"17.10"|"18.04 Daily")
+                "17.10.1"|"18.04 Daily")
                         break
                         ;;
             *)
@@ -413,10 +469,10 @@ if [[ "$DISTRO" = "Kubuntu" ]] || [[ "$DISTRO" = "Lubuntu" ]] || [[ "$DISTRO" = 
 
     if [[ $DISTRO = "Ubuntu GNOME" ]]; then
         echo 'Please select a release'
-        select RELEASE in "16.04.3" "17.04"
+        select RELEASE in "16.04.3"
         do
                 case $RELEASE in
-                "16.04.3"|"17.04")
+                "16.04.3")
                         break
                         ;;
                 *)
@@ -428,10 +484,10 @@ if [[ "$DISTRO" = "Kubuntu" ]] || [[ "$DISTRO" = "Lubuntu" ]] || [[ "$DISTRO" = 
 
     if [[ $DISTRO = "Ubuntu Studio" ]]; then
         echo 'Please select a release'
-        select RELEASE in "16.04.3" "17.04" "17.10"
+        select RELEASE in "16.04.3" "17.10.1"
         do
                 case $RELEASE in
-                "16.04.3"|"17.04"|"17.10")
+                "16.04.3"|"17.10.1")
                         break
                         ;;
                 *)
@@ -443,10 +499,10 @@ if [[ "$DISTRO" = "Kubuntu" ]] || [[ "$DISTRO" = "Lubuntu" ]] || [[ "$DISTRO" = 
 
     if [[ "$DISTRO" = "Kubuntu" ]] || [[ "$DISTRO" = "Lubuntu" ]] || [[ "$DISTRO" = "Ubuntu" ]] || [[ "$DISTRO" = "Ubuntu MATE" ]] || [[ "$DISTRO" = "Xubuntu" ]]; then
         echo 'Please select a release'
-        select RELEASE in "16.04.3" "17.04" "17.10" "18.04 Daily"
+        select RELEASE in "16.04.3" "17.10.1" "18.04 Daily"
         do
                 case $RELEASE in
-                "16.04.3"|"17.04"|"17.10"|"18.04 Daily")
+                "16.04.3"|"17.10.1"|"18.04 Daily")
                         break
                         ;;
                 *)
@@ -456,7 +512,7 @@ if [[ "$DISTRO" = "Kubuntu" ]] || [[ "$DISTRO" = "Lubuntu" ]] || [[ "$DISTRO" = 
         done
     fi
 
-    if ( [[ $DISTRO = "Ubuntu" ]] && [[ $RELEASE = "17.10" ]] ) || ( [[ $DISTRO = "Ubuntu" ]] && [[ $RELEASE = "18.04 Daily" ]] ); then
+    if ( [[ $DISTRO = "Ubuntu" ]] && [[ $RELEASE = "17.10.1" ]] ) || ( [[ $DISTRO = "Ubuntu" ]] && [[ $RELEASE = "18.04 Daily" ]] ); then
         ARC=$"64-bit"
     else
         echo 'Please select an architecture'
@@ -498,7 +554,7 @@ if [[ "$DISTRO" = "Kubuntu" ]] || [[ "$DISTRO" = "Lubuntu" ]] || [[ "$DISTRO" = 
     fi
   fi
 
-  read -p "Is this what you wanted to download? $FINAL (y/n) " YN
+  read -p "Is this what you wanted to download? $FINAL (Y/n) " YN
   case "$YN" in
     y|Y ) YN=$"yes";;
     n|N ) YN=$"no";;
@@ -507,7 +563,7 @@ if [[ "$DISTRO" = "Kubuntu" ]] || [[ "$DISTRO" = "Lubuntu" ]] || [[ "$DISTRO" = 
 
 if [[ $YN = "yes" ]]; then
 
-  read -p "Where would you like to download $FINAL? (d for default) " DIRECT
+  read -p "Where in your home directory would you like to download $FINAL? (d for default) " DIRECT
   case "$DIRECT" in
     d|D ) DIRECT=$"ISO";;
    *);;
@@ -533,7 +589,7 @@ fi
     bash $BASEDIR/tux-disc_$BINARYVER-$PATCHVER.sh
   fi
 
-  read -p "Would you like to download another ISO? (y/n) " REPEAT
+  read -p "Would you like to download another ISO? (Y/n) " REPEAT
   case "$REPEAT" in
     y|Y ) REPEAT=$"yes";;
     n|N ) REPEAT=$"no";;

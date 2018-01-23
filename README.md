@@ -30,6 +30,10 @@ Currently includes
 * Net Installer (32-bit/64-bit)
 * Live Installer (64-bit)
 
+#### Kali Linux
+* Kali Linux (32-bit/64-bit)
+* Kali Linux Light (32-bit/64-bit)
+
 #### KDE Neon
 * User Edition (64-bit)
 * User LTS Edition (64-bit)
@@ -38,17 +42,17 @@ Currently includes
 
 #### Kubuntu
 * 16.04 LTS (32-bit/64-bit)
-* 17.04 (32-bit/64-bit)
 * 17.10 (32-bit/64-bit)
 * 18.04 Daily (32-bit/64-bit)
 
 #### Linux Mint 18.3
 * Cinnamon desktop (32-bit/64-bit)
+* KDE desktop (32-bit/64-bit)
 * MATE desktop (32-bit/64-bit)
+* Xfce desktop (32-bit/64-bit)
 
 #### Lubuntu
 * 16.04 LTS (32-bit/64-bit)
-* 17.04 (32-bit/64-bit)
 * 17.10 (32-bit/64-bit)
 * 18.04 Daily (32-bit/64-bit)
 
@@ -58,33 +62,27 @@ Currently includes
 
 #### Ubuntu
 * 16.04 LTS (32-bit/64-bit)
-* 17.04 (32-bit/64-bit)
 * 17.10 (64-bit)
 * 18.04 Daily (64-bit)
 
 #### Ubuntu Budgie
-* 17.04 (32-bit/64-bit)
 * 17.10 (32-bit/64-bit)
 * 18.04 Daily (32-bit/64-bit)
 
 #### Ubuntu GNOME
 * 16.04 LTS (32-bit/64-bit)
-* 17.04 (32-bit/64-bit)
 
 #### Ubuntu MATE
 * 16.04 LTS (32-bit/64-bit)
-* 17.04 (32-bit/64-bit)
 * 17.10 (32-bit/64-bit)
 * 18.04 Daily (32-bit/64-bit)
 
 #### Ubuntu Studio
 * 16.04 LTS (32-bit/64-bit)
-* 17.04 (32-bit/64-bit)
 * 17.10 (32-bit/64-bit)
 
 #### Xubuntu
 * 16.04 LTS (32-bit/64-bit)
-* 17.04 (32-bit/64-bit)
 * 17.10 (32-bit/64-bit)
 * 18.04 Daily (32-bit/64-bit)
 

@@ -1,6 +1,31 @@
 Changelog
 =========
 
+1.9-1
+-----
+### Added
+* Kali Linux 32/64-bit
+* Kali Linux Light 32/64-bit
+
+### Changed
+* Kubuntu 17.10 > 17.10.1
+* Lubuntu 17.10 > 17.10.1
+* Ubuntu 17.10 > 17.10.1
+* Ubuntu Budgie 17.10 > 17.10.1
+* Ubuntu MATE 17.10 > 17.10.1
+* Ubuntu Studio 17.10 > 17.10.1
+* Xubuntu 17.10 > 17.10.1
+
+### Removed
+* Kubuntu 17.04
+* Lubuntu 17.04
+* Ubuntu 17.04
+* Ubuntu Budgie 17.04
+* Ubuntu GNOME 17.04
+* Ubuntu MATE 17.04
+* Ubuntu Studio 17.04
+* Xubuntu 17.04
+
 1.8-1
 -----
 ### Changed
