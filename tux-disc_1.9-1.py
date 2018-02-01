@@ -37,11 +37,8 @@ print("""
 """)
 
 # Asks the user which Linux Distribution they would like to download
-print("""1) Debian """+DEBVER+"""	        6) Linux Mint """+MINTVER+"""    11) Ubuntu GNOME
-2) Fedora	        7) Lubuntu	      12) Ubuntu MATE
-3) Kali Linux """+KALIVER+"""    8) Qubes	      13) Ubuntu Studio
-4) KDE Neon	        9) Ubuntu	      14) Xubuntu
-5) Kubuntu	       10) Ubuntu Budgie""")
+distrolist = ['1) Debian '+DEBVER, '2) Fedora', '3) Kali Linux '+KALIVER, '4) KDE Neon', '5) Kubuntu', '6) Linux Mint '+MINTVER, '7) Lubuntu', '8) Qubes', '9) Ubuntu', '10) Ubuntu Budgie', '11) Ubuntu GNOME', '12) Ubuntu MATE', '13) Ubuntu Studio ', '14) Xubuntu']
+print(distrolist)
 DISTRO = {'1':'Debian '+DEBVER,'2':'Fedora'}
 Choose_Distro = input("Please select a distro to download: ")
 try:
