@@ -1,6 +1,12 @@
 Changelog
 =========
 
+1.9-2
+-----
+### Changed
+* Kali Linux 2017.3 > 2018.1
+* Qubes 4.0 RC2 > RC4
+
 1.9-1
 -----
 ### Added
