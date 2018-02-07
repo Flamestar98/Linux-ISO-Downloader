@@ -5,6 +5,7 @@ Downloads Linux ISO of choice based on user input.
 
 #### All 32-bit/64-bit Ubuntu LTS releases are currently at 16.04.3
 #### All Debian 9 releases are currently at 9.3.0
+#### All Kali Linux releases are currently at 2018.1
 
 [Changelog][1]
 
@@ -32,7 +33,11 @@ Currently includes
 
 #### Kali Linux
 * Kali Linux (32-bit/64-bit)
+* Kali Linux KDE (64-bit)
 * Kali Linux Light (32-bit/64-bit)
+* Kali Linux LXDE (64-bit)
+* Kali Linux MATE (64-bit)
+* Kali Linux Xfce (64-bit)
 
 #### KDE Neon
 * User Edition (64-bit)
