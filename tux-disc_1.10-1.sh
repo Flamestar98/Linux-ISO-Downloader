@@ -285,10 +285,10 @@ fi
 # Kali Linux
 if [[ $DISTRO = "Kali Linux $KALIVER" ]]; then
   echo "Now select a release for $DISTRO"
-  select RELEASE in "Kali" "Kali Light"
+  select RELEASE in "Kali Linux" "Kali Linux KDE" "Kali Linux Light" "Kali Linux LXDE" "Kali Linux MATE" "Kali Linux Xfce"
   do
           case $RELEASE in
-          "Kali"|"Kali Light")
+          "Kali Linux"|"Kali Linux KDE"|"Kali Linux Light"|"Kali Linux LXDE"|"Kali Linux MATE"|"Kali Linux Xfce")
                   break
                   ;;
           *)
@@ -296,44 +296,37 @@ if [[ $DISTRO = "Kali Linux $KALIVER" ]]; then
                   ;;
           esac
   done
-
-  if [[ $RELEASE = "Kali" ]]; then
-    echo "Now select an architecture for $DISTRO"
-  else
-    echo "Now select an architecture for $DISTRO $RELEASE"
+  if [[ $RELEASE = "Kali Linux" ]] || [[ $RELEASE = "Kali Linux Light" ]]; then
+    echo "Now select an architecture for $RELEASE $KALIVER"
+    select ARC in "32-bit" "64-bit"
+    do
+            case $ARC in
+            "32-bit"|"64-bit")
+                    break
+                    ;;
+            *)
+                    ;;
+            esac
+    done
   fi
-  select ARC in "32-bit" "64-bit"
-  do
-          case $ARC in
-          "32-bit"|"64-bit")
-                  break
-                  ;;
-          *)
-                  ;;
-          esac
-  done
 
   if [[ $ARC = "32-bit" ]]; then
     arc=$"i386"
   fi
 
-  if [[ $ARC = "64-bit" ]]; then
+  if [[ ! $ARC = "32-bit" ]]; then
     arc=$"amd64"
   fi
 
-  if [[ $RELEASE = "Kali" ]]; then
-    distro=$"kali-linux"
-    FINAL=$"$DISTRO $ARC"
-  fi
+  HYPHEN="${RELEASE// /-}"
 
-  if [[ $RELEASE = "Kali Light" ]]; then
-    distro=$"kali-linux-light"
-    FINAL=$"$RELEASE $ARC"
-  fi
+  distro="${HYPHEN,,}"
 
   OPTION=$"-P"
 
   URL=$" http://cdimage.kali.org/kali-$KALIVER/$distro-$KALIVER-$arc.iso"
+
+  FINAL=$"$RELEASE $KALIVER"
 fi
 # KDE Neon
 if [[ $DISTRO = "KDE Neon" ]]; then
