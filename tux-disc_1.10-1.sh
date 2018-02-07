@@ -310,11 +310,15 @@ if [[ $DISTRO = "Kali Linux $KALIVER" ]]; then
     done
   fi
 
+  if [[ ! $ARC = "32-bit" ]] && [[ ! $ARC = "64-bit" ]]; then
+    ARC=$"64-bit"
+  fi
+
   if [[ $ARC = "32-bit" ]]; then
     arc=$"i386"
   fi
 
-  if [[ ! $ARC = "32-bit" ]]; then
+  if [[ $ARC = "64-bit" ]]; then
     arc=$"amd64"
   fi
 
@@ -326,7 +330,7 @@ if [[ $DISTRO = "Kali Linux $KALIVER" ]]; then
 
   URL=$" http://cdimage.kali.org/kali-$KALIVER/$distro-$KALIVER-$arc.iso"
 
-  FINAL=$"$RELEASE $KALIVER"
+  FINAL=$"$RELEASE $KALIVER $ARC"
 fi
 # KDE Neon
 if [[ $DISTRO = "KDE Neon" ]]; then
