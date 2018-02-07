@@ -416,7 +416,7 @@ if [[ $DISTRO = "Qubes" ]]; then
     select RELEASE in "3.2" "4.0-rc4"
     do
             case $RELEASE in
-            "3.2"|"4.0-rc2")
+            "3.2"|"4.0-rc4")
                     break
                     ;;
             *)
