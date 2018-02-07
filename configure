@@ -7,7 +7,7 @@ BASEDIR=$(dirname $0)
 BINARYVER=$"1.9"
 
 # Establishes patch version
-PATCHVER=$"1"
+PATCHVER=$"2"
 
 # Establishes Debian version
 DEBVER=$"9.3.0"
@@ -16,7 +16,7 @@ DEBVER=$"9.3.0"
 MINTVER=$"18.3"
 
 # Establishes Kali Linux version
-KALIVER=$"2017.3"
+KALIVER=$"2018.1"
 
 # Establishes size in KB
 SIZEKB=$"588"
