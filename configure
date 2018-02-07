@@ -4,10 +4,10 @@
 BASEDIR=$(dirname $0)
 
 # Establishes binary version number
-BINARYVER=$"1.9"
+BINARYVER=$"1.10"
 
 # Establishes patch version
-PATCHVER=$"2"
+PATCHVER=$"1"
 
 # Establishes Debian version
 DEBVER=$"9.3.0"
