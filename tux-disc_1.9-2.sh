@@ -416,7 +416,7 @@ if [[ $DISTRO = "Qubes" ]]; then
     select RELEASE in "3.2" "4.0-rc4"
     do
             case $RELEASE in
-            "3.2"|"4.0-rc2")
+            "3.2"|"4.0-rc4")
                     break
                     ;;
             *)
@@ -432,7 +432,7 @@ if [[ $DISTRO = "Qubes" ]]; then
             OPTION=$"-P" URL=$" https://mirrors.kernel.org/qubes/iso/Qubes-R3.2-x86_64.iso"
     fi
 # Qubes 4.0-rc2
-    if [[ $RELEASE = "4.0-rc2" ]]; then
+    if [[ $RELEASE = "4.0-rc4" ]]; then
 # Message
             FINAL=$"$DISTRO $RELEASE 64-bit"
 # Download
