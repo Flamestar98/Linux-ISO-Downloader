@@ -1,10 +1,17 @@
 Changelog
 =========
 
-1.9-2
+1.10-1
 -----
+
+### Added
+* Kali Linux KDE 64-bit
+* Kali Linux LXDE 64-bit
+* Kali Linux MATE 64-bit
+* Kali Linux Xfce 64-bit
+
 ### Changed
-* Kali Linux 2017.3 > 2018.1
+* Kali Linux (Light) 2017.3 > 2018.1
 * Qubes 4.0 RC2 > RC4
 
 1.9-1
