@@ -81,93 +81,19 @@ echo ""
     done
 # HTTPS
   if [[ $PROTO = "HTTPS" ]]; then
-    echo ''
-    echo 'Which branch would you like to download?'
-    select BRANCH in master development both
-    do
-      case $BRANCH in
-        master|development|both)
-        break
-        ;;
-        *)
-        echo ''
-        echo 'Please select a branch for download'
-        ;;
-      esac
-    done
-    # master
-    if [[ $BRANCH = "master" ]]; then
-      cd ~
-      if [ -d "Tux-Disc/master" ]; then
-        # Message
-        echo ""
-        echo "Deleting your current version of Tux Disc $BRANCH branch and downloading most recent version from Github..."
-        echo ""
-        # Remove current Tux Disc and clone Git
-        sudo rm -r $HOME/Tux-Disc/master && git clone -b master --single-branch https://github.com/Flamestar98/Tux-Disc.git $HOME/Tux-Disc/master
-        echo ""
-    else
-        # Message
-        echo ""
-        echo "Downloading most recent version of Tux Disc $BRANCH branch from Github..."
-        echo ""
-    # Clone Git
-        git clone -b master --single-branch https://github.com/Flamestar98/Tux-Disc.git $HOME/Tux-Disc/master
-        echo ""
-      fi
-    fi
-    # development
-    if [[ $BRANCH = "development" ]]; then
-      cd ~
-      if [ -d "Tux-Disc/development" ]; then
-        # Message
-        echo ""
-        echo "Deleting your current version of Tux Disc $BRANCH branch and downloading most recent version from Github..."
-        echo ""
-        # Remove current Tux Disc and clone Git
-        sudo rm -r $HOME/Tux-Disc/master && git clone -b development --single-branch https://github.com/Flamestar98/Tux-Disc.git $HOME/Tux-Disc/development
-        echo ""
-    else
-        # Message
-        echo ""
-        echo "Downloading most recent version of Tux Disc $BRANCH branch from Github..."
-        echo ""
-    # Clone Git
-        git clone -b development --single-branch https://github.com/Flamestar98/Tux-Disc.git $HOME/Tux-Disc/development
-        echo ""
-      fi
-    fi
-    # both
-    if [[ $BRANCH = "both" ]]; then
-      cd ~
-      if [ -d "Tux-Disc" ]; then
-        # Message
-        echo ""
-        echo "Deleting your current version of Tux Disc and downloading most recent version from Github..."
-        echo ""
-        # Remove current Tux Disc and clone Git
-        sudo rm -r $HOME/Tux-Disc && git clone -b master --single-branch https://github.com/Flamestar98/Tux-Disc.git $HOME/Tux-Disc/master && git clone -b development --single-branch https://github.com/Flamestar98/Tux-Disc.git $HOME/Tux-Disc/development
-        echo ""
-    else
-        # Message
-        echo ""
-        echo "Downloading most recent version of Tux Disc from Github..."
-        echo ""
-    # Clone Git
-        git clone -b master --single-branch https://github.com/Flamestar98/Tux-Disc.git $HOME/Tux-Disc/master && git clone -b development --single-branch https://github.com/Flamestar98/Tux-Disc.git $HOME/Tux-Disc/development
-        echo ""
-      fi
-    fi
+    GITCLONE=$"https://github.com/Flamestar98/Tux-Disc.git"
   fi
-# SSH
+
   if [[ $PROTO = "SSH" ]]; then
-    cd ~
+    GITCLONE=$"git@github.com:Flamestar98/Tux-Disc.git"
+  fi
+
     echo ''
     echo 'Which branch would you like to download?'
-    select BRANCH in master development both
+    select BRANCH in 'master' 'development' 'development-python' 'all'
     do
       case $BRANCH in
-        master|development|both)
+        'master'|'development'|'development-python'|'all')
         break
         ;;
         *)
@@ -176,71 +102,24 @@ echo ""
         ;;
       esac
     done
-    # master
-    if [[ $BRANCH = "master" ]]; then
-      cd ~
-      if [ -d "Tux-Disc/master" ]; then
-        # Message
-        echo ""
-        echo "Deleting your current version of Tux Disc $BRANCH branch and downloading most recent version from Github..."
-        echo ""
+
+      cd $HOME
+      # Message
+      echo ""
+      echo "Downloading most recent version of Tux Disc from Github..."
+      echo ""
+      # both
+      if [[ $BRANCH = "all" ]]; then
+          # Remove current Tux Disc and clone Git
+          sudo rm -r $HOME/Tux-Disc && git clone -b master --single-branch $GITCLONE $HOME/Tux-Disc/master && git clone -b development --single-branch $GITCLONE $HOME/Tux-Disc/development && git clone -b development-python --single-branch $GITCLONE $HOME/Tux-Disc/development-python
+          echo ""
+      else
+      if [ -d "Tux-Disc/$BRANCH" ]; then
         # Remove current Tux Disc and clone Git
-        sudo rm -r $HOME/Tux-Disc/master && git clone -b master --single-branch git@github.com:Flamestar98/Tux-Disc.git $HOME/Tux-Disc/master
-        echo ""
-    else
-        # Message
-        echo ""
-        echo "Downloading most recent version of Tux Disc $BRANCH branch from Github..."
-        echo ""
-    # Clone Git
-        git clone -b master --single-branch git@github.com:Flamestar98/Tux-Disc.git $HOME/Tux-Disc/master
-        echo ""
+        sudo rm -r $HOME/Tux-Disc/$BRANCH &&\
       fi
+      git clone -b $BRANCH --single-branch $GITCLONE $HOME/Tux-Disc/$BRANCH
     fi
-    # development
-    if [[ $BRANCH = "development" ]]; then
-      cd ~
-      if [ -d "Tux-Disc/development" ]; then
-        # Message
-        echo ""
-        echo "Deleting your current version of Tux Disc $BRANCH branch and downloading most recent version from Github..."
-        echo ""
-        # Remove current Tux Disc and clone Git
-        sudo rm -r $HOME/Tux-Disc/development && git clone -b development --single-branch git@github.com:Flamestar98/Tux-Disc.git $HOME/Tux-Disc/development
-        echo ""
-    else
-        # Message
-        echo ""
-        echo "Downloading most recent version of Tux Disc $BRANCH branch from Github..."
-        echo ""
-    # Clone Git
-        git clone -b development --single-branch git@github.com:Flamestar98/Tux-Disc.git $HOME/Tux-Disc/development
-        echo ""
-      fi
-    fi
-    # both
-    if [[ $BRANCH = "both" ]]; then
-      cd ~
-      if [ -d "Tux-Disc" ]; then
-        # Message
-        echo ""
-        echo "Deleting your current version of Tux Disc and downloading most recent version from Github..."
-        echo ""
-        # Remove current Tux Disc and clone Git
-        sudo rm -r $HOME/Tux-Disc && git clone -b master --single-branch git@github.com:Flamestar98/Tux-Disc.git $HOME/Tux-Disc/master && git clone -b development --single-branch git@github.com:Flamestar98/Tux-Disc.git $HOME/Tux-Disc/development
-        echo ""
-    else
-        # Message
-        echo ""
-        echo "Downloading most recent version of Tux Disc from Github..."
-        echo ""
-    # Clone Git
-        git clone -b master --single-branch git@github.com:Flamestar98/Tux-Disc.git $HOME/Tux-Disc/master && git clone -b development --single-branch git@github.com:Flamestar98/Tux-Disc.git $HOME/Tux-Disc/development
-        echo ""
-      fi
-    fi
-  fi
-fi
 # End
 if [[ $REPLACE = "No" ]]; then
 # Message
