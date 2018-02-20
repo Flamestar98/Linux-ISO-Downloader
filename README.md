@@ -5,87 +5,69 @@ Tux Disc
 alt="Tux Disc" width="292" height="300" /></center>
 
 [![GitHub release](https://img.shields.io/github/release/Flamestar98/Tux-Disc.svg)](https://github.com/Flamestar98/Tux-Disc/releases/latest)
-![GitHub release date](https://img.shields.io/github/release-date/Flamestar98/Tux-Disc.svg)
+[![GitHub release date](https://img.shields.io/github/release-date/Flamestar98/Tux-Disc.svg)](https://github.com/Flamestar98/Tux-Disc)
 [![GitHub license](https://img.shields.io/github/license/Flamestar98/Tux-Disc.svg)](https://github.com/Flamestar98/Tux-Disc/blob/master/LICENSE)
 [![GitHub last commit](https://img.shields.io/github/last-commit/Flamestar98/Tux-Disc.svg)](https://github.com/Flamestar98/Tux-Disc/commits)
-![GitHub top language](https://img.shields.io/github/languages/top/Flamestar98/Tux-Disc.svg)
-
-A nice little utility for downloading ISO images
+[![GitHub top language](https://img.shields.io/github/languages/top/Flamestar98/Tux-Disc.svg)](https://github.com/Flamestar98/Tux-Disc)
 
 [[Changelog][1]]
 [[Distro List][3]]
 
+Tux Disc is a command line utility for downloading ISO images for various Linux distributions.
+
+Tux Disc provides a simple, easy to use interface, that makes it a breeze to download various ISO images.
+
+This is pretty much a little project of mine born from my wanting to choose which Ubuntu flavor's 17.10 daily testing ISO I wanted to download, and just kinda ended up becoming this whole thing for downloading a bunch of Linux distributions install images.
+
+Screenshots
+===========
+<center><img src="https://github.com/Flamestar98/Tux-Disc/raw/screenshots/main-menu.png"
+alt="Tux Disc" /></center>
+<center><img src="https://github.com/Flamestar98/Tux-Disc/raw/screenshots/downloading.png"
+alt="Tux Disc" /></center>
+
+Get Tux Disc
+============
+You can get Tux Disc either using the Tux Disc PPA, downloading straight from the [releases][2] page, or by compiling the source code
+
 PPA
 ---
-To install Tux Disc and receive updates,
-
-* Run `sudo add-apt-repository ppa:flamestar/tux-disc`
-* Then run `sudo apt-get update && sudo apt install tux-disc`
+To get Tux Disc using the PPA, open a terminal window and run
+* `sudo add-apt-repository ppa:flamestar/tux-disc`
+* `sudo apt-get update && sudo apt install tux-disc`
 
 Download
 --------
-Both source tarballs and binaries can be downloaded from the [release][2] page, or you can use Git to clone the most recent version of the repository
+To download the deb installer for Tux Disc,
+* head on over to the [releases][2] page,
+* download the .deb installer for the latest version
+* double click the .deb installer
+* click `Install Package`
+* enter your password
 
-Importaint information
-----------------------
+Source
+------
+To compile and install Tux Disc from source,
+* Download the source code, by either
+  * going to the [releases][2] page
+    * download the source code either as .zip or .tar.gz
+    * extract the contents of the archive
+  * using `git` to clone the repository
+  * click on `Clone or Download` and click on `Download ZIP`
+    * extract the contents of the archive
+* Open a terminal window and `cd` into the folder for Tux Disc
+* Run
+  * `sudo bash ./configure`
+  * `sudo bash ./make`
+  * `sudo bash ./make-install`
 
-This script relies on the URL of each file remaining unchanged.
 
-In the event that any of the downloads become broken, I will attempt to fix them as soon as I notice them.
+Once any of the methods have been completed, Tux Disc can now be run either from your desktop's application launcher, or by running the `tux-disc` command
 
-Otherwise, feel free to file an issue stating which download(s) are broken, and i will attempt to fix them as soon as possible.
+Planned Features
+================
 
-Operation
----------
-
-To use this script,
-
-### Binary
-* Download the binary .deb file of the latest release
-
-#### GUI
-* Double-click the .deb file and click install
-* Find and open `Tux Disc` in the application menu of your desktop under `Accessories` (the desktop file is saved under `~/.local/share/applications`)
-
-#### CLI
-* run `dpkg -i FILEPATH/tux-disc_?.?-?.deb` (where `FILEPATH` is the full path (you can use `~` in the filepath if it's somewhere in your home directory) to the .deb file, and `?.?-?` is the version number of Tux Disc)
-* Once install is complete, simply run `tux-disc` from any terminal
-
-### Source
-* Download the source tarball from the releases page or clone the Git repository
-
-#### GUI
-* Right click `tux-disc_?.?-?.sh`
-* Select `Properties`
-* Select `Permissions`
-* Check the `Allow executing file as program` box
-* Double click on the file and select `Run In Terminal`
-
-#### CLI
-* Type `bash` and then the full path to the file
-  * i.e. `bash /home/user/Tux-Disc/tux-disc_1.8-1.sh`
-  * i.e. `bash ~/Tux-Disc/tux-disc_1.8-1.sh`
-
-* Or
-  * `cd` into the directory of the script
-  * `./tux-disc_?.?-?.sh`
-
-Compile from source
--------------------
-To compile from source,
-
-* Download the source tarball or clone the Git repo
-* Run `configure`
-* Run `make` to compile the source and then `make-install` to install the source
-
-To remove the source,
-
-* Run `make-uninstall` to uninstall the compiled source
-
-Planned features
-----------------
-
-In no particular order,
+In no particular order, these are some features/milestones that I have planned for future development
 
 * Graphical user interface (buttons everywhere!)
 * Flatpak packaging (for easier cross-distro distribution)
