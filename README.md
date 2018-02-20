@@ -5,10 +5,10 @@ Tux Disc
 alt="Tux Disc" width="292" height="300" /></center>
 
 [![GitHub release](https://img.shields.io/github/release/Flamestar98/Tux-Disc.svg)](https://github.com/Flamestar98/Tux-Disc/releases/latest)
-![GitHub release date](https://img.shields.io/github/release-date/Flamestar98/Tux-Disc.svg)
+[![GitHub release date](https://img.shields.io/github/release-date/Flamestar98/Tux-Disc.svg)](https://github.com/Flamestar98/Tux-Disc)
 [![GitHub license](https://img.shields.io/github/license/Flamestar98/Tux-Disc.svg)](https://github.com/Flamestar98/Tux-Disc/blob/master/LICENSE)
 [![GitHub last commit](https://img.shields.io/github/last-commit/Flamestar98/Tux-Disc.svg)](https://github.com/Flamestar98/Tux-Disc/commits)
-![GitHub top language](https://img.shields.io/github/languages/top/Flamestar98/Tux-Disc.svg)
+[![GitHub top language](https://img.shields.io/github/languages/top/Flamestar98/Tux-Disc.svg)](https://github.com/Flamestar98/Tux-Disc)
 
 A nice little utility for downloading ISO images
 
