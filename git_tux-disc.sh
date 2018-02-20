@@ -116,11 +116,18 @@ echo ""
       else
       if [ -d "Tux-Disc/$BRANCH" ]; then
         # Remove current Tux Disc and clone Git
+<<<<<<< HEAD
         sudo rm -r $HOME/Tux-Disc/$BRANCH
       fi
       git clone -b $BRANCH --single-branch $GITCLONE $HOME/Tux-Disc/$BRANCH
     fi
   fi
+=======
+        sudo rm -r $HOME/Tux-Disc/$BRANCH &&\
+      fi
+      git clone -b $BRANCH --single-branch $GITCLONE $HOME/Tux-Disc/$BRANCH
+    fi
+>>>>>>> 7f53ceb0513d909186b7527a1e05ca8018df6e36
 # End
 if [[ $REPLACE = "No" ]]; then
 # Message
