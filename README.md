@@ -21,9 +21,9 @@ This is pretty much a little project of mine born from my wanting to choose whic
 
 Screenshots
 ===========
-<center><img src="https://github.com/Flamestar98/Tux-Disc/raw/screenshots/main-menu.png"
+<center><img src="https://github.com/Flamestar98/Tux-Disc/raw/master/screenshots/main-menu.png"
 alt="Tux Disc" /></center>
-<center><img src="https://github.com/Flamestar98/Tux-Disc/raw/screenshots/downloading.png"
+<center><img src="https://github.com/Flamestar98/Tux-Disc/raw/master/screenshots/downloading.png"
 alt="Tux Disc" /></center>
 
 Get Tux Disc
