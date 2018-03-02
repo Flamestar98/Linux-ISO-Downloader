@@ -62,7 +62,7 @@ KDE Neon
 Kubuntu
 -------
 
-* 16.04.3 LTS
+* 16.04.4 LTS
   * 32-bit
   * 64-bit
 * 17.10
@@ -90,7 +90,7 @@ Linux Mint 18.3
 Lubuntu
 -------
 
-* 16.04.3 LTS
+* 16.04.4 LTS
   * 32-bit
   * 64-bit
 * 17.10
@@ -109,7 +109,7 @@ Qubes
 
 Ubuntu
 ------
-* 16.04.3 LTS
+* 16.04.4 LTS
   * 32-bit
   * 64-bit
 * 17.10
@@ -128,13 +128,13 @@ Ubuntu Budgie
 
 Ubuntu GNOME
 ------------
-* 16.04.3 LTS
+* 16.04.4 LTS
   * 32-bit
   * 64-bit
 
 Ubuntu MATE
 -----------
-* 16.04.3 LTS
+* 16.04.4 LTS
   * 32-bit
   * 64-bit
 * 17.10
@@ -146,7 +146,7 @@ Ubuntu MATE
 
 Ubuntu Studio
 -------------
-* 16.04.3 LTS
+* 16.04.4 LTS
   * 32-bit
   * 64-bit
 * 17.10
@@ -155,7 +155,7 @@ Ubuntu Studio
 
 Xubuntu
 -------
-* 16.04.3 LTS
+* 16.04.4 LTS
   * 32-bit
   * 64-bit
 * 17.10

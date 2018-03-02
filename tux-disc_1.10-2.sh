@@ -466,10 +466,10 @@ if [[ "$DISTRO" = "Kubuntu" ]] || [[ "$DISTRO" = "Lubuntu" ]] || [[ "$DISTRO" = 
 
     if [[ $DISTRO = "Ubuntu GNOME" ]]; then
         echo 'Please select a release'
-        select RELEASE in "16.04.3"
+        select RELEASE in "16.04.4"
         do
                 case $RELEASE in
-                "16.04.3")
+                "16.04.4")
                         break
                         ;;
                 *)
@@ -481,10 +481,10 @@ if [[ "$DISTRO" = "Kubuntu" ]] || [[ "$DISTRO" = "Lubuntu" ]] || [[ "$DISTRO" = 
 
     if [[ $DISTRO = "Ubuntu Studio" ]]; then
         echo 'Please select a release'
-        select RELEASE in "16.04.3" "17.10.1"
+        select RELEASE in "16.04.4" "17.10.1"
         do
                 case $RELEASE in
-                "16.04.3"|"17.10.1")
+                "16.04.4"|"17.10.1")
                         break
                         ;;
                 *)
@@ -496,10 +496,10 @@ if [[ "$DISTRO" = "Kubuntu" ]] || [[ "$DISTRO" = "Lubuntu" ]] || [[ "$DISTRO" = 
 
     if [[ "$DISTRO" = "Kubuntu" ]] || [[ "$DISTRO" = "Lubuntu" ]] || [[ "$DISTRO" = "Ubuntu" ]] || [[ "$DISTRO" = "Ubuntu MATE" ]] || [[ "$DISTRO" = "Xubuntu" ]]; then
         echo 'Please select a release'
-        select RELEASE in "16.04.3" "17.10.1" "18.04 Daily"
+        select RELEASE in "16.04.4" "17.10.1" "18.04 Daily"
         do
                 case $RELEASE in
-                "16.04.3"|"17.10.1"|"18.04 Daily")
+                "16.04.4"|"17.10.1"|"18.04 Daily")
                         break
                         ;;
                 *)
@@ -597,10 +597,8 @@ fi
 if [[ $REPEAT = "yes" ]]; then
 # Message
     echo "Here we go again"
-# Change directory
-    cd $BASEDIR
 # Relaunch script
-    bash tux-disc_$BINARYVER-$PATCHVER.sh
+    bash $0
 fi
 # End
 if [[ $REPEAT = "no" ]] || [[ $REPEAT = "invalid" ]]; then

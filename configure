@@ -7,7 +7,7 @@ BASEDIR=$(dirname $0)
 BINARYVER=$"1.10"
 
 # Establishes patch version
-PATCHVER=$"1"
+PATCHVER=$"2"
 
 # Establishes Debian version
 DEBVER=$"9.3.0"
