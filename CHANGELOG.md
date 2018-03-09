@@ -5,14 +5,11 @@ Changelog
 -----
 
 ### Added
-* Kubuntu 18.04 Beta 1 (32/64-bit)
-* Lubuntu 18.04 Beta 1 (32/64-bit)
-* Ubuntu Budgie 18.04 Beta 1 (32/64-bit)
-* Ubuntu MATE 18.04 Beta 1 (32/64-bit)
-* Xubuntu 18.04 Beta 1 (32/64-bit)
+* Versioning file to more easily change 16.04 point releases for each new point release
 
 ### Changed
 * Qubes 4.0 Release Candidate 4 > 5
+* Changed how Desktop file gets installed
 
 1.10-1
 -----
