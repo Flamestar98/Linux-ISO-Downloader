@@ -1,6 +1,32 @@
 Changelog
 =========
 
+1.10-2
+-----
+
+### Added
+* Kubuntu 18.04 Beta 1 (32/64-bit)
+* Lubuntu 18.04 Beta 1 (32/64-bit)
+* Ubuntu Budgie 18.04 Beta 1 (32/64-bit)
+* Ubuntu MATE 18.04 Beta 1 (32/64-bit)
+* Xubuntu 18.04 Beta 1 (32/64-bit)
+
+### Changed
+* Qubes 4.0 Release Candidate 4 > 5
+
+1.10-1
+-----
+
+### Added
+* Kali Linux KDE 64-bit
+* Kali Linux LXDE 64-bit
+* Kali Linux MATE 64-bit
+* Kali Linux Xfce 64-bit
+
+### Changed
+* Kali Linux (Light) 2017.3 > 2018.1
+* Qubes 4.0 RC2 > RC4
+
 1.10-1
 -----
 
