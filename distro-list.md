@@ -71,6 +71,9 @@ Kubuntu
 * 18.04 Daily
   * 32-bit
   * 64-bit
+* 18.04 Beta 1
+  * 32-bit
+  * 64-bit
 
 Linux Mint 18.3
 ---------------
@@ -99,6 +102,9 @@ Lubuntu
 * 18.04 Daily
   * 32-bit
   * 64-bit
+* 18.04 Beta 1
+  * 32-bit
+  * 64-bit
 
 Qubes
 -----
@@ -125,6 +131,9 @@ Ubuntu Budgie
 * 18.04 Daily
   * 32-bit
   * 64-bit
+* 18.04 Beta 1
+  * 32-bit
+  * 64-bit
 
 Ubuntu GNOME
 ------------
@@ -141,6 +150,9 @@ Ubuntu MATE
   * 32-bit
   * 64-bit
 * 18.04 Daily
+  * 32-bit
+  * 64-bit
+* 18.04 Beta 1
   * 32-bit
   * 64-bit
 
@@ -162,5 +174,8 @@ Xubuntu
   * 32-bit
   * 64-bit
 * 18.04 Daily
+  * 32-bit
+  * 64-bit
+* 18.04 Beta 1
   * 32-bit
   * 64-bit

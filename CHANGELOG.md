@@ -1,8 +1,18 @@
 Changelog
 =========
 
+1.11-1
+------
+
+### Added
+* Kubuntu 18.04 Beta 1 32/64-bit
+* Lubuntu 18.04 Beta 1 32/64-bit
+* Ubuntu Budgie 18.04 Beta 1 32/64-bit
+* Ubuntu MATE 18.04 Beta 1 32/64-bit
+* Xubuntu 18.04 Beta 1 32/64-bit
+
 1.10-2
------
+------
 
 ### Added
 * Versioning file to more easily change 16.04 point releases for each new point release
@@ -12,7 +22,7 @@ Changelog
 * Changed how Desktop file gets installed
 
 1.10-1
------
+------
 
 ### Added
 * Kali Linux KDE 64-bit
@@ -25,7 +35,7 @@ Changelog
 * Qubes 4.0 RC2 > RC4
 
 1.10-1
------
+------
 
 ### Added
 * Kali Linux KDE 64-bit

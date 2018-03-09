@@ -480,20 +480,20 @@ if [[ "$DISTRO" = "Kubuntu" ]] || [[ "$DISTRO" = "Lubuntu" ]] || [[ "$DISTRO" = 
         distro="${HYPHEN,,}"
 
         # This section needs to be reintroduced to the rest of the Ubuntu flavors come beta 2
-        #if [[ "$DISTRO" = "Ubuntu" ]]; then
-        #        echo 'Please select a release'
-        #        select RELEASE in "$SIXTEENPOINTFOUR" "17.10.1" "18.04 Daily"
-        #        do
-        #                case $RELEASE in
-        #                "$SIXTEENPOINTFOUR"|"17.10.1"|"18.04 Daily")
-        #                        break
-        #                        ;;
-        #                *)
-        #                        echo 'Please select a release'
-        #                        ;;
-        #                esac
-        #        done
-        #fi
+        if [[ "$DISTRO" = "Ubuntu" ]]; then
+                echo 'Please select a release'
+                select RELEASE in "$SIXTEENPOINTFOUR" "17.10.1" "18.04 Daily"
+                do
+                        case $RELEASE in
+                        "$SIXTEENPOINTFOUR"|"17.10.1"|"18.04 Daily")
+                                break
+                                ;;
+                        *)
+                                echo 'Please select a release'
+                                ;;
+                        esac
+                done
+        fi
         # End section to reintrodice
 
         if [[ $DISTRO = "Ubuntu Budgie" ]]; then
@@ -541,12 +541,12 @@ if [[ "$DISTRO" = "Kubuntu" ]] || [[ "$DISTRO" = "Lubuntu" ]] || [[ "$DISTRO" = 
                 done
         fi
 
-        if [[ "$DISTRO" = "Kubuntu" ]] || [[ "$DISTRO" = "Lubuntu" ]] || [[ "$DISTRO" = "Ubuntu" ]]|| [[ "$DISTRO" = "Ubuntu MATE" ]] || [[ "$DISTRO" = "Xubuntu" ]]; then
+        if [[ "$DISTRO" = "Kubuntu" ]] || [[ "$DISTRO" = "Lubuntu" ]] || [[ "$DISTRO" = "Ubuntu MATE" ]] || [[ "$DISTRO" = "Xubuntu" ]]; then
                 echo 'Please select a release'
-                select RELEASE in "$SIXTEENPOINTFOUR" "17.10.1" "18.04 Daily" # "18.04 Beta 1"
+                select RELEASE in "$SIXTEENPOINTFOUR" "17.10.1" "18.04 Daily" "18.04 Beta 1"
                 do
                         case $RELEASE in
-                        "$SIXTEENPOINTFOUR"|"17.10.1"|"18.04 Daily") #|"18.04 Beta 1")
+                        "$SIXTEENPOINTFOUR"|"17.10.1"|"18.04 Daily"|"18.04 Beta 1")
                                 break
                                 ;;
                         *)
@@ -594,9 +594,9 @@ if [[ "$DISTRO" = "Kubuntu" ]] || [[ "$DISTRO" = "Lubuntu" ]] || [[ "$DISTRO" = 
                         OPTION=$"-O" URL=$"/$distro-bionic-$DESKDVD-$DATE-$arc.iso http://cdimage.ubuntu.com/$distro/daily-live/current/bionic-$DESKDVD-$arc.iso"
                 fi
 
-                #if [[ $RELEASE = "18.04 Beta 1" ]]; then
-                #        OPTION=$"-O" URL=$"/$distro-bionic-$DESKDVD-beta1-$arc.iso http://cdimage.ubuntu.com/$distro/18.04/beta-1/bionic-$DESKDVD-$arc.iso"
-                #fi
+                if [[ $RELEASE = "18.04 Beta 1" ]]; then
+                        OPTION=$"-O" URL=$"/$distro-bionic-$DESKDVD-beta1-$arc.iso http://cdimage.ubuntu.com/$distro/18.04/beta-1/bionic-$DESKDVD-$arc.iso"
+                fi
 
                 if [[ ! $RELEASE = "18.04 Daily" ]]; then # && [[ ! $RELEASE = "18.04 Beta 1" ]]; then
                         OPTION=$"-P" URL=$" http://cdimage.ubuntu.com/$distro/releases/$RELEASE/release/$distro-$RELEASE-$DESKDVD-$arc.iso"
