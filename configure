@@ -44,7 +44,7 @@ if [ $USER = "root" ]; then
     echo "$KALIVER" > $BASEDIR/kaliver
 
     # Creates sixteenpointfour file
-    echo "$KALIVER" > $BASEDIR/sixteenpointfour
+    echo "$SIXTEENPOINTFOUR" > $BASEDIR/sixteenpointfour
 
     # Build files
 
@@ -166,6 +166,7 @@ mkdir ./tux-disc_$BINARYVER-$PATCHVER/DEBIAN
 mkdir ./tux-disc_$BINARYVER-$PATCHVER/usr
 mkdir ./tux-disc_$BINARYVER-$PATCHVER/usr/bin
 mkdir ./tux-disc_$BINARYVER-$PATCHVER/usr/lib
+mkdir ./tux-disc_$BINARYVER-$PATCHVER/usr/share
 mkdir ./tux-disc_$BINARYVER-$PATCHVER/usr/lib/tux-disc
 mkdir ./tux-disc_$BINARYVER-$PATCHVER/usr/share/applications
 
