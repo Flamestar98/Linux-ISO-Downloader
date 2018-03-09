@@ -7,7 +7,7 @@ BASEDIR=$(dirname $0)
 BINARYVER=$"1.10"
 
 # Establishes patch version
-PATCHVER=$"1"
+PATCHVER=$"2"
 
 # Establishes Debian version
 DEBVER=$"9.3.0"
@@ -18,32 +18,37 @@ MINTVER=$"18.3"
 # Establishes Kali Linux version
 KALIVER=$"2018.1"
 
+# Establishes Ubuntu 16.04 point release
+SIXTEENPOINTFOUR=$"16.04.4"
+
 # Establishes size in KB
 SIZEKB=$"588"
 
 # Check if root
 if [ $USER = "root" ]; then
+    # Versioning files
 
-  # Versioning files
+    # Creates binaryver file
+    echo "$BINARYVER" > $BASEDIR/binaryver
 
-  # Creates binaryver file
-  echo "$BINARYVER" > $BASEDIR/binaryver
+    # Creates pacthver file
+    echo "$PATCHVER" > $BASEDIR/patchver
 
-  # Creates pacthver file
-  echo "$PATCHVER" > $BASEDIR/patchver
+    # Creates debver file
+    echo "$DEBVER" > $BASEDIR/debver
 
-  # Creates debver file
-  echo "$DEBVER" > $BASEDIR/debver
+    # Creates mintver file
+    echo "$MINTVER" > $BASEDIR/mintver
 
-  # Creates mintver file
-  echo "$MINTVER" > $BASEDIR/mintver
+    # Creates kaliver file
+    echo "$KALIVER" > $BASEDIR/kaliver
 
-  # Creates kaliver file
-  echo "$KALIVER" > $BASEDIR/kaliver
+    # Creates sixteenpointfour file
+    echo "$SIXTEENPOINTFOUR" > $BASEDIR/sixteenpointfour
 
-# Build files
+    # Build files
 
-# Desktop
+    # Desktop
     echo "#!/bin/bash
 
 echo '[Desktop Entry]
@@ -54,23 +59,23 @@ Icon=/usr/lib/tux-disc/tux-disc.png
 Name=Tux Disc
 Terminal=true
 Type=Application
-Version=$BINARYVER-$PATCHVER' > ./tux-disc_$BINARYVER-$PATCHVER/usr/lib/tux-disc/tux-disc_$BINARYVER-$PATCHVER.desktop
+Version=$BINARYVER-$PATCHVER' > ./tux-disc_$BINARYVER-$PATCHVER/usr/share/applications/tux-disc_$BINARYVER-$PATCHVER.desktop
 
-chmod a+x ./tux-disc_$BINARYVER-$PATCHVER/usr/lib/tux-disc/tux-disc_$BINARYVER-$PATCHVER.desktop
+chmod a+x ./tux-disc_$BINARYVER-$PATCHVER/usr/share/applications/tux-disc_$BINARYVER-$PATCHVER.desktop
 
-if [ -e ./tux-disc_$BINARYVER-$PATCHVER/usr/lib/tux-disc/tux-disc_$BINARYVER-$PATCHVER.desktop ]; then
+if [ -e ./tux-disc_$BINARYVER-$PATCHVER/usr/share/applications/tux-disc_$BINARYVER-$PATCHVER.desktop ]; then
     echo 'Desktop file built'
 else
     echo 'Failed to build desktop file'
 fi" > ./create-desktop.sh
 
-if [ -e ./create-desktop.sh ]; then
-    echo 'create-desktop.sh configured'
-else
-    echo 'Failed to configure create-desktop.sh'
-fi
+    if [ -e ./create-desktop.sh ]; then
+        echo 'create-desktop.sh configured'
+    else
+        echo 'Failed to configure create-desktop.sh'
+    fi
 
-# Control
+    # Control
     echo "#!/bin/bash
 
 echo 'Package: tux-disc
@@ -90,51 +95,51 @@ else
     echo 'Failed to build control file'
 fi" > ./create-control.sh
 
-if [ -e ./create-control.sh ]; then
-    echo 'create-control.sh configured'
-else
-    echo 'Failed to configure create-control.sh'
-fi
+    if [ -e ./create-control.sh ]; then
+        echo 'create-control.sh configured'
+    else
+        echo 'Failed to configure create-control.sh'
+    fi
 
-# Postinst
-    echo "#!/bin/bash
+    # Postinst
+#    echo "#!/bin/bash
 
-echo '#!/bin/bash
+#echo '#!/bin/bash
 
-cp /usr/lib/tux-disc/tux-disc_$BINARYVER-$PATCHVER.desktop /home/*/.local/share/applications/ && update-desktop-database /home/*/.local/share/applications/' > ./tux-disc_$BINARYVER-$PATCHVER/DEBIAN/postinst && chmod a+x ./tux-disc_$BINARYVER-$PATCHVER/DEBIAN/postinst
+#cp /usr/lib/tux-disc/tux-disc_$BINARYVER-$PATCHVER.desktop /usr/share/applications/ && update-desktop-database /usr/share/applications/' > ./tux-disc_$BINARYVER-$PATCHVER/DEBIAN/postinst && chmod a+x ./tux-disc_$BINARYVER-$PATCHVER/DEBIAN/postinst
 
-if [ -e ./tux-disc_$BINARYVER-$PATCHVER/DEBIAN/postinst ]; then
-    echo 'Postinst file built'
-else
-    echo 'Failed to build postinst file'
-fi" > ./create-postinst.sh
+#if [ -e ./tux-disc_$BINARYVER-$PATCHVER/DEBIAN/postinst ]; then
+    #echo 'Postinst file built'
+#else
+    #echo 'Failed to build postinst file'
+#fi" > ./create-postinst.sh
 
-if [ -e ./create-postinst.sh ]; then
-    echo 'create-postinst.sh configured'
-else
-    echo 'Failed to configure create-postinst.sh'
-fi
+#    if [ -e ./create-postinst.sh ]; then
+#        echo 'create-postinst.sh configured'
+#    else
+#        echo 'Failed to configure create-postinst.sh'
+#    fi
 
-# Prerm
-    echo "#!/bin/bash
+    # Prerm
+#    echo "#!/bin/bash
 
-echo 'if [ -e /home/*/.local/share/applications/tux-disc_$BINARYVER-$PATCHVER.desktop ]; then
-  rm /home/*/.local/share/applications/tux-disc_$BINARYVER-$PATCHVER.desktop
-fi' > ./tux-disc_$BINARYVER-$PATCHVER/DEBIAN/prerm && chmod a+x ./tux-disc_$BINARYVER-$PATCHVER/DEBIAN/prerm
+#echo 'if [ -e /usr/share/applications/tux-disc_$BINARYVER-$PATCHVER.desktop ]; then
+#  rm /usr/share/applications/tux-disc_$BINARYVER-$PATCHVER.desktop
+#fi' > ./tux-disc_$BINARYVER-$PATCHVER/DEBIAN/prerm && chmod a+x ./tux-disc_$BINARYVER-$PATCHVER/DEBIAN/prerm
 
-if [ -e ./tux-disc_$BINARYVER-$PATCHVER/DEBIAN/prerm ]; then
-    echo 'Prerm file built'
-else
-    echo 'Failed to build prerm file'
-fi" > ./create-prerm.sh
+#if [ -e ./tux-disc_$BINARYVER-$PATCHVER/DEBIAN/prerm ]; then
+#    echo 'Prerm file built'
+#else
+#    echo 'Failed to build prerm file'
+#fi" > ./create-prerm.sh
 
-if [ -e ./create-prerm.sh ]; then
-    echo 'create-prerm.sh configured'
-else
-    echo 'Failed to configure create-prerm.sh'
-fi
+#    if [ -e ./create-prerm.sh ]; then
+#        echo 'create-prerm.sh configured'
+#    else
+#        echo 'Failed to configure create-prerm.sh'
+#    fi
 
-# Command
+    # Command
     echo "#!/bin/bash
 
 echo '#!/bin/bash
@@ -147,13 +152,13 @@ else
     echo 'Failed to command command file'
 fi" > ./create-command.sh
 
-if [ -e ./create-command.sh ]; then
-    echo 'create-command.sh configured'
-else
-    echo 'Failed to configure create-command.sh'
-fi
+    if [ -e ./create-command.sh ]; then
+        echo 'create-command.sh configured'
+    else
+        echo 'Failed to configure create-command.sh'
+    fi
 
-# Directories
+    # Directories
     echo "#!/bin/bash
 
 mkdir ./tux-disc_$BINARYVER-$PATCHVER
@@ -161,7 +166,9 @@ mkdir ./tux-disc_$BINARYVER-$PATCHVER/DEBIAN
 mkdir ./tux-disc_$BINARYVER-$PATCHVER/usr
 mkdir ./tux-disc_$BINARYVER-$PATCHVER/usr/bin
 mkdir ./tux-disc_$BINARYVER-$PATCHVER/usr/lib
+mkdir ./tux-disc_$BINARYVER-$PATCHVER/usr/share
 mkdir ./tux-disc_$BINARYVER-$PATCHVER/usr/lib/tux-disc
+mkdir ./tux-disc_$BINARYVER-$PATCHVER/usr/share/applications
 
 if [ -d ./tux-disc_$BINARYVER-$PATCHVER ]; then
     echo 'Directories built'
@@ -169,13 +176,13 @@ else
     echo 'Failed to build directories'
 fi" > ./create-directories.sh
 
-if [ -e ./create-directories.sh ]; then
-    echo 'create-directories.sh configured'
-else
-    echo 'Failed to configure create-directories.sh'
-fi
+    if [ -e ./create-directories.sh ]; then
+        echo 'create-directories.sh configured'
+    else
+        echo 'Failed to configure create-directories.sh'
+    fi
 
-# Move and copy files
+    # Move and copy files
     echo "#!/bin/bash
 
 # Changelog
@@ -201,15 +208,17 @@ cp ./mintver ./tux-disc_$BINARYVER-$PATCHVER/usr/lib/tux-disc/
 
 cp ./kaliver ./tux-disc_$BINARYVER-$PATCHVER/usr/lib/tux-disc/
 
-cp ./patchver ./tux-disc_$BINARYVER-$PATCHVER/usr/lib/tux-disc/" > ./copy-files.sh
+cp ./patchver ./tux-disc_$BINARYVER-$PATCHVER/usr/lib/tux-disc/
 
-if [ -e ./copy-files.sh ]; then
-    echo 'copy-files.sh configured'
-else
-    echo 'Failed to configure copy-files.sh'
-fi
+cp ./sixteenpointfour ./tux-disc_$BINARYVER-$PATCHVER/usr/lib/tux-disc/" > ./copy-files.sh
 
-# Copy source files
+    if [ -e ./copy-files.sh ]; then
+        echo 'copy-files.sh configured'
+    else
+        echo 'Failed to configure copy-files.sh'
+    fi
+
+    # Copy source files
     echo "#!/bin/bash
 
 # Command
@@ -219,15 +228,15 @@ cp ./tux-disc_$BINARYVER-$PATCHVER/usr/bin/tux-disc /usr/bin/
 cp -r ./tux-disc_$BINARYVER-$PATCHVER/usr/lib/tux-disc /usr/lib/
 
 # Desktop
-cp ./tux-disc_$BINARYVER-$PATCHVER/usr/lib/tux-disc/tux-disc_$BINARYVER-$PATCHVER.desktop /home/*/.local/share/applications/ && update-desktop-database /home/*/.local/share/applications/" > ./copy-source.sh
+cp ./tux-disc_$BINARYVER-$PATCHVER/usr/share/applications/tux-disc_$BINARYVER-$PATCHVER.desktop /usr/share/applications/ && update-desktop-database /usr/share/applications/" > ./copy-source.sh
 
-if [ -e ./copy-source.sh ]; then
-    echo 'copy-source.sh configured'
-else
-    echo 'Failed to configure copy-source.sh'
-fi
+    if [ -e ./copy-source.sh ]; then
+        echo 'copy-source.sh configured'
+    else
+        echo 'Failed to configure copy-source.sh'
+    fi
 
-# Remove source files
+    # Remove source files
     echo "#!/bin/bash
 
 # Command
@@ -237,16 +246,16 @@ rm /usr/bin/tux-disc
 rm -r /usr/lib/tux-disc
 
 # Desktop
-rm /home/*/.local/share/applications/tux-disc_$BINARYVER-$PATCHVER.desktop" > ./make-uninstall
+rm /usr/share/applications/tux-disc_$BINARYVER-$PATCHVER.desktop && update-desktop-database /usr/share/applications/" > ./make-uninstall
 
-if [ -e ./make-uninstall ]; then
-    echo 'make-uninstall configured'
-else
-    echo 'Failed to configure make-uninstall'
-fi
+    if [ -e ./make-uninstall ]; then
+        echo 'make-uninstall configured'
+    else
+        echo 'Failed to configure make-uninstall'
+    fi
 
 # If not run as root
 else
-# Message
+    # Message
     echo "Please run this build script as root or with sudo"
 fi

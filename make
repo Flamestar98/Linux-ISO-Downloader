@@ -24,10 +24,10 @@ if [ $USER = "root" ]; then
   bash ./create-control.sh && \
 
   # Postinst
-  bash ./create-postinst.sh && \
+  #bash ./create-postinst.sh && \
 
   # Prerm
-  bash ./create-prerm.sh && \
+  #bash ./create-prerm.sh && \
 
   # Command
   bash ./create-command.sh && \
