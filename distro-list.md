@@ -102,9 +102,6 @@ Lubuntu
 * 18.04 Daily
   * 32-bit
   * 64-bit
-* 18.04 Beta 1
-  * 32-bit
-  * 64-bit
 
 Qubes
 -----

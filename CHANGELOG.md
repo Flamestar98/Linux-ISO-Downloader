@@ -6,7 +6,6 @@ Changelog
 
 ### Added
 * Kubuntu 18.04 Beta 1 32/64-bit
-* Lubuntu 18.04 Beta 1 32/64-bit
 * Ubuntu Budgie 18.04 Beta 1 32/64-bit
 * Ubuntu MATE 18.04 Beta 1 32/64-bit
 * Xubuntu 18.04 Beta 1 32/64-bit

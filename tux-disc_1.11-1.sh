@@ -480,7 +480,7 @@ if [[ "$DISTRO" = "Kubuntu" ]] || [[ "$DISTRO" = "Lubuntu" ]] || [[ "$DISTRO" = 
         distro="${HYPHEN,,}"
 
         # This section needs to be reintroduced to the rest of the Ubuntu flavors come beta 2
-        if [[ "$DISTRO" = "Ubuntu" ]]; then
+        if [[ "$DISTRO" = "Lubuntu" ]] || [[ "$DISTRO" = "Ubuntu" ]]; then
                 echo 'Please select a release'
                 select RELEASE in "$SIXTEENPOINTFOUR" "17.10.1" "18.04 Daily"
                 do
@@ -541,7 +541,7 @@ if [[ "$DISTRO" = "Kubuntu" ]] || [[ "$DISTRO" = "Lubuntu" ]] || [[ "$DISTRO" = 
                 done
         fi
 
-        if [[ "$DISTRO" = "Kubuntu" ]] || [[ "$DISTRO" = "Lubuntu" ]] || [[ "$DISTRO" = "Ubuntu MATE" ]] || [[ "$DISTRO" = "Xubuntu" ]]; then
+        if [[ "$DISTRO" = "Kubuntu" ]] || [[ "$DISTRO" = "Ubuntu MATE" ]] || [[ "$DISTRO" = "Xubuntu" ]]; then
                 echo 'Please select a release'
                 select RELEASE in "$SIXTEENPOINTFOUR" "17.10.1" "18.04 Daily" "18.04 Beta 1"
                 do
