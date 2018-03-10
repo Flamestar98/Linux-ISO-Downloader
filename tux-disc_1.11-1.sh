@@ -595,10 +595,10 @@ if [[ "$DISTRO" = "Kubuntu" ]] || [[ "$DISTRO" = "Lubuntu" ]] || [[ "$DISTRO" = 
                 fi
 
                 if [[ $RELEASE = "18.04 Beta 1" ]]; then
-                        OPTION=$"-O" URL=$"/$distro-bionic-$DESKDVD-beta1-$arc.iso http://cdimage.ubuntu.com/$distro/18.04/beta-1/bionic-$DESKDVD-$arc.iso"
+                        OPTION=$"-O" URL=$"/$distro-bionic-$DESKDVD-beta1-$arc.iso http://cdimage.ubuntu.com/$distro/releases/18.04/beta-1/$distro-18.04-beta1-$DESKDVD-$arc.iso"
                 fi
 
-                if [[ ! $RELEASE = "18.04 Daily" ]]; then # && [[ ! $RELEASE = "18.04 Beta 1" ]]; then
+                if [[ ! $RELEASE = "18.04 Daily" ]] && [[ ! $RELEASE = "18.04 Beta 1" ]]; then
                         OPTION=$"-P" URL=$" http://cdimage.ubuntu.com/$distro/releases/$RELEASE/release/$distro-$RELEASE-$DESKDVD-$arc.iso"
                 fi
         fi
