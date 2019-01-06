@@ -3,7 +3,20 @@ Changelog
 
 2.0-1
 -----
-* ?
+### Added
+* 18.04.1 releases of all Ubuntu flavors
+	* Exept Ubuntu Studio, which didn't release 18.04 as an LTS, so they won't be publishing point releases
+* 18.10 releases of all Ubuntu flavors
+* Added the ability to flash the newly downloaded ISO with 'bootiso'
+
+### Changed
+* Rewrote script from scratch
+* distro-list.md now relfects the updated distros available for download
+* Added 'bootiso' as a dependency
+
+### Removed
+* All distros that are not (a flavor of) Ubuntu or KDE neon
+* Ubuntu GNOME (rest in peace old friend)
 
 1.11-1
 ------
