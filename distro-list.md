@@ -41,8 +41,6 @@ Ubuntu
 
 Ubuntu Budgie
 -------------
-* 16.04.5 LTS
-  * 64-bit
 * 18.04.1 LTS
   * 64-bit
 * 18.10
