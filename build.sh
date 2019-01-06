@@ -30,6 +30,11 @@ if [ $USER = "root" ]; then
 
 	echo 'Linking desktop file...'
 	ln -s /usr/lib/tux-disc/tux-disc.desktop /usr/share/applications/tux-disc.desktop && echo 'Linking complete!' || echo 'Linking failed :('
+
+	if [ ! -e /usr/bin/bootiso ]; then
+		echo 'Installing bootiso...'
+		cd /usr/bin && curl -L https://git.io/bootiso -O && chmod +x ./bootiso && echo 'bootiso installed!' || echo 'Failed to install bootiso :('
+	fi
 else
 	echo 'This build script must be run as root. Please either login as root or use sudo'
 fi
