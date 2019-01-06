@@ -1,0 +1,9 @@
+[Desktop Entry]
+Categories=Utility; ConsoleOnly
+Exec=/usr/bin/tux-disc
+Hidden=no
+Icon=/usr/lib/tux-disc/tux-disc.png
+Name=Tux Disc
+Terminal=true
+Type=Application
+Version=2.0-1
