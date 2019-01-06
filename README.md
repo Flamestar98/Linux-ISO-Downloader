@@ -12,10 +12,10 @@ alt="Tux Disc" width="292" height="300" /></center>
 ---
 
 [![GitHub release](https://img.shields.io/github/release/Flamestar98/Tux-Disc.svg?&style=for-the-badge)](https://github.com/Flamestar98/Tux-Disc/releases/latest)
-![GitHub release date](https://img.shields.io/github/release-date/Flamestar98/Tux-Disc.svg?&style=for-the-badge)
+[![GitHub release date](https://img.shields.io/github/release-date/Flamestar98/Tux-Disc.svg?&style=for-the-badge)](https://github.com/Flamestar98/Tux-Disc/tree/version-2)
 [![GitHub license](https://img.shields.io/github/license/Flamestar98/Tux-Disc.svg?&style=for-the-badge)](https://github.com/Flamestar98/Tux-Disc/blob/master/LICENSE)
 [![GitHub last commit](https://img.shields.io/github/last-commit/Flamestar98/Tux-Disc/version-2.svg?&style=for-the-badge)](https://github.com/Flamestar98/Tux-Disc/commits/version-2)
-![GitHub top language](https://img.shields.io/github/languages/top/Flamestar98/Tux-Disc.svg?&style=for-the-badge&logo=linux)
+[![GitHub top language](https://img.shields.io/github/languages/top/Flamestar98/Tux-Disc.svg?&style=for-the-badge&logo=linux)](https://github.com/Flamestar98/Tux-Disc/tree/version-2)
 
 ---
 
