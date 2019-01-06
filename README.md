@@ -1,17 +1,27 @@
 Tux Disc
 ========
 
-<center><img src="https://github.com/Flamestar98/Tux-Disc/raw/master/tux-disc.png"
+<center><img src="https://github.com/Flamestar98/Tux-Disc/raw/version-2/tux-disc.png"
 alt="Tux Disc" width="292" height="300" /></center>
 
-[![GitHub release](https://img.shields.io/github/release/Flamestar98/Tux-Disc.svg)](https://github.com/Flamestar98/Tux-Disc/releases/latest)
-[![GitHub release date](https://img.shields.io/github/release-date/Flamestar98/Tux-Disc.svg)](https://github.com/Flamestar98/Tux-Disc)
-[![GitHub license](https://img.shields.io/github/license/Flamestar98/Tux-Disc.svg)](https://github.com/Flamestar98/Tux-Disc/blob/master/LICENSE)
-[![GitHub last commit](https://img.shields.io/github/last-commit/Flamestar98/Tux-Disc.svg)](https://github.com/Flamestar98/Tux-Disc/commits)
-[![GitHub top language](https://img.shields.io/github/languages/top/Flamestar98/Tux-Disc.svg)](https://github.com/Flamestar98/Tux-Disc)
+---
 
-[[Changelog][1]]
-[[Distro List][3]]
+[![](https://img.shields.io/badge/Mastodon-gray.svg?&style=for-the-badge&logo=mastodon)](https://niu.moe/@easthighNerd)
+![](https://img.shields.io/badge/Matrix-@easthighnerd:ubports.chat-hotpink.svg?&style=for-the-badge&logo=matrix)
+
+---
+
+[![GitHub release](https://img.shields.io/github/release/Flamestar98/Tux-Disc.svg?&style=for-the-badge)](https://github.com/Flamestar98/Tux-Disc/releases/latest)
+[![GitHub release date](https://img.shields.io/github/release-date/Flamestar98/Tux-Disc.svg?&style=for-the-badge)](https://github.com/Flamestar98/Tux-Disc)
+[![GitHub license](https://img.shields.io/github/license/Flamestar98/Tux-Disc.svg?&style=for-the-badge)](https://github.com/Flamestar98/Tux-Disc/blob/master/LICENSE)
+[![GitHub last commit](https://img.shields.io/github/last-commit/Flamestar98/Tux-Disc/version-2.svg?&style=for-the-badge)](https://github.com/Flamestar98/Tux-Disc/commits/version-2)
+[![GitHub top language](https://img.shields.io/github/languages/top/Flamestar98/Tux-Disc.svg?&style=for-the-badge&logo=linux)](https://github.com/Flamestar98/Tux-Disc)
+
+---
+
+[![](https://img.shields.io/badge/Changelog-blue.svg?&style=for-the-badge)](https://github.com/Flamestar98/tux-disc/blob/version-2/CHANGELOG.md)[![](https://img.shields.io/badge/Distro%20List-brightgreen.svg?&style=for-the-badge)](https://github.com/Flamestar98/tux-disc/blob/version-2/distro-list.md)
+
+---
 
 Tux Disc is a command line utility for downloading ISO images for various Linux distributions.
 
