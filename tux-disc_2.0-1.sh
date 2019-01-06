@@ -42,7 +42,7 @@ if [ ! -d $HOME/ISO ]; then
 fi
 
 # Asks user which flavor of Ubuntu they want to download.
-echo 'Please choose you flavor of Ubuntu (or KDE neon)'
+echo 'Please choose your flavor of Ubuntu (or KDE neon)'
 select FLAVOR in "KDE neon" "Kubuntu" "Lubuntu" "Ubuntu" "Ubuntu Budgie" "Ubuntu MATE" "Ubuntu Studio" "Xubuntu"
 do
 	case $FLAVOR in
