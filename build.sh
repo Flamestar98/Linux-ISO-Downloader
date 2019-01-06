@@ -5,13 +5,15 @@ if [ $USER = "root" ]; then
 	cd "$( dirname "${BASH_SOURCE[0]}" )" || exit
 
 	if [ -d /usr/lib/tux-disc ]; then
-		echo 'Removing old version...'
-		rm -r /usr/lib/tux-disc && echo 'Old version removed!' || echo 'Old version not removed :('
+		echo 'Removing old library folder...'
+		rm -r /usr/lib/tux-disc && echo 'old library folder removed!' || echo 'Old library folder not removed :('
 	fi
 
-	mkdir /usr/lib/tux-disc
+	echo 'Making library directory...'
+	mkdir /usr/lib/tux-disc && echo 'Directory created!' || echo 'Directory not created :('
 
-	cp -r ./ /usr/lib/tux-disc
+	echo 'Copying source folder into /usr/lib/tux-disc...'
+	cp -r ./ /usr/lib/tux-disc && echo 'Source folder copied!' || echo 'Source folder not copied :('
 
 	if [ -e /usr/bin/tux-disc ]; then
 		echo 'Removing old link...'
