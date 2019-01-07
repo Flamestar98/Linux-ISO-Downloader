@@ -5,19 +5,19 @@
 if [ $USER = "root" ]; then
 	cd "$( dirname "${BASH_SOURCE[0]}" )" || exit
 
-	if [ -d /usr/lib/tux-disc ]; then
-		echo 'Removing /usr/lib/tux-disc...'
-		rm -r /usr/lib/tux-disc && echo 'Folder removed!' || echo 'Folder not removed :('
-	fi
-
-	if [ ! -e /usr/bin/tux-disc ]; then
+	if [ -e /usr/bin/tux-disc ]; then
 		echo 'Removing /usr/bin link...'
 		rm /usr/bin/tux-disc && echo 'Link removed!' || echo 'Link not removed :('
 	fi
 
-	if [ ! -e /usr/share/applications/tux-disc.desktop ]; then
+	if [ -e /usr/share/applications/tux-disc.desktop ]; then
 		echo 'Removing desktop file...'
 		rm /usr/share/applications/tux-disc.desktop && echo 'Desktop file removed!' || echo 'Desktop file not removed :('
+	fi
+
+	if [ -d /usr/lib/tux-disc ]; then
+		echo 'Removing /usr/lib/tux-disc...'
+		rm -r /usr/lib/tux-disc && echo 'Folder removed!' || echo 'Folder not removed :('
 	fi
 else
 	echo 'This build script must be run as root. Please either login as root or use sudo'
