@@ -41,6 +41,20 @@ if [ ! -d $HOME/ISO ]; then
 	mkdir $HOME/ISO
 fi
 
+clear
+
+echo "
+##########################################
+##   _____            ____  _           ##
+##  |_   _|_ _ _ _   |    \|_|___ ___   ##
+##    | | | | |_'_|  |  |  | |_ -|  _|  ##
+##    |_| |___|_,_|  |____/|_|___|___|  ##
+##                                      ##
+##                       Version 2.0-1  ##
+##                                      ##
+##########################################
+"
+
 # Asks user which flavor of Ubuntu they want to download.
 echo 'Please choose your flavor of Ubuntu (or KDE neon)'
 select FLAVOR in "KDE neon" "Kubuntu" "Lubuntu" "Ubuntu" "Ubuntu Budgie" "Ubuntu MATE" "Ubuntu Studio" "Xubuntu"
@@ -180,3 +194,5 @@ RELEASE=""
 NEON=""
 PLATFORM=""
 YN=""
+
+clear
