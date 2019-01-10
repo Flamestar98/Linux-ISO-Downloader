@@ -23,18 +23,18 @@ alt="Tux Disc" width="292" height="300" /></center>
 
 ---
 
-Tux Disc is a command line utility for downloading ISO images for various Linux distributions.
+Tux Disc is a command line utility for downloading ISO images for Ubuntu and it's flavors, as well as KDE neon.
 
-Tux Disc provides a simple, easy to use interface, that makes it a breeze to download various ISO images.
+Tux Disc provides a simple, easy to use interface, that makes it a breeze to download Ubuntu ISO images.
 
 This is pretty much a little project of mine born from my wanting to choose which Ubuntu flavor's 17.10 daily testing ISO I wanted to download, and just kinda ended up becoming this whole thing for downloading a bunch of Linux distributions install images.
 
 Screenshots
 ===========
-<center><img src="https://github.com/Flamestar98/Tux-Disc/raw/master/screenshots/main-menu.png"
-alt="Tux Disc" /></center>
-<center><img src="https://github.com/Flamestar98/Tux-Disc/raw/master/screenshots/downloading.png"
-alt="Tux Disc" /></center>
+<center><img src="https://github.com/Flamestar98/Tux-Disc/raw/version-2/screenshots/main-menu.png"
+alt="Main Menu" /></center>
+<center><img src="https://github.com/Flamestar98/Tux-Disc/raw/version-2/screenshots/downloading.png"
+alt="Downloading" /></center>
 
 Get Tux Disc
 ============
@@ -43,8 +43,10 @@ You can get Tux Disc either using the Tux Disc PPA, downloading straight from th
 PPA
 ---
 To get Tux Disc using the PPA, open a terminal window and run
-* `sudo add-apt-repository ppa:flamestar/tux-disc`
-* `sudo apt-get update && sudo apt install tux-disc`
+```
+$ sudo add-apt-repository ppa:flamestar/tux-disc
+$ sudo apt-get update && sudo apt install tux-disc
+```
 
 Download
 --------
@@ -67,12 +69,18 @@ To compile and install Tux Disc from source,
     * extract the contents of the archive
 * Open a terminal window and `cd` into the folder for Tux Disc
 * Run
-  * `sudo bash ./configure`
-  * `sudo bash ./make`
-  * `sudo bash ./make-install`
+  *
+  ```
+  $ sudo bash ./configure`
+  $ sudo bash ./make`
+  $ sudo bash ./make-install
+  ```
 
 
-Once any of the methods have been completed, Tux Disc can now be run either from your desktop's application launcher, or by running the `tux-disc` command
+Once any of the methods have been completed, Tux Disc can now be run either from your desktop's application launcher, or by running
+```
+$ tux-Disc
+```
 
 Planned Features
 ================
@@ -85,6 +93,11 @@ In no particular order, these are some features/milestones that I have planned f
 * Windows batch script (spreading freedom around all operating systems)
 * Windows graphical binary (gotta make it easy on them somehow)
 
+---
+
+This app depends on [bootiso][4], and installs it during the build process.
+
 [1]: https://github.com/Flamestar98/tux-disc/blob/master/CHANGELOG.md
 [2]: https://github.com/Flamestar98/tux-disc/releases
 [3]: https://github.com/Flamestar98/tux-disc/blob/master/distro-list.md
+[4]:https://github.com/jsamr/bootiso
