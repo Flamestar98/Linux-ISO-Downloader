@@ -1,7 +1,7 @@
 Tux Disc
 ========
 
-<center><img src="https://github.com/Flamestar98/Tux-Disc/raw/version-2/tux-disc.png"
+<center><img src="https://github.com/easthighNerd/Tux-Disc/raw/version-2/tux-disc.png"
 alt="Tux Disc" width="292" height="300" /></center>
 
 ---
@@ -11,15 +11,15 @@ alt="Tux Disc" width="292" height="300" /></center>
 
 ---
 
-[![GitHub release](https://img.shields.io/github/release/Flamestar98/Tux-Disc.svg?&style=for-the-badge)](https://github.com/Flamestar98/Tux-Disc/releases/latest)
-[![GitHub release date](https://img.shields.io/github/release-date/Flamestar98/Tux-Disc.svg?&style=for-the-badge)](https://github.com/Flamestar98/Tux-Disc/tree/version-2)
-[![GitHub license](https://img.shields.io/github/license/Flamestar98/Tux-Disc.svg?&style=for-the-badge)](https://github.com/Flamestar98/Tux-Disc/blob/master/LICENSE)
-[![GitHub last commit](https://img.shields.io/github/last-commit/Flamestar98/Tux-Disc/version-2.svg?&style=for-the-badge)](https://github.com/Flamestar98/Tux-Disc/commits/version-2)
-[![GitHub top language](https://img.shields.io/github/languages/top/Flamestar98/Tux-Disc.svg?&style=for-the-badge&logo=linux)](https://github.com/Flamestar98/Tux-Disc/tree/version-2)
+[![GitHub release](https://img.shields.io/github/release/easthighNerd/Tux-Disc.svg?&style=for-the-badge)](https://github.com/easthighNerd/Tux-Disc/releases/latest)
+[![GitHub release date](https://img.shields.io/github/release-date/easthighNerd/Tux-Disc.svg?&style=for-the-badge)](https://github.com/easthighNerd/Tux-Disc/tree/version-2)
+[![GitHub license](https://img.shields.io/github/license/easthighNerd/Tux-Disc.svg?&style=for-the-badge)](https://github.com/easthighNerd/Tux-Disc/blob/master/LICENSE)
+[![GitHub last commit](https://img.shields.io/github/last-commit/easthighNerd/Tux-Disc/version-2.svg?&style=for-the-badge)](https://github.com/easthighNerd/Tux-Disc/commits/version-2)
+[![GitHub top language](https://img.shields.io/github/languages/top/easthighNerd/Tux-Disc.svg?&style=for-the-badge&logo=linux)](https://github.com/easthighNerd/Tux-Disc/tree/version-2)
 
 ---
 
-[![](https://img.shields.io/badge/Changelog-blue.svg?&style=for-the-badge)](https://github.com/Flamestar98/tux-disc/blob/version-2/CHANGELOG.md)[![](https://img.shields.io/badge/Distro%20List-brightgreen.svg?&style=for-the-badge)](https://github.com/Flamestar98/tux-disc/blob/version-2/distro-list.md)
+[![](https://img.shields.io/badge/Changelog-blue.svg?&style=for-the-badge)](https://github.com/easthighNerd/tux-disc/blob/version-2/CHANGELOG.md)[![](https://img.shields.io/badge/Distro%20List-brightgreen.svg?&style=for-the-badge)](https://github.com/easthighNerd/tux-disc/blob/version-2/distro-list.md)
 
 ---
 
@@ -31,9 +31,9 @@ This is pretty much a little project of mine born from my wanting to choose whic
 
 Screenshots
 ===========
-<center><img src="https://github.com/Flamestar98/Tux-Disc/raw/version-2/screenshots/main-menu.png"
+<center><img src="https://github.com/easthighNerd/Tux-Disc/raw/version-2/screenshots/main-menu.png"
 alt="Main Menu" /></center>
-<center><img src="https://github.com/Flamestar98/Tux-Disc/raw/version-2/screenshots/downloading.png"
+<center><img src="https://github.com/easthighNerd/Tux-Disc/raw/version-2/screenshots/downloading.png"
 alt="Downloading" /></center>
 
 Get Tux Disc
@@ -96,7 +96,7 @@ In no particular order, these are some features/milestones that I have planned f
 
 This app depends on [bootiso][4], and installs it during the build process.
 
-[1]: https://github.com/Flamestar98/tux-disc/blob/master/CHANGELOG.md
-[2]: https://github.com/Flamestar98/tux-disc/releases
-[3]: https://github.com/Flamestar98/tux-disc/blob/master/distro-list.md
+[1]: https://github.com/easthighNerd/tux-disc/blob/master/CHANGELOG.md
+[2]: https://github.com/easthighNerd/tux-disc/releases
+[3]: https://github.com/easthighNerd/tux-disc/blob/master/distro-list.md
 [4]:https://github.com/jsamr/bootiso
