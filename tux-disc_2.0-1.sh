@@ -53,6 +53,12 @@ echo "
 ##                       Version 2.0-1  ##
 ##                                      ##
 ##########################################
+
+Copyright (C) 2017-2019  John Laufert
+
+This program comes with ABSOLUTELY NO WARRANTY.
+This is free software, and you are welcome to redistribute it
+under the terms of the GNU General Public License version 3.
 "
 
 # Asks user which flavor of Ubuntu they want to download.
