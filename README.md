@@ -62,9 +62,7 @@ To compile and install Tux Disc from source,
 * Open a terminal window and `cd` into the folder for Tux Disc
 * Run
   ```
-  $ sudo bash ./configure
-  $ sudo bash ./make
-  $ sudo bash ./make-install
+  $ sudo . ./build.sh
   ```
 
 
