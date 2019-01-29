@@ -38,15 +38,7 @@ alt="Downloading" /></center>
 
 Get Tux Disc
 ============
-You can get Tux Disc either using the Tux Disc PPA, downloading straight from the [releases][2] page, or by compiling the source code
-
-PPA
----
-To get Tux Disc using the PPA, open a terminal window and run
-```
-$ sudo add-apt-repository ppa:flamestar/tux-disc
-$ sudo apt-get update && sudo apt install tux-disc
-```
+You can get Tux Disc either by downloading straight from the [releases][2] page, or by compiling the source code.
 
 Download
 --------
@@ -70,8 +62,8 @@ To compile and install Tux Disc from source,
 * Open a terminal window and `cd` into the folder for Tux Disc
 * Run
   ```
-  $ sudo bash ./configure`
-  $ sudo bash ./make`
+  $ sudo bash ./configure
+  $ sudo bash ./make
   $ sudo bash ./make-install
   ```
 
