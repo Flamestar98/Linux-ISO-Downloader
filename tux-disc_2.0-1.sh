@@ -92,7 +92,7 @@ if [[ $FLAVOR = "KDE neon" ]]; then
 	done
 
 	if [[ $RELEASE = "User Edition" ]]; then
-		wget -O $HOME/ISO/neon-useredition-current-$DATE\.iso https://files.kde.org/neon/images/neon-useredition/current/neon-useredition-current.iso
+		wget -O $HOME/ISO/neon-user-current-${DATE}.iso https://files.kde.org/neon/images/user/current/neon-user-current.iso
 
 		NEON="useredition"
 	fi
