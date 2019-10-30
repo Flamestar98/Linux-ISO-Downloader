@@ -24,7 +24,7 @@ if [ $USER = "root" ]; then
 	fi
 
 	echo '==> Linking script into /usr/bin'
-	ln -s /usr/lib/tux-disc/tux-disc_2.0-1.sh /usr/bin/tux-disc && chmod +x /usr/bin/tux-disc && echo '  -> Linking complete!' || echo '  -> Linking failed :('
+	ln -s /usr/lib/tux-disc/tux-disc.sh /usr/bin/tux-disc && chmod +x /usr/bin/tux-disc && echo '  -> Linking complete!' || echo '  -> Linking failed :('
 
 	if [ -e /usr/share/applications/tux-disc.desktop ]; then
 		echo '==> Removing old desktop file'
