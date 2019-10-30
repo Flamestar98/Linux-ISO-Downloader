@@ -4,16 +4,19 @@ Changelog
 2.0-1
 -----
 ### Added
-* 16.04.6, 18.04.3, 19.04, & 19.10 releases of all Ubuntu flavors
+* `16.04.6`, `18.04.3`, `19.04`, & `19.10` releases of all Ubuntu flavors
 
 ### Changed
 * Rewrote script from scratch
-* distro-list.md now relfects the updated distros available for download
+* Simplified installation into a single `build.sh`
+* Updated KDE neon versions and respective links
+* distro-list.md now reflects the updated distros available for download
 * Actual script no longer has version number in filename
 
 ### Removed
 * All distros that are not (a flavor of) Ubuntu or KDE neon
 * Ubuntu GNOME (rest in peace old friend)
+* Outdated versions of Ubuntu and it's flavors
 
 1.11-1
 ------
