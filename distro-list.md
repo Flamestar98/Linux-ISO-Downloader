@@ -5,70 +5,21 @@ KDE Neon
 --------
 * User Edition
   * 64-bit
-* Developer Edition Git-Unstable
+* Testing Edition
   * 64-bit
-* Developer Edition Git-Stable
+* Unstable Edition
+  * 64-bit
+* Developer Edition
   * 64-bit
 
-Kubuntu
+Ubuntu Family
 -------
 
-* 16.04.5 LTS
+* 16.04.6 LTS (Not including Ubuntu Budgie)
   * 64-bit
-* 18.04.1 LTS
+* 18.04.3 LTS (18.04 for Ubuntu Studio)
   * 64-bit
-* 18.10
+* 19.04
   * 64-bit
-
-Lubuntu
--------
-
-* 16.04.5 LTS
-  * 64-bit
-* 18.04.1 LTS
-  * 64-bit
-* 18.10
-  * 64-bit
-
-Ubuntu
-------
-* 16.04.5 LTS
-  * 64-bit
-* 18.04.1 LTS
-  * 64-bit
-* 18.10
-  * 64-bit
-
-Ubuntu Budgie
--------------
-* 18.04.1 LTS
-  * 64-bit
-* 18.10
-  * 64-bit
-
-Ubuntu MATE
------------
-* 16.04.5 LTS
-  * 64-bit
-* 18.04.1 LTS
-  * 64-bit
-* 18.10
-  * 64-bit
-
-Ubuntu Studio
--------------
-* 16.04.5 LTS
-  * 64-bit
-* 18.04
-  * 64-bit
-* 18.10
-  * 64-bit
-
-Xubuntu
--------
-* 16.04.5 LTS
-  * 64-bit
-* 18.04.1 LTS
-  * 64-bit
-* 18.10
+* 19.10
   * 64-bit
