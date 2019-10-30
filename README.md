@@ -1,7 +1,7 @@
 Tux Disc
 ========
 
-<center><img src="https://github.com/easthighNerd/Tux-Disc/raw/version-2/tux-disc.png"
+<center><img src="./tux-disc.png"
 alt="Tux Disc" width="292" height="300" /></center>
 
 ---
