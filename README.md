@@ -19,7 +19,7 @@ alt="Tux Disc" width="292" height="300" /></center>
 
 ---
 
-[![](https://img.shields.io/badge/Changelog-blue.svg?&style=for-the-badge)](https://github.com/easthighNerd/tux-disc/blob/version-2/CHANGELOG.md)[![](https://img.shields.io/badge/Distro%20List-brightgreen.svg?&style=for-the-badge)](./distro-list.md)
+[![](https://img.shields.io/badge/Changelog-blue.svg?&style=for-the-badge)](./CHANGELOG.md)[![](https://img.shields.io/badge/Distro%20List-brightgreen.svg?&style=for-the-badge)](./distro-list.md)
 
 ---
 
