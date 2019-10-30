@@ -12,10 +12,10 @@ alt="Tux Disc" width="292" height="300" /></center>
 ---
 
 [![GitHub release](https://img.shields.io/github/release/easthighNerd/Tux-Disc.svg?&style=for-the-badge)](https://github.com/easthighNerd/Tux-Disc/releases/latest)
-[![GitHub release date](https://img.shields.io/github/release-date/easthighNerd/Tux-Disc.svg?&style=for-the-badge)](https://github.com/easthighNerd/Tux-Disc/tree/version-2)
+[![GitHub release date](https://img.shields.io/github/release-date/easthighNerd/Tux-Disc.svg?&style=for-the-badge)](https://github.com/easthighNerd/Tux-Disc/tree/development)
 [![GitHub license](https://img.shields.io/github/license/easthighNerd/Tux-Disc.svg?&style=for-the-badge)](./LICENSE)
-[![GitHub last commit](https://img.shields.io/github/last-commit/easthighNerd/Tux-Disc/version-2.svg?&style=for-the-badge)](https://github.com/easthighNerd/Tux-Disc/commits/version-2)
-[![GitHub top language](https://img.shields.io/github/languages/top/easthighNerd/Tux-Disc.svg?&style=for-the-badge&logo=linux)](https://github.com/easthighNerd/Tux-Disc/tree/version-2)
+[![GitHub last commit](https://img.shields.io/github/last-commit/easthighNerd/Tux-Disc/version-2.svg?&style=for-the-badge)](https://github.com/easthighNerd/Tux-Disc/commits/development)
+[![GitHub top language](https://img.shields.io/github/languages/top/easthighNerd/Tux-Disc.svg?&style=for-the-badge&logo=linux)](https://github.com/easthighNerd/Tux-Disc/tree/development)
 
 ---
 
@@ -69,7 +69,6 @@ In no particular order, these are some features/milestones that I have planned f
 * Flatpak/Snap packaging (for easier cross-distro distribution)
 * Complete recoding into Python (Might make the GUI easier, and should make it easier to port to other OSes)
 
-[1]: https://github.com/easthighNerd/tux-disc/blob/master/CHANGELOG.md
+[1]: ./CHANGELOG.md
 [2]: https://github.com/easthighNerd/tux-disc/releases
-[3]: https://github.com/easthighNerd/tux-disc/blob/master/distro-list.md
-[4]:https://github.com/jsamr/bootiso
+[3]: ./distro-list.md
