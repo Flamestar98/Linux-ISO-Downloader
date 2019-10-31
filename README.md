@@ -12,10 +12,10 @@ alt="Tux Disc" width="292" height="300" /></center>
 ---
 
 [![GitHub release](https://img.shields.io/github/release/easthighNerd/Tux-Disc.svg?&style=for-the-badge)](https://github.com/easthighNerd/Tux-Disc/releases/latest)
-[![GitHub release date](https://img.shields.io/github/release-date/easthighNerd/Tux-Disc.svg?&style=for-the-badge)](https://github.com/easthighNerd/Tux-Disc/tree/master)
+[![GitHub release date](https://img.shields.io/github/release-date/easthighNerd/Tux-Disc.svg?&style=for-the-badge)](https://github.com/easthighNerd/Tux-Disc/tree/devel-python)
 [![GitHub license](https://img.shields.io/github/license/easthighNerd/Tux-Disc.svg?&style=for-the-badge)](./LICENSE)
-[![GitHub last commit](https://img.shields.io/github/last-commit/easthighNerd/Tux-Disc/version-2.svg?&style=for-the-badge)](https://github.com/easthighNerd/Tux-Disc/commits/master)
-[![GitHub top language](https://img.shields.io/github/languages/top/easthighNerd/Tux-Disc.svg?&style=for-the-badge&logo=linux)](https://github.com/easthighNerd/Tux-Disc/tree/master)
+[![GitHub last commit](https://img.shields.io/github/last-commit/easthighNerd/Tux-Disc/version-2.svg?&style=for-the-badge)](https://github.com/easthighNerd/Tux-Disc/commits/devel-python)
+[![GitHub top language](https://img.shields.io/github/languages/top/easthighNerd/Tux-Disc.svg?&style=for-the-badge&logo=linux)](https://github.com/easthighNerd/Tux-Disc/tree/devel-python)
 
 ---
 
