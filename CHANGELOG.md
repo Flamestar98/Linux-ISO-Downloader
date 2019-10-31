@@ -1,8 +1,57 @@
 Changelog
 =========
 
-1.10-1
+2.0-1
 -----
+### Added
+* `16.04.6`, `18.04.3`, `19.04`, & `19.10` releases of all Ubuntu flavors
+
+### Changed
+* Rewrote script from scratch
+* Simplified installation into a single `build.sh`
+* Updated KDE neon versions and respective links
+* distro-list.md now reflects the updated distros available for download
+* Actual script no longer has version number in filename
+
+### Removed
+* All distros that are not (a flavor of) Ubuntu or KDE neon
+* Ubuntu GNOME (rest in peace old friend)
+* Outdated versions of Ubuntu and it's flavors
+
+1.11-1
+------
+
+### Added
+* Kubuntu 18.04 Beta 1 32/64-bit
+* Ubuntu Budgie 18.04 Beta 1 32/64-bit
+* Ubuntu MATE 18.04 Beta 1 32/64-bit
+* Xubuntu 18.04 Beta 1 32/64-bit
+
+1.10-2
+------
+
+### Added
+* Versioning file to more easily change 16.04 point releases for each new point release
+
+### Changed
+* Qubes 4.0 Release Candidate 4 > 5
+* Changed how Desktop file gets installed
+
+1.10-1
+------
+
+### Added
+* Kali Linux KDE 64-bit
+* Kali Linux LXDE 64-bit
+* Kali Linux MATE 64-bit
+* Kali Linux Xfce 64-bit
+
+### Changed
+* Kali Linux (Light) 2017.3 > 2018.1
+* Qubes 4.0 RC2 > RC4
+
+1.10-1
+------
 
 ### Added
 * Kali Linux KDE 64-bit
