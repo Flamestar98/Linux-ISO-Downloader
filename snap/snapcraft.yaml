@@ -1,0 +1,41 @@
+name: tux-disc # you probably want to 'snapcraft register <name>'
+title: Tux Disc
+base: core18 # the base snap is the execution environment for this snap
+version: '2.0-1' # just for humans, typically '1.2+git' or '1.3.2'
+summary: Tux Disc is a command line utility for downloading ISO images for Ubuntu. # 79 char long summary
+description: |
+  Tux Disc is a command line utility for downloading ISO images for Ubuntu and it's flavors, as well as KDE neon.
+
+  Tux Disc provides a simple, easy to use interface, that makes it a breeze to download Ubuntu ISO images.
+
+  This is pretty much a little project of mine born from my wanting to choose which Ubuntu flavor's 17.10 daily testing ISO I wanted to download, and just kinda ended up becoming this whole thing for downloading a bunch of Linux distributions install images.
+
+grade: devel # must be 'stable' to release into candidate/stable channels
+confinement: strict # use 'strict' once you have the right plugs and slots
+
+parts:
+  tux-disc:
+    # See 'snapcraft plugins'
+    source: .
+    plugin: dump
+    organize:
+      ./tux-disc.png: usr/lib/tux-disc/tux-disc.png
+      ./tux-disc.sh: usr/bin/tux-disc
+      ./tux-disc.desktop: usr/share/applications/tux-disc.desktop
+    prime:
+      - -CHANGELOG.md
+      - -distro-list.md
+      - -build.sh
+      - -uninstall.sh
+    stage-packages:
+      - bash
+      - wget
+
+apps:
+  tux-disc:
+    command: usr/bin/tux-disc
+    plugs:
+      - network
+      - home
+      - desktop
+    desktop: usr/share/applications/tux-disc.desktop
