@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 # This build script must be run as root, otherwise it will not work correctly.
 if [ $USER = "root" ]; then
 	cd "$( dirname "${BASH_SOURCE[0]}" )" || exit
@@ -33,11 +34,6 @@ if [ $USER = "root" ]; then
 
 	echo '==> Linking desktop file'
 	ln -s /usr/lib/tux-disc/tux-disc.desktop /usr/share/applications/tux-disc.desktop && echo '  -> Linking complete!' || echo '  -> Linking failed :('
-
-	if [ ! -e /usr/bin/bootiso ]; then
-		echo '==> Installing bootiso'
-		cd /usr/bin && curl -L https://git.io/bootiso -O && chmod +x ./bootiso && echo '  -> bootiso installed!' || echo '  -> Failed to install bootiso :('
-	fi
 
 	echo ''
 	echo '== Install complete! =='

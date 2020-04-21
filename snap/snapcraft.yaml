@@ -1,0 +1,40 @@
+name: tux-disc
+title: Tux Disc
+base: core18
+version: 'git'
+summary: Tux Disc is a command line utility for downloading ISO images for Ubuntu.
+description: |
+  Tux Disc is a command line utility for downloading ISO images for Ubuntu and it's flavors, as well as KDE neon.
+
+  Tux Disc provides a simple, easy to use interface, that makes it a breeze to download Ubuntu ISO images.
+
+  This is pretty much a little project of mine born from my wanting to choose which Ubuntu flavor's 17.10 daily testing ISO I wanted to download, and just kinda ended up becoming this whole thing for downloading a bunch of Linux distributions install images.
+
+grade: stable
+confinement: strict
+
+parts:
+  tux-disc:
+    source: https://github.com/easthighNerd/Tux-Disc.git
+    plugin: dump
+    organize:
+      ./tux-disc.png: usr/lib/tux-disc/tux-disc.png
+      ./tux-disc.sh: usr/bin/tux-disc
+      ./tux-disc.desktop: usr/share/applications/tux-disc.desktop
+    prime:
+      - -CHANGELOG.md
+      - -distro-list.md
+      - -build.sh
+      - -uninstall.sh
+    stage-packages:
+      - bash
+      - wget
+
+apps:
+  tux-disc:
+    command: usr/bin/tux-disc
+    plugs:
+      - network
+      - home
+      - desktop
+    desktop: usr/share/applications/tux-disc.desktop

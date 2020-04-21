@@ -6,7 +6,7 @@
 #    | | | | |_'_|  |  |  | |_ -|  _|
 #    |_| |___|_,_|  |____/|_|___|___|
 #                                    
-#                       Version 2.0-1
+#                       Version 2.1-1
 #  
 #  ==================================
 #  
@@ -28,13 +28,17 @@
 #  ==================================
 #  
 
-# This shell script allows for easy downloading (and with bootiso, flashing) of
+# This shell script allows for easy downloading of
 # ISO images for Ubuntu, it's various flavors, and KDE neon.
 # All ISO images provided are x86_64. i386 downloads will not be made available.
 # ISO images will be saved to $HOME/ISO.
 
-# Prints date as YYYYmmdd.
+# Sets date as YYYYmmdd.
 DATE=$(date +%Y%m%d)
+
+# Sets LTS versions
+UBUNTU_1804="18.04.4"
+UBUNTU_2004="20.04"
 
 # Makes the ISO directory if not present.
 if [ ! -d ${HOME}/ISO ]; then
@@ -49,7 +53,7 @@ echo "
 ##    | | | | |_'_|  |  |  | |_ -|  _|  ##
 ##    |_| |___|_,_|  |____/|_|___|___|  ##
 ##                                      ##
-##                       Version 2.0-1  ##
+##                       Version 2.1-1  ##
 ##                                      ##
 ##########################################
 
@@ -107,10 +111,10 @@ else
 	# will not be given that option when choosing Ubuntu Budgie.	
 	if [[ ${FLAVOR} = "Ubuntu Budgie" ]]; then
 		echo 'Please select an Ubuntu release to download'
-		select RELEASE in "18.04.3" "19.04" "19.10"
+		select RELEASE in "${UBUNTU_1804}" "19.10" "${UBUNTU_2004}"
 		do
 			case ${RELEASE} in
-				"18.04.3"|"19.04"|"19.10")
+				"${UBUNTU_1804}"|"19.10"|"${UBUNTU_2004}")
 					break
 					;;
 				*)
@@ -122,10 +126,10 @@ else
 		# If the flavor they want to download isn't Ubuntu Budgie, then
 		# they get to pick from all of the currently suportded releases.
 		echo 'Please select an Ubuntu release to download'
-		select RELEASE in '16.04.6' '18.04.3' '19.04' '19.10'
+		select RELEASE in "16.04.6" "${UBUNTU_1804}" "19.10" "${UBUNTU_2004}"
 		do
 			case ${RELEASE} in
-				'16.04.6'|'18.04.3'|'19.04'|'19.10')
+				"16.04.6"|"${UBUNTU_1804}"|"19.10"|"${UBUNTU_2004}")
 					break
 					;;
 				*)
@@ -156,7 +160,7 @@ if [[ ${YN} = "Yes" ]]; then
         # Ubuntu Studio uses 'dvd' instead of 'desktop' in their file name for
     	# whatever reason. This fixes that issue if downloading Ubuntu Studio.
 	    if [[ ${FLAVOR} = "Ubuntu Studio" ]]; then
-	        RELEASE="${RELEASE//18.04.3/18.04}"
+	        RELEASE="${RELEASE//${UBUNTU_1804}/18.04}"
 	    	FLAVOR="${FLAVOR// /}"
 	    	PLATFORM="dvd"
 	
@@ -190,24 +194,6 @@ if [[ ${YN} = "Yes" ]]; then
     fi
 fi
 
-# This last part will ask the user if they want to flash the ISO they just
-# downloaded to a USB stick using 'bootiso'.
-#echo -en 'Would you like to flash the ISO you just downloaded to a USB stick? (yes/no):  '
-#read BOOTISO
-#case $BOOTISO in
-#	y|yes|Yes|YES)	YN='Yes'		;;
-#	n|no|No|NO)		echo 'Okay'		;;
-#	*)				echo 'Invalid input. Assuming no'	;;
-#esac
-
-#if [[ $YN = "Yes" ]]; then
-#	if [[ $FLAVOR = "KDE neon" ]]; then
-#		bootiso ${HOME}/ISO/neon-${NEON}-current-$DATE\.iso
-#	else
-#		bootiso ${HOME}/ISO/${FLAVOR}-${RELEASE}-${PLATFORM}-amd64.iso
-#	fi
-#fi
-
 # Flush all variables set during operation of Tux Disc.
 DATE=""
 FLAVOR=""
@@ -215,5 +201,3 @@ RELEASE=""
 NEON=""
 PLATFORM=""
 YN=""
-
-#clear
