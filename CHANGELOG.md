@@ -1,6 +1,18 @@
 Changelog
 =========
 
+2.1-1
+-----
+### Added
+* `Ubuntu 20.04`
+
+### Changed
+* Ubuntu `18.04.3` > `18.04.4`
+* LTS versions of Ubuntu are now numbered based ona variable, making it a lot easier for me to update them as needed
+
+### Removed
+* `Ubuntu 19.04`
+
 2.0-1
 -----
 ### Added
